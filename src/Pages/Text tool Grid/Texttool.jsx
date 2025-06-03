@@ -20,15 +20,20 @@ function Texttool() {
      
     
       <Navbar />
+<<<<<<< HEAD
       
       <img
         src={leaf1}
         alt="leav"
         className="top-15 absolute hidden lg:block"
       />
+=======
+      <img src={leaf1} alt="leav" className="top-15 absolute hidden lg:block" />
+>>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
       <div>
-        <div>
+        <div className="">
           <Information
+            className="text-white"
             title="Online  Text  Tools For Free"
             description="Looking for some great online text tools? Look no further than 10015.io!
 
@@ -37,13 +42,13 @@ Our text tools are the best in the web and they're all available for free. Wheth
             buttonText1="LOGIN / REGISTER"
             srcImg={arror}
             srcImg1={Textimg}
-            exploreLinkState={{ scrollTo: 'featured-tools' }}
-
+            exploreLinkState={{ scrollTo: "featured-tools" }}
           />
 
           {/* image grid section */}
-
-          <Texttool1 />
+        
+            <Texttool1 />
+        
         </div>
       </div>
       <div className="bg-[#16283E]">
@@ -54,5 +59,3 @@ Our text tools are the best in the web and they're all available for free. Wheth
 }
 
 export default Texttool;
-
-

@@ -12,6 +12,8 @@ import Footer from "./Footer";
 import ston from "../image/ston.svg";
 import Oval2 from "../image/Oval2.svg";
 import chrome from "../image/chrome.svg";
+import leaf1 from "../image/leaf1.svg";
+
 const ProductFinderHero = () => {
   const [selectedProduct, setSelectedProduct] = useState("");
   const [selectedPackage, setSelectedPackage] = useState(1);
@@ -29,8 +31,12 @@ const ProductFinderHero = () => {
 
   return (
     <>
+<<<<<<< HEAD
         <section className="w-full relative bg-[#16283E]">
       <img
+=======
+      {/* <img
+>>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
         src={Oval2}
         alt="Background"
         className="absolute w-150 h-auto object-cover hidden lg:block  "
@@ -46,13 +52,42 @@ const ProductFinderHero = () => {
           className="w-full h-auto object-cover"
         />
       </div> */}
-        {/* Leaf Background */}
+<<<<<<< HEAD
+=======
+      <div className="mx-auto">
+        <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
+          <img
+            src={Oval2}
+            alt="Background"
+            className="w-150 h-auto object-cover "
+          />
+        </div>
+        <div
+          className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%] "
+          style={{ zIndex: -1 }}
+        >
+          <img
+            src={ston}
+            alt="Background Shape"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+        <Navbar />
         <img
+          src={leaf1}
+          alt="leav"
+          className="top-15 absolute hidden lg:block"
+        />
+      </div>
+      <section className="w-full relative">
+>>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
+        {/* Leaf Background */}
+        {/* <img
           src={Getleaf}
           alt="Leaf Background"
           className="hidden lg:block absolute left-0 top-0 w-48 md:w-64 lg:w-80 opacity-5 z-0"
-        />
-        <div className="max-w-7xl mx-auto">
+        /> */}
+        <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           {/* Main Blur Container */}
           <div
             className={`${
@@ -60,8 +95,13 @@ const ProductFinderHero = () => {
             }`}
           >
             <div className="py-12 flex flex-col lg:flex-row items-center justify-between relative z-10 gap-10">
+<<<<<<< HEAD
               <div className="flex-1 text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0 px-5">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+=======
+              <div className="flex-1 text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+>>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
                   Product Finder
                 </h1>
                 <p className="text-gray-400 text-base sm:text-lg">
@@ -71,12 +111,21 @@ const ProductFinderHero = () => {
                 <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
                   <div className="relative inline-flex items-center">
                     <Link
+<<<<<<< HEAD
                   to="/"
                   state={{ scrollTo: 'featured-tools' }}
                   className="bg-[#273D58]  border border-white text-white font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
                 >
                   EXPLORE TOOL
                 </Link>
+=======
+                      to="/"
+                      state={{ scrollTo: "featured-tools" }}
+                      className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
+                    >
+                      EXPLORE TOOL
+                    </Link>
+>>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
                     <img
                       src={explore}
                       alt="Arrow Icon"
@@ -84,9 +133,17 @@ const ProductFinderHero = () => {
                     />
                   </div>
                   <div className="relative inline-flex items-center">
+<<<<<<< HEAD
                     <Link to ="/Productfinder"><button className="bg-[#273D58]  border border-white text-white font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer">
                       PRODUCT FINDER
                     </button></Link>
+=======
+                    <Link to="/Productfinder">
+                      <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap">
+                        PRODUCT FINDER
+                      </button>
+                    </Link>
+>>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
                     <img
                       src={finder}
                       alt="Finder Icon"
@@ -97,6 +154,7 @@ const ProductFinderHero = () => {
 
                 <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6 mt-10 max-w-md mx-auto lg:mx-0">
                   <div className="flex flex-col items-center space-y-3">
+<<<<<<< HEAD
                     <button className="bg-[#273D58] px-8 py-2 rounded-full text-gray-400 font-semibold shadow-md whitespace-nowrap">
                       LOGIN / REGISTER
                     </button>
@@ -106,6 +164,21 @@ const ProductFinderHero = () => {
                   </div>
 
                   {/* <div className="text-center">
+=======
+                    <Link to="/Signup">
+                      <button className="bg-gray-100 px-8 py-2 rounded-full text-gray-600 font-semibold shadow-md whitespace-nowrap cursor-pointer">
+                        LOGIN / REGISTER
+                      </button>
+                    </Link>
+                    <Link to="/Signup">
+                      <button className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
+                        SIGN IN
+                      </button>
+                    </Link>
+                  </div>
+
+                  <div className="text-center ">
+>>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
                     <p className="text-sm text-gray-500 mb-2 max-w-xs mx-auto sm:mx-0">
                       Get the extension and access all tools with just one click
                     </p>
@@ -117,11 +190,7 @@ const ProductFinderHero = () => {
                         rel="noopener noreferrer"
                         className="flex items-center py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
-                        <img
-                          src={chrome}
-                          alt="Chrome"
-                          className="w-6 h-6"
-                        />
+                        <img src={chrome} alt="Chrome" className="w-6 h-6" />
                       </a>
                       <a
                         href="https://chrome.google.com/webstore"
@@ -129,11 +198,7 @@ const ProductFinderHero = () => {
                         rel="noopener noreferrer"
                         className="flex items-center py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
-                        <img
-                          src={firefox}
-                          alt="Firefox"
-                          className="w-6 h-6"
-                        />
+                        <img src={firefox} alt="Firefox" className="w-6 h-6" />
                       </a>
                       <div className="h-px w-12 bg-gray-300" />
                     </div>

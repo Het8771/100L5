@@ -64,9 +64,10 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-            <p className="text-white mb-6">
-             Your all-in-one AI tools hub simplifying tasks, boosting creativity, and saving time with powerful, easy-to-use online tools.{" "}
-              {/* <Link href="#" className="text-white ">
+            <p className="text-gray-600 mb-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore.{" "}
+              <Link href="#" className="text-indigo-600 hover:underline">
                 Learn more
               </Link> */}
             </p>

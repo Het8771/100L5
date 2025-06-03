@@ -83,7 +83,11 @@ function Miscellaneoustool1() {
     return (
       <div
         key={index}
+<<<<<<< HEAD
         className="relative rounded-2xl shadow-md cursor-pointer p-6 bg-[#273D58] flex flex-col justify-between transition-all duration-300 hover:shadow-lg w-full max-w-[280px]"
+=======
+        className="relative rounded-2xl shadow-md cursor-pointer p-6 bg-[#F6F5F8] flex flex-col justify-between transition-all duration-300 hover:shadow-lg w-full max-w-[280px]"
+>>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
         onClick={() => handleCardClick(tool.filename)}
       >
         {/* Wishlist Icon */}
@@ -108,6 +112,7 @@ function Miscellaneoustool1() {
         <div className="rounded-md flex items-center justify-start mb-4">{tool.icon}</div>
 
         {/* Title */}
+<<<<<<< HEAD
         <h3 className="text-left font-semibold text-white mb-2 break-words">{tool.title}</h3>
 
         {/* Description */}
@@ -116,6 +121,16 @@ function Miscellaneoustool1() {
         {/* Arrow Button */}
         <div className="group absolute bottom-5.5 right-1">
           <div className="relative w-28 h-10 flex items-center justify-center  rounded-full z-0 transition-all duration-300">
+=======
+        <h3 className="text-left font-semibold text-[#1F2B56] mb-2 break-words">{tool.title}</h3>
+
+        {/* Description */}
+        <p className="text-left text-gray-600 mb-8">{tool.description}</p>
+
+        {/* Arrow Button */}
+        <div className="group absolute bottom-5.5 right-1">
+          <div className="relative w-28 h-10 flex items-center justify-center bg-gray-100 rounded-full z-0 transition-all duration-300">
+>>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
             <img
               src={arrow || "/placeholder.svg"}
               alt="Arrow"
@@ -133,6 +148,7 @@ function Miscellaneoustool1() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="bg-[#16283E]">
       <div className="py-10 px-4 md:px-10 max-w-7xl mx-auto">
         <h2
@@ -142,6 +158,17 @@ function Miscellaneoustool1() {
           Miscellaneous Tools
         </h2>
         <p className="text-center text-gray-400 mb-10">Smart Tools. Simple Solutions.</p>
+=======
+    <div>
+      <div className="py-10 px-4 md:px-10 max-w-7xl mx-auto">
+        <h2
+          style={{ fontFamily: "David Libre" }}
+          className="text-2xl md:text-4xl font-semibold text-center text-[#1F2B56] mb-2"
+        >
+          Miscellaneous Tools
+        </h2>
+        <p className="text-center text-gray-500 mb-10">Smart Tools. Simple Solutions.</p>
+>>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
 
         <div className="space-y-6">
           {toolChunks.map((chunk, chunkIndex) => (

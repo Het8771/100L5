@@ -7,19 +7,18 @@ import Footer from "./Footer";
 import ston from "../image/ston.svg";
 import Oval2 from "../image/Oval2.svg";
 import leaf1 from "../image/leaf1.svg";
-import { Link } from "react-router-dom";  
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
-
   const exploreLinkState = {
-  scrollTo: 'featured-tools',
-  fromContactPage: true,
-  message: "Navigated from Contact Section",
-};
+    scrollTo: "featured-tools",
+    fromContactPage: true,
+    message: "Navigated from Contact Section",
+  };
 
   return (
     <>
-      <div className="relative bg-[#16283E] ">
+      <div className="relative ">
         {/* Background Image - Hidden on mobile/tablet, visible on lg screens */}
         {/* <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
           <img
@@ -61,7 +60,7 @@ const ContactSection = () => {
       to="/"
       state={exploreLinkState} 
     >
-      <button className="bg-[#273D58]  border border-white text-white font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap">
+      <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap">
                     EXPLORE TOOL
                   </button></Link>
                   <img
@@ -71,7 +70,7 @@ const ContactSection = () => {
                   />
                 </div>
                 <div className="relative inline-flex items-center">
-               <Link to ="/Productfinder"> <button className="bg-[#273D58]  border border-white text-white font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap"> 
+               <Link to ="/Productfinder"> <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap"> 
                     PRODUCT FINDER
                   </button></Link>
                   <img
