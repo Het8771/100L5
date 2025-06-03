@@ -131,7 +131,7 @@ export default function HTMLEncoderDecoder({id="HTML Encoder/Decoder"}) {
                         </div>
       
                         {/* Main Share Box */}
-                        <div className="text-center border border-gray-300 rounded-xl p-6">
+                        <div className="text-center border border-gray-500 rounded-xl p-6">
                           <p className="text-sm mb-1 text-gray-500">
                             You are currently sharing:
                           </p>
@@ -192,7 +192,7 @@ export default function HTMLEncoderDecoder({id="HTML Encoder/Decoder"}) {
                         </label>
                         <textarea
                           id="bugDescription"
-                          className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                          className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                           placeholder="Description*"
                           value={bugDescription}
                           onChange={(e) => setBugDescription(e.target.value)}
@@ -200,7 +200,7 @@ export default function HTMLEncoderDecoder({id="HTML Encoder/Decoder"}) {
                         <div className="flex justify-end gap-3 mt-4">
                           <button
                             onClick={() => setOpen(false)}
-                            className="px-4 py-2  border-indigo-300 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black  rounded-lg cursor-pointer"
+                            className="px-4 py-2  border-indigo-300 bg-[#273D58]  border border-white text-white  rounded-lg cursor-pointer"
                           >
                             Cancel
                           </button>
@@ -215,7 +215,7 @@ export default function HTMLEncoderDecoder({id="HTML Encoder/Decoder"}) {
                               setOpen(false);
                               setBugDescription("");
                             }}
-                            className="px-4 py-2  border-indigo-300 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg cursor-pointer"
+                            className="px-4 py-2  border-indigo-300 bg-[#273D58]  border border-white text-white rounded-lg cursor-pointer"
                           >
                             Submit
                           </button>
@@ -259,7 +259,7 @@ export default function HTMLEncoderDecoder({id="HTML Encoder/Decoder"}) {
           <button
             className={`px-6 py-2 rounded-md text-sm font-medium transition ${
               tab === "encode"
-                ? "bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                ? "bg-[#273D58]  border border-white text-white rounded-lg"
                 : "text-gray-500 hover:bg-[#e7eafe]"
             }`}
             onClick={() => {
@@ -273,7 +273,7 @@ export default function HTMLEncoderDecoder({id="HTML Encoder/Decoder"}) {
           <button
             className={`px-6 py-2 rounded-md text-sm font-medium transition ${
               tab === "decode"
-                ? "bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                ? "bg-[#273D58]  border border-white text-white rounded-lg"
                 : "text-gray-500 hover:bg-[#e7eafe]"
             }`}
             onClick={() => {
@@ -322,21 +322,21 @@ export default function HTMLEncoderDecoder({id="HTML Encoder/Decoder"}) {
       {/* Action Buttons */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 max-w-4xl mx-auto">
         <button
-          className="px-6 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg cursor-pointer"
+          className="px-6 py-2 bg-[#273D58]  border border-white text-white rounded-lg cursor-pointer"
           onClick={handleReset}
         >
           Reset
         </button>
         <button
-          className="px-8 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg rounded-lg font-semibold shadow hover:bg-[#4346b1] transition"
+          className="px-8 py-2 bg-[#273D58]  border border-white text-white rounded-lg rounded-lg font-semibold shadow hover:bg-[#4346b1] transition"
           onClick={handleAction}
         >
           {tab === "encode" ? "Encode \u2192" : "Decode \u2192"}
         </button>
         <button
-          className={`px-6 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg cursor-pointer rounded-lg flex items-center gap-2 transition ${
+          className={`px-6 py-2 bg-[#273D58]  border border-white text-white rounded-lg cursor-pointer rounded-lg flex items-center gap-2 transition ${
             isCopied
-              ? "bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+              ? "bg-[#273D58]  border border-white text-white rounded-lg"
               : "text-[#5b63e6] hover:bg-[#e7eafe]"
           }`}
           onClick={handleCopy}

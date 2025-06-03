@@ -37,8 +37,8 @@ const ProductFinderHero = () => {
 
   return (
     <>
-      <div className="relative">
-        <div
+      <div className="relative bg-[#16283E]">
+        {/* <div
           className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-280 "
           style={{ zIndex: 1 }}
         >
@@ -47,7 +47,7 @@ const ProductFinderHero = () => {
             alt="Background Shape"
             className="w-full h-auto object-cover"
           />
-        </div>
+        </div> */}
 
         <section className="w-full relative">
           <Navbar />
@@ -73,16 +73,16 @@ const ProductFinderHero = () => {
             >
               <div className="py-12 flex flex-col lg:flex-row items-center justify-between relative z-10 gap-10">
                 <div className="flex-1 text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0 px-7">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
                     Product Finder
                   </h1>
-                  <p className="text-gray-600 text-base sm:text-lg">
+                  <p className="text-gray-500 text-base sm:text-lg">
                     Find Exactly What You Need <br /> Your Shortcut to the Right
                     Choice
                   </p>
                   <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
                     <div className="relative inline-flex items-center">
-                      <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap">
+                      <button className="bg-[#273D58]  border border-white text-white font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap">
                         EXPLORE TOOL
                       </button>
                       <img
@@ -92,7 +92,7 @@ const ProductFinderHero = () => {
                       />
                     </div>
                     <div className="relative inline-flex items-center">
-                      <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap">
+                      <button className="bg-[#273D58]  border border-white text-white font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap">
                         PRODUCT FINDER
                       </button>
                       <img
@@ -106,17 +106,17 @@ const ProductFinderHero = () => {
                   <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6 mt-10 max-w-md mx-auto lg:mx-0">
                     <div className="flex flex-col items-center space-y-3">
                       <Link to="/Signup">
-                        <button className="bg-gray-100 px-8 py-2 rounded-full text-gray-600 font-semibold shadow-md whitespace-nowrap cursor-pointer">
+                        <button className="bg-[#273D58] px-8 py-2 rounded-full text-gray-400 font-semibold shadow-md whitespace-nowrap cursor-pointer">
                           LOGIN / REGISTER
                         </button>
                       </Link>
-                      <Link to="/Login">
+                      {/* <Link to="/Login">
                         <button className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
                           SIGN IN
                         </button>
-                      </Link>
+                      </Link> */}
                     </div>
-
+{/* 
                     <div className="text-center">
                       <p className="text-sm text-gray-500 mb-2 max-w-xs mx-auto sm:mx-0">
                         Get the extension and access all tools with just one
@@ -150,7 +150,7 @@ const ProductFinderHero = () => {
                         </a>
                         <div className="h-px w-12 bg-gray-300" />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
@@ -166,7 +166,7 @@ const ProductFinderHero = () => {
               {/* <!-- Tailwind CSS Product Card Example --> */}
               <div class="max-w-7xl mx-auto">
                 {/* <!-- Top Bar --> */}
-                <div class="flex justify-between items-center bg-[#e3effc] rounded-full px-6 py-3">
+                <div class="flex justify-between items-center bg-[#D5C7FF] rounded-full px-6 py-3 mb-4">
                   <span class="text-[#23233c] font-medium">
                     Product→Productivity→Cleansnap
                   </span>
@@ -178,7 +178,7 @@ const ProductFinderHero = () => {
                   </a>
                 </div>
                 {/* <!-- Card --> */}
-                <div class="bg-white rounded-3xl shadow p-6 md:p-10">
+                <div class="bg-[#273D58] rounded-3xl shadow p-6 md:p-10">
                   {/* <!-- Image --> */}
                   <div class="overflow-hidden rounded-2xl mb-5">
                     <img
@@ -189,11 +189,11 @@ const ProductFinderHero = () => {
                   </div>
                   {/* <!-- Title and Boosted by --> */}
                   <div class="mb-2">
-                    <h2 class="text-2xl font-bold text-[#23233c]">CleanSnap</h2>
-                    <span class="text-gray-500 text-sm">boosted by</span>
+                    <h2 class="text-2xl font-bold text-white">CleanSnap</h2>
+                    <span class="text-gray-300 text-sm">boosted by</span>
                   </div>
                   {/* <!-- Description --> */}
-                  <div class="text-[#888888] text-base leading-relaxed space-y-4 mb-6">
+                  <div class="text-gray-300 text-base leading-relaxed space-y-4 mb-6">
                     <p>
                       Discover a growing, hand-curated collection of 2100+
                       highly useful tools and resources all in one place.
@@ -227,7 +227,7 @@ const ProductFinderHero = () => {
                   <div class="flex justify-end">
                     <a
                       href="#"
-                      class="bg-[#0a1330] text-white rounded-full px-8 py-2 text-lg font-medium flex items-center gap-2 hover:bg-[#23233c] transition"
+                      class="bg-[#D5C7FF] text-black rounded-full px-8 py-2 text-lg font-medium flex items-center gap-2 hover:bg-[#23233c] transition"
                     >
                       Visit
                       <svg
@@ -249,28 +249,28 @@ const ProductFinderHero = () => {
               </div>
 
               {/* <!-- Product Bento --> */}
-              <div className="bg-[#f6f7fb] rounded-3xl p-8 max-w-7xl mx-auto mt-5 mb-5">
-                <h2 className="text-xl font-extrabold text-[#23233c] mb-6">
+              <div className="bg-[#273D58] rounded-3xl p-8 max-w-7xl mx-auto mt-5 mb-5">
+                <h2 className="text-xl font-extrabold text-white mb-6">
                   Product Bento
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                   {/* Pricing */}
-                  <div className="bg-white rounded-xl p-5">
-                    <div className="font-bold text-[#23233c] mb-1">Pricing</div>
-                    <div className="text-[#23233c] text-sm">Free</div>
+                  <div className="bg-[#16283E] rounded-xl p-5">
+                    <div className="font-bold text-white mb-1">Pricing</div>
+                    <div className="text-gray-400 text-sm">Free</div>
                   </div>
                   {/* Categories */}
-                  <div className="bg-white rounded-xl p-5">
-                    <div className="font-bold text-[#23233c] mb-1">
+                  <div className="bg-[#16283E] rounded-xl p-5">
+                    <div className="font-bold text-white mb-1">
                       Categories
                     </div>
-                    <div className="text-[#23233c] text-sm">Productivity</div>
-                    <div className="text-[#23233c] text-sm">Business</div>
+                    <div className="text-gray-400 text-sm">Productivity</div>
+                    <div className="text-gray-400 text-sm">Business</div>
                   </div>
                   {/* Tags */}
-                  <div className="bg-white rounded-xl p-5">
-                    <div className="font-bold text-[#23233c] mb-1">Tags</div>
-                    <div className="text-[#23233c] text-sm mb-2">Free</div>
+                  <div className="bg-[#16283E] rounded-xl p-5">
+                    <div className="font-bold text-white mb-1">Tags</div>
+                    <div className="text-gray-400 text-sm mb-2">Free</div>
                     <div className="flex flex-wrap gap-2">
                       <span className="bg-[#f6f7fb] text-[#888] text-xs px-3 py-1 rounded-full">
                         # Event
@@ -284,8 +284,8 @@ const ProductFinderHero = () => {
                     </div>
                   </div>
                   {/* Social Media & Links */}
-                  <div className="bg-white rounded-xl p-5 flex flex-col justify-center">
-                    <div className="font-bold text-[#23233c] mb-2">
+                  <div className="bg-[#16283E] rounded-xl p-5 flex flex-col justify-center">
+                    <div className="font-bold text-white mb-2">
                       Social Media & Links
                     </div>
                     <div className="flex gap-3">
@@ -331,23 +331,26 @@ const ProductFinderHero = () => {
                     </div>
                   </div>
                   {/* People */}
-                  <div className="bg-white rounded-xl p-5 flex items-center gap-4">
+                  <div className="bg-[#16283E] rounded-xl p-5 flex items-center gap-4">
                     <div className="w-10 h-10 bg-[#e0e1e5] rounded-full"></div>
                     <div>
-                      <div className="text-[#23233c] font-medium">
+                      <div className="text-white font-medium">
                         Hossein Yazdi
                       </div>
-                      <div className="text-[#888888] text-sm">Founder</div>
+                      <div className="text-gray-400 text-sm">Founder</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <Support />
           </div>
         </section>
-      </div>
+         <div className="bg-[#16283E]">
+            <Support />
       <Footer />
+      </div>
+      </div>
+     
     </>
   );
 };

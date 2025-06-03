@@ -214,7 +214,7 @@ box-shadow: ${shadowValue};
               <div className="flex justify-end gap-3 mt-4">
                 <button
                   onClick={() => setOpen(false)}
-                  className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-lg hover:opacity-90 transition"
+                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg hover:opacity-90 transition"
                 >
                   Cancel
                 </button>
@@ -228,7 +228,7 @@ box-shadow: ${shadowValue};
                     setOpen(false);
                     setBugDescription("");
                   }}
-                  className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-lg hover:opacity-90 transition"
+                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg hover:opacity-90 transition"
                 >
                   Submit
                 </button>
@@ -374,13 +374,13 @@ box-shadow: ${shadowValue};
         <div className="flex flex-col sm:flex-row justify-end gap-4 mt-4">
           <button
             onClick={handleReset}
-            className="w-full sm:w-40 px-6 py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
+            className="w-full sm:w-40 px-6 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
           >
             Reset
           </button>
           <button
             onClick={handleCopy}
-            className="w-full sm:w-40 px-6 py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
+            className="w-full sm:w-40 px-6 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
           >
             Copy
           </button>

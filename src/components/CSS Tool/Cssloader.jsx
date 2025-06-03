@@ -1986,7 +1986,7 @@ export default function CSSLoaderGenerator({id="CSS Loader"}) {
                 🏠 Share 10015
               </button>
             </div>
-            <div className="text-center border border-gray-300 rounded-xl p-6">
+            <div className="text-center border border-gray-500 rounded-xl p-6">
               <p className="text-sm mb-1 text-gray-500">
                 You are currently sharing:
               </p>
@@ -2042,7 +2042,7 @@ export default function CSSLoaderGenerator({id="CSS Loader"}) {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Cancel
               </button>
@@ -2056,7 +2056,7 @@ export default function CSSLoaderGenerator({id="CSS Loader"}) {
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Submit
               </button>
@@ -2073,7 +2073,7 @@ export default function CSSLoaderGenerator({id="CSS Loader"}) {
           <div className="w-full sm:w-64 relative" ref={dropdownRef}>
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="w-full flex items-center justify-between px-4 py-2 border border-gray-300 rounded-md bg-white text-sm"
+              className="w-full flex items-center justify-between px-4 py-2 border border-gray-500 rounded-md bg-white text-sm"
             >
               <span>
                 {loaderCategories.find((cat) => cat.value === selectedCategory)

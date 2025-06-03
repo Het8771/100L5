@@ -266,7 +266,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                 🏠 Share 10015
                             </button>
                         </div>
-                        <div className="text-center border border-gray-300 rounded-xl p-6">
+                        <div className="text-center border border-gray-500 rounded-xl p-6">
                             <p className="text-sm mb-1 text-gray-500">
                                 You are currently sharing:
                             </p>
@@ -314,7 +314,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                         </label>
                         <textarea
                             id="bugDescription"
-                            className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                            className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                             placeholder="Description*"
                             value={bugDescription}
                             onChange={(e) => setBugDescription(e.target.value)}
@@ -322,7 +322,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                         <div className="flex justify-end gap-3 mt-4">
                             <button
                                 onClick={() => setOpen(false)}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                             >
                                 Cancel
                             </button>
@@ -336,7 +336,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                     setOpen(false);
                                     setBugDescription("");
                                 }}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                             >
                                 Submit
                             </button>
@@ -472,7 +472,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                 <select
                                     value={theme}
                                     onChange={(e) => setTheme(e.target.value)}
-                                    className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none"
+                                    className="w-full border border-gray-500 rounded-md px-3 py-2 outline-none"
                                 >
                                     <option value="Light">Light</option>
                                     <option value="Dark">Dark</option>
@@ -486,7 +486,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                         type="text"
                                         value={username}
                                         onChange={(e) => setUsername(e.target.value)}
-                                        className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none"
+                                        className="w-full border border-gray-500 rounded-md px-3 py-2 outline-none"
                                     />
                                 </div>
                                 <button
@@ -503,7 +503,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                     type="text"
                                     value={location}
                                     onChange={(e) => setLocation(e.target.value)}
-                                    className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none"
+                                    className="w-full border border-gray-500 rounded-md px-3 py-2 outline-none"
                                     placeholder="New York, USA"
                                 />
                             </div>
@@ -514,7 +514,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                     type="datetime-local"
                                     value={postDate}
                                     onChange={(e) => setPostDate(e.target.value)}
-                                    className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none"
+                                    className="w-full border border-gray-500 rounded-md px-3 py-2 outline-none"
                                     placeholder="May 21, 2025 11:50 AM"
                                 />
                             </div>
@@ -522,7 +522,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Avatar</label>
                                 <div
-                                    className="w-full border border-gray-300 rounded-md px-3 py-2 flex items-center cursor-pointer bg-white hover:bg-gray-50 outline-none"
+                                    className="w-full border border-gray-500 rounded-md px-3 py-2 flex items-center cursor-pointer bg-white hover:bg-gray-50 outline-none"
                                     onClick={() => avatarInputRef.current.click()}
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -542,7 +542,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Post Image</label>
                                 <div
-                                    className="w-full border border-gray-300 rounded-md px-3 py-2 flex items-center cursor-pointer bg-white hover:bg-gray-50"
+                                    className="w-full border border-gray-500 rounded-md px-3 py-2 flex items-center cursor-pointer bg-white hover:bg-gray-50"
                                     onClick={() => postImageInputRef.current.click()}
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -568,7 +568,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                 value={postText}
                                 rows={4}
                                 onChange={(e) => setPostText(e.target.value)}
-                                className="outline-none w-full border border-gray-300 rounded-md px-3 "
+                                className="outline-none w-full border border-gray-500 rounded-md px-3 "
                                 maxLength={220}
                             />
                         </div>
@@ -583,7 +583,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                     type="text"
                                     value={likeCount}
                                     onChange={(e) => setLikeCount(e.target.value)}
-                                    className="w-full border border-gray-300 rounded-md px-3 py-2 outline-none"
+                                    className="w-full border border-gray-500 rounded-md px-3 py-2 outline-none"
                                 />
                             </div>
                             <div>
@@ -592,7 +592,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                     type="text"
                                     value={commentCount}
                                     onChange={(e) => setCommentCount(e.target.value)}
-                                    className="w-full border  border-gray-300 rounded-md px-3 py-2 outline-none"
+                                    className="w-full border  border-gray-500 rounded-md px-3 py-2 outline-none"
                                 />
                             </div>
                         </div>
@@ -604,7 +604,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                     id="isLiked"
                                     checked={isLiked}
                                     onChange={(e) => setIsLiked(e.target.checked)}
-                                    className="h-4 w-4  border-gray-300 rounded"
+                                    className="h-4 w-4  border-gray-500 rounded"
                                 />
                                 <label htmlFor="isLiked" className="ml-2 block text-sm text-gray-700">
                                     Is post liked by viewer?
@@ -616,7 +616,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                     id="isTagged"
                                     checked={isTagged}
                                     onChange={(e) => setIsTagged(e.target.checked)}
-                                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-500 rounded"
                                 />
                                 <label htmlFor="isTagged" className="ml-2 block text-sm text-gray-700">
                                     Is someone tagged?
@@ -628,7 +628,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                     id="hasStory"
                                     checked={hasStory}
                                     onChange={(e) => setHasStory(e.target.checked)}
-                                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-500 rounded"
                                 />
                                 <label htmlFor="hasStory" className="ml-2 block text-sm text-gray-700">
                                     Has an Instagram story?
@@ -640,7 +640,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                                     id="showComments"
                                     checked={showComments}
                                     onChange={(e) => setShowComments(e.target.checked)}
-                                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-500 rounded"
                                 />
                                 <label htmlFor="showComments" className="ml-2 block text-sm text-gray-700">
                                     Are comments displayed?
@@ -658,7 +658,7 @@ export default function InstagramPostGenerator({id="Instagram Post Generator"}) 
                 <div className="relative inline-block" ref={dropdownRef}>
                     <button
                         onClick={toggleDropdown}
-                        className="cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B]   px-8 py-2 rounded-full  text-lg flex items-center justify-center mx-auto transition-colors"
+                        className="cursor-pointer bg-[#273D58]  border border-white text-white   px-8 py-2 rounded-full  text-lg flex items-center justify-center mx-auto transition-colors"
                     >
                         Export Instagram Post
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

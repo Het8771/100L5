@@ -183,7 +183,7 @@ export default function ImageResizer({id="Image Resizer"}) {
                                 🏠 Share 10015
                             </button>
                         </div>
-                        <div className="text-center border border-gray-300 rounded-xl p-4 sm:p-6">
+                        <div className="text-center border border-gray-500 rounded-xl p-4 sm:p-6">
                             <p className="text-sm mb-1 text-gray-500">
                                 You are currently sharing:
                             </p>
@@ -231,7 +231,7 @@ export default function ImageResizer({id="Image Resizer"}) {
                         </label>
                         <textarea
                             id="bugDescription"
-                            className="w-full p-2 sm:p-3 border border-gray-300 rounded-xl text-base h-24 sm:h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                            className="w-full p-2 sm:p-3 border border-gray-500 rounded-xl text-base h-24 sm:h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                             placeholder="Description*"
                             value={bugDescription}
                             onChange={(e) => setBugDescription(e.target.value)}
@@ -239,7 +239,7 @@ export default function ImageResizer({id="Image Resizer"}) {
                         <div className="flex flex-col sm:flex-row justify-end gap-3 mt-4">
                             <button
                                 onClick={() => setOpen(false)}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                             >
                                 Cancel
                             </button>
@@ -252,7 +252,7 @@ export default function ImageResizer({id="Image Resizer"}) {
                                     setOpen(false);
                                     setBugDescription("");
                                 }}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                             >
                                 Submit
                             </button>
@@ -263,7 +263,7 @@ export default function ImageResizer({id="Image Resizer"}) {
 
             {/* Upload / Drag & Drop */}
             {!imageSrc && (
-                <div className="border-2 border-dashed border-gray-300 rounded-lg h-40 flex flex-col items-center justify-center mb-8">
+                <div className="border-2 border-dashed border-gray-500 rounded-lg h-40 flex flex-col items-center justify-center mb-8">
                     <label
                         className="cursor-pointer flex flex-col items-center text-indigo-400"
                         htmlFor="file-input"
@@ -291,7 +291,7 @@ export default function ImageResizer({id="Image Resizer"}) {
             {imageSrc && (
                 <div className="flex flex-col gap-6">
                     {/* Image Preview Card */}
-                    <div className="bg-white rounded-xl border border-gray-300 flex flex-col items-center py-8 px-4">
+                    <div className="bg-white rounded-xl border border-gray-500 flex flex-col items-center py-8 px-4">
                         <img
                             src={imageSrc}
                             alt="preview"
@@ -318,7 +318,7 @@ export default function ImageResizer({id="Image Resizer"}) {
                                     min={1}
                                     value={width}
                                     onChange={e => setWidth(Number(e.target.value))}
-                                    className="w-[100px] px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring font-semibold"
+                                    className="w-[100px] px-4 py-2 border border-gray-500 rounded-lg text-gray-700 focus:outline-none focus:ring font-semibold"
                                     placeholder="Width"
                                 />
                             </div>
@@ -331,14 +331,14 @@ export default function ImageResizer({id="Image Resizer"}) {
                                     min={1}
                                     value={height}
                                     onChange={e => setHeight(Number(e.target.value))}
-                                    className="w-[100px] px-4 py-2 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring font-semibold"
+                                    className="w-[100px] px-4 py-2 border border-gray-500 rounded-lg text-gray-700 focus:outline-none focus:ring font-semibold"
                                     placeholder="Height"
                                 />
                             </div>
                             {/* Resize Button */}
                             <button
                                 onClick={handleResize}
-                                className="cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] px-6 py-2 rounded-lg shadow-none"
+                                className="cursor-pointer bg-[#273D58]  border border-white text-white px-6 py-2 rounded-lg shadow-none"
                             >
                                 Resize
                             </button>
@@ -346,7 +346,7 @@ export default function ImageResizer({id="Image Resizer"}) {
                         <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
                             <button
                                 onClick={handleReset}
-                                className="cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] flex items-center gap-2 px-6 py-2 rounded-lg w-full sm:w-auto"
+                                className="cursor-pointer bg-[#273D58]  border border-white text-white flex items-center gap-2 px-6 py-2 rounded-lg w-full sm:w-auto"
                             >
                                 <LuRefreshCw className="text-lg" />
                                 Reset
@@ -354,7 +354,7 @@ export default function ImageResizer({id="Image Resizer"}) {
                             <button
                                 onClick={handleDownload}
                                 disabled={!pngDataUrl}
-                                className="cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] flex items-center gap-2 px-6 py-2 rounded-lg w-full sm:w-auto"
+                                className="cursor-pointer bg-[#273D58]  border border-white text-white flex items-center gap-2 px-6 py-2 rounded-lg w-full sm:w-auto"
                             >
                                 <LuDownload className="text-lg" />
                                 Download

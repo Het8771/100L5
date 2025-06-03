@@ -4,7 +4,6 @@ import { BsQrCode } from "react-icons/bs";
 import Comment from "../Text tools/Comment";
 import {
   FaCheck,
-  FaRegCopy,
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
@@ -65,148 +64,147 @@ export default function QRCodeGenerator({id="QR Code Generator"}) {
           <span className="text-4xl text-indigo-400 mt-4">
             <BsQrCode />
           </span>
-          <h1 className="text-xl sm:text-2xl md:text-lg font-bold text-gray-900 mt-4">
+          <h1 className="text-xl sm:text-2xl md:text-lg font-bold text-white mt-4">
             QR&nbsp;Code&nbsp;Generator
           </h1>
         </div>
         <div className="flex flex-col w-full sm:w-auto sm:flex-row sm:items-center gap-2 sm:gap-3">
-          <button
+         <button
             onClick={() => setShareOpen(true)}
-            className="flex items-center justify-center w-full sm:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 cursor-pointer"
+            className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white mb-2 md:mb-0 cursor-pointer"
           >
             <FiShare2 className="mr-2" size={18} />
             Share
-          </button>
-          <button
-            className="flex items-center justify-center gap-2 w-full sm:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 cursor-pointer hover:bg-indigo-100 transition"
+          </button>   <button
+            className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white cursor-pointer transition"
             onClick={() => setOpen(true)}
           >
-            <FiAlertCircle className="text-indigo-600 text-base" />
+            <FiAlertCircle className="text-white text-base" />
             Report Bug
           </button>
-          <button
-            onClick={onFavoriteToggle}
-            className={`px-3 py-2 rounded-xl border text-sm w-full sm:w-auto ${
-              isFavorite
-                ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-                : "bg-indigo-50 border-indigo-600 text-indigo-600"
-            }`}
-          >
-            {isFavorite ? (
-              <>
-                <FaCheck className="inline-block mr-1" size={12} /> Added
-              </>
-            ) : (
-              <>
-                <FaRegStar className="inline-block mr-1" size={12} /> Add to Favorites
-              </>
-            )}
-          </button>
+           <button
+                     onClick={onFavoriteToggle}
+                     className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
+                       ? "border border-white bg-[#273D58]  border border-white text-white"
+                       : "bg-[#273D58]  border border-white text-white"
+                       }`}
+                   >
+                     {isFavorite ? (
+                       <>
+                         <FaCheck className="inline-block mr-1" size={12} /> Added
+                       </>
+                     ) : (
+                       <>
+                         <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                         Favorites
+                       </>
+                     )}
+                   </button>
         </div>
       </div>
 
-      {/* Share Popup */}
-      {shareOpen && (
-        <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center p-2">
-          <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-xl w-full max-w-xs sm:max-w-md relative overflow-y-auto max-h-[90vh]">
-            <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
-              <button
-                onClick={() => setActiveTab("tool")}
-                className={`w-1/2 px-2 py-2 rounded-xl font-semibold text-sm ${
-                  activeTab === "tool"
-                    ? "bg-indigo-600 text-white"
-                    : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                }`}
-              >
-                ⚙️ Share Tool
-              </button>
-              <button
-                onClick={() => setActiveTab("home")}
-                className={`w-1/2 px-2 py-2 rounded-xl font-semibold text-sm ${
-                  activeTab === "home"
-                    ? "bg-indigo-600 text-white"
-                    : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                }`}
-              >
-                🏠 Share 10015
-              </button>
-            </div>
-            <div className="text-center border border-gray-300 rounded-xl p-4 sm:p-6">
-              <p className="text-sm mb-1 text-gray-500">You are currently sharing:</p>
-              <h2 className="text-lg sm:text-xl font-semibold mb-5 text-gray-600">
-                {activeTab === "tool"
-                  ? "Google Fonts Pair Finder"
-                  : "10015 Tools"}
-              </h2>
-              <div className="flex justify-center mb-6">
-                <MdShare className="text-indigo-500 text-5xl sm:text-7xl" />
-              </div>
-              <div className="flex justify-center gap-3 sm:gap-4">
-                {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
-                  (Icon, i) => (
+    {/* Share Popup */}
+              {shareOpen && (
+                <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
+                    <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
+                      <button
+                        onClick={() => setActiveTab("tool")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        ⚙️ Share Tool
+                      </button>
+                      <button
+                        onClick={() => setActiveTab("home")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        🏠 Share 10015
+                      </button>
+                    </div>
+                    <div className="text-center border border-gray-500 rounded-xl p-6">
+                      <p className="text-sm mb-1 text-white">
+                        You are currently sharing:
+                      </p>
+                      <h2 className="text-xl font-semibold mb-5 text-white">
+                        {activeTab === "tool"
+                          ? "Google Fonts Pair Finder"
+                          : "10015 Tools"}
+                      </h2>
+                      <div className="flex justify-center mb-6">
+                        <MdShare className="text-white text-7xl" />
+                      </div>
+                      <div className="flex justify-center gap-4">
+                        {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
+                          (Icon, i) => (
+                            <button
+                              key={i}
+                              className="text-black bg-white rounded-full w-10 h-10 flex items-center justify-center"
+                            >
+                              <Icon />
+                            </button>
+                          )
+                        )}
+                      </div>
+                    </div>
                     <button
-                      key={i}
-                      className="text-white bg-indigo-500 rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"
+                      className="absolute top-0 h-2 w-2 right-4 text-white text-lg cursor-pointer"
+                      onClick={() => setShareOpen(false)}
                     >
-                      <Icon />
+                      ✕
                     </button>
-                  )
-                )}
-              </div>
-            </div>
-            <button
-              className="absolute top-2 right-4 text-gray-600 text-lg cursor-pointer"
-              onClick={() => setShareOpen(false)}
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Bug Report Popup */}
-      {open && (
-        <div className="fixed inset-0 bg-black/30 flex z-40 justify-center items-center p-2">
-          <div className="bg-white w-full max-w-xs sm:max-w-md p-4 sm:p-6 rounded-2xl shadow-lg relative overflow-y-auto max-h-[90vh]">
-            <h2 className="text-lg sm:text-xl font-bold mb-2">Bug Report</h2>
-            <p className="text-sm mb-4">
-              <strong>Tool:</strong> Lorem Ipsum Generator
-            </p>
-            <label className="text-sm mb-1 block" htmlFor="bugDescription">
-              Please describe the issue.
-            </label>
-            <textarea
-              id="bugDescription"
-              className="w-full p-2 sm:p-3 border border-gray-300 rounded-xl text-base h-24 sm:h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-              placeholder="Description*"
-              value={bugDescription}
-              onChange={(e) => setBugDescription(e.target.value)}
-            />
-            <div className="flex flex-col sm:flex-row justify-end gap-3 mt-4">
-              <button
-                onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={() => {
-                  if (!bugDescription.trim()) {
-                    alert("Please enter a description.");
-                    return;
-                  }
-                  // Submit logic here
-                  setOpen(false);
-                  setBugDescription("");
-                }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+                  </div>
+                </div>
+              )}
+        
+              {/* Bug Report Popup */}
+              {open && (
+                <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
+                    <h2 className="text-xl font-bold mb-2">Bug Report</h2>
+                    <p className="text-sm mb-4">
+                      <strong>Tool:</strong> Lorem Ipsum Generator
+                    </p>
+                    <label className="text-sm mb-1 block" htmlFor="bugDescription">
+                      Please describe the issue.
+                    </label>
+                    <textarea
+                      id="bugDescription"
+                      className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 "
+                      placeholder="Description*"
+                      value={bugDescription}
+                      onChange={(e) => setBugDescription(e.target.value)}
+                    />
+                    <div className="flex justify-end gap-3 mt-4">
+                      <button
+                        onClick={() => setOpen(false)}
+                        className="px-4 py-2 bg-[#273D58]  border border-white text-white border border-white rounded-lg"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (!bugDescription.trim()) {
+                            alert("Please enter a description.");
+                            return;
+                          }
+                          console.log("Bug description submitted:", bugDescription);
+                          setOpen(false);
+                          setBugDescription("");
+                        }}
+                        className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
 
       {/* Input and QR Code */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -215,11 +213,11 @@ export default function QRCodeGenerator({id="QR Code Generator"}) {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="URL or text"
-          className="w-full p-3 text-base rounded-lg border border-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-300"
+          className="w-full p-3 text-base rounded-lg border border-gray-500 "
         />
         <button
           onClick={() => setText("")}
-          className="w-full sm:w-auto px-4 py-2 rounded-lg bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer"
+          className="w-full sm:w-auto px-4 py-2 rounded-lg bg-[#273D58]  border border-white text-white cursor-pointer"
         >
           Reset
         </button>
@@ -243,7 +241,7 @@ export default function QRCodeGenerator({id="QR Code Generator"}) {
       <div className="text-center mt-6">
         <button
           onClick={handleDownload}
-          className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-full px-6 py-3 cursor-pointer w-full sm:w-auto"
+          className="bg-[#273D58]  border border-white text-white rounded-full px-6 py-3 cursor-pointer w-full sm:w-auto"
         >
           Download QR Code
         </button>

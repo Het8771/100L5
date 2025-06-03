@@ -22,8 +22,7 @@ import StrongRandom from "./components/Miscellaneous Tools/StrongRandom";
 import Barcode from "./components/Miscellaneous Tools/Barcode";
 import AIColor from "./components/Colour Tool/AIColor";
 import HEX from "./components/Colour Tool/HEX";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+
 import RGBA from "./components/Colour Tool/RGBA";
 import ColorMixer from "./components/Colour Tool/ColorMixer";
 import Resizer from "./components/Image Tool/Resizer";

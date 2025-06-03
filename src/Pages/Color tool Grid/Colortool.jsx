@@ -1,6 +1,6 @@
 import arror from "../../image/arror.svg";
 import ston from '../../image/ston.svg';
-import Colortool1 from '../CSS tool Grid/CSStool1';
+import Colortool1 from '../Color tool Grid/Colortool1';
 import Information from "../../components/Information";
 import Oval2 from "../../image/Oval2.svg";
 import leaf1 from "../../image/leaf1.svg";
@@ -18,7 +18,7 @@ function Colortool() {
           className="w-150 h-auto object-cover "
         />
       </div>
-      <div
+      {/* <div
         className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%] "
         style={{ zIndex: -1 }}
       >
@@ -27,7 +27,7 @@ function Colortool() {
           alt="Background Shape"
           className="w-full h-auto object-cover"
         />
-      </div>
+      </div> */}
       <Navbar />
       <img
         src={leaf1}
@@ -43,7 +43,9 @@ function Colortool() {
 
         <Colortool1 />
       </div>
+       <div className="bg-[#16283E]">
       <Footer />
+      </div>
 
     </>
   )

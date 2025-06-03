@@ -159,7 +159,7 @@ export default function Base64EncoderDecoder({ id = "Base64 Encoder Decoder Gene
                   🏠 Share 10015
                 </button>
               </div>
-              <div className="text-center border border-gray-300 rounded-xl p-6">
+              <div className="text-center border border-gray-500 rounded-xl p-6">
                 <p className="text-sm mb-1 text-gray-500">
                   You are currently sharing:
                 </p>
@@ -215,7 +215,7 @@ export default function Base64EncoderDecoder({ id = "Base64 Encoder Decoder Gene
               <div className="flex justify-end gap-3 mt-4">
                 <button
                   onClick={() => setOpen(false)}
-                  className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                 >
                   Cancel
                 </button>
@@ -229,7 +229,7 @@ export default function Base64EncoderDecoder({ id = "Base64 Encoder Decoder Gene
                     setOpen(false);
                     setBugDescription("");
                   }}
-                  className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                 >
                   Submit
                 </button>
@@ -242,7 +242,7 @@ export default function Base64EncoderDecoder({ id = "Base64 Encoder Decoder Gene
         <div className="mb-2 inline-flex rounded-lg bg-[#f3f4f8] p-1">
           <button
             className={`px-6 py-2 rounded-md text-sm font-medium transition ${tab === "encode"
-                ? "bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B]"
+                ? "bg-[#273D58]  border border-white text-white"
                 : "text-gray-500"
               }`}
             onClick={() => {
@@ -255,7 +255,7 @@ export default function Base64EncoderDecoder({ id = "Base64 Encoder Decoder Gene
           </button>
           <button
             className={`px-6 py-2 rounded-md text-sm font-medium transition ${tab === "decode"
-                ? "bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B]"
+                ? "bg-[#273D58]  border border-white text-white"
                 : "text-gray-500"
               }`}
             onClick={() => {
@@ -303,21 +303,21 @@ export default function Base64EncoderDecoder({ id = "Base64 Encoder Decoder Gene
         {/* Action Buttons */}
         <div className="w-full max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <button
-            className="px-6 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-lg cursor-pointer"
+            className="px-6 py-2 bg-[#273D58]  border border-white text-white rounded-lg cursor-pointer"
             onClick={handleReset}
           >
             Reset
           </button>
           <button
-            className="px-8 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-lg shadow cursor transition"
+            className="px-8 py-2 bg-[#273D58]  border border-white text-white rounded-lg shadow cursor transition"
             onClick={tab === "encode" ? handleEncode : handleDecode}
           >
             {tab === "encode" ? "Encode →" : "Decode →"}
           </button>
           <button
             className={`px-6 py-2 bg-white border border-gray-200 rounded-lg flex items-center gap-2 transition cursor-pointer ${isCopied
-                ? "bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B]"
-                : "bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B]"
+                ? "bg-[#273D58]  border border-white text-white"
+                : "bg-[#273D58]  border border-white text-white"
               }`}
             onClick={handleCopy}
             disabled={!output}

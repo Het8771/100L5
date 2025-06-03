@@ -133,7 +133,7 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
                                     <span className="text-4xl text-indigo-400">
                                         <FaBrain/>
                                     </span>
-                                    <h1 className="text-xl sm:text-2xl md:text-lg font-bold text-gray-900">
+                                    <h1 className="text-xl sm:text-2xl md:text-lg font-bold text-white">
                                         AI&nbsp;Color
                                     </h1>
                                 </div>
@@ -191,7 +191,7 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
                     </select>
                     <button
                         onClick={handleGenerate}
-                        className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black px-5 py-3 rounded-md"
+                        className="bg-[#273D58] text-white border border-white px-5 py-3 rounded-md"
                     >
                         Generate
                     </button>
@@ -214,7 +214,7 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
                 </div>
 
                 <div className="flex gap-4 mt-4">
-                    <button onClick={() => setShowExportModal(true)} className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black px-4 py-2 rounded-md">
+                    <button onClick={() => setShowExportModal(true)} className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-white px-4 py-2 rounded-md">
                         Export Colors
                     </button>
                     <button onClick={() => setShowPreview(!showPreview)} className="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-md">
@@ -227,7 +227,7 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
 
                 {shareOpen && (
                     <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center p-4">
-                        <div className="bg-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
+                        <div className="bg-[#16283E] p-6 rounded-2xl shadow-xl max-w-md w-full relative">
                             <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
                                 <button onClick={() => setActiveTab("tool")} className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool" ? "bg-indigo-600 text-white" : "text-indigo-600 hover:bg-indigo-600 hover:text-white"}`}>⚙️ Share Tool</button>
                                 <button onClick={() => setActiveTab("home")} className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home" ? "bg-indigo-600 text-white" : "text-indigo-600 hover:bg-indigo-600 hover:text-white"}`}>🏠 Share 10015</button>
@@ -240,7 +240,7 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
                                 </div>
                                 <div className="flex justify-center gap-4">
                                     {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map((Icon, i) => (
-                                        <button key={i} className="text-white bg-indigo-500 rounded-full w-10 h-10 flex items-center justify-center">
+                                        <button key={i} className="text-white bg-[#273D58] rounded-full w-10 h-10 flex items-center justify-center">
                                             <Icon />
                                         </button>
                                     ))}
@@ -253,8 +253,8 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
 
                 {open && (
                     <div className="fixed inset-0 bg-black/30 flex z-40 justify-center items-center">
-                        <div className="bg-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
-                            <h2 className="text-xl font-bold mb-2">Bug Report</h2>
+                        <div className="bg-[#16283E] max-w-md w-full p-6 rounded-2xl shadow-lg relative">
+                            <h2 className="text-xl font-bold mb-2 ">Bug Report</h2>
                             <p className="text-sm mb-4"><strong>Tool:</strong> AI Color Palette Generator</p>
                             <label className="text-sm mb-1 block" htmlFor="bugDescription">Please describe the issue.</label>
                             <textarea
@@ -265,7 +265,7 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
                                 onChange={(e) => setBugDescription(e.target.value)}
                             />
                             <div className="flex justify-end gap-3 mt-4">
-                                <button onClick={() => setOpen(false)} className="px-4 py-2 bg-gray-200 rounded-lg">Cancel</button>
+                                <button onClick={() => setOpen(false)} className="px-4 py-2 bg-[#273D58] rounded-lg">Cancel</button>
                                 <button
                                     onClick={() => {
                                         if (!bugDescription.trim()) {

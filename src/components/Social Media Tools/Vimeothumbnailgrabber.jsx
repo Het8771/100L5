@@ -207,7 +207,7 @@ const Vimeothumbnailgrabber = ({id="Vimeo Thumbnail Grabber"}) => {
                   🏠 Share 10015
                 </button>
               </div>
-              <div className="text-center border border-gray-300 rounded-xl p-6">
+              <div className="text-center border border-gray-500 rounded-xl p-6">
                 <p className="text-sm mb-1 text-gray-500">
                   You are currently sharing:
                 </p>
@@ -267,7 +267,7 @@ const Vimeothumbnailgrabber = ({id="Vimeo Thumbnail Grabber"}) => {
               <div className="flex justify-end gap-3 mt-4">
                 <button
                   onClick={() => setOpen(false)}
-                  className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                 >
                   Cancel
                 </button>
@@ -281,7 +281,7 @@ const Vimeothumbnailgrabber = ({id="Vimeo Thumbnail Grabber"}) => {
                     setOpen(false);
                     setBugDescription("");
                   }}
-                  className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                 >
                   Submit
                 </button>
@@ -295,7 +295,7 @@ const Vimeothumbnailgrabber = ({id="Vimeo Thumbnail Grabber"}) => {
 
       <input
         type="text"
-        className="w-full border border-gray-300 rounded-md px-3 py-2 mb-6 text-gray-700 outline-none text-sm sm:text-base"
+        className="w-full border border-gray-500 rounded-md px-3 py-2 mb-6 text-gray-700 outline-none text-sm sm:text-base"
         placeholder="e.g. https://vimeo.com/22439234"
         value={vimeoUrl}
         onChange={handleUrlChange}
@@ -356,7 +356,7 @@ const Vimeothumbnailgrabber = ({id="Vimeo Thumbnail Grabber"}) => {
                     />
                     <div className="flex flex-row flex-wrap justify-center gap-2 mt-2">
                       <button
-                        className="px-2 sm:px-3 py-1 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100 text-xs sm:text-sm"
+                        className="px-2 sm:px-3 py-1 border border-gray-500 rounded-md text-gray-700 hover:bg-gray-100 text-xs sm:text-sm"
                         onClick={() => navigator.clipboard.writeText(thumb.url)}
                       >
                         Copy URL

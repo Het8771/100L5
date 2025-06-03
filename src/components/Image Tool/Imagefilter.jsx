@@ -215,7 +215,7 @@ export default function ImageFilter({id="Image Filter"}) {
                 🏠 Share 10015
               </button>
             </div>
-            <div className="text-center border border-gray-300 rounded-xl p-6">
+            <div className="text-center border border-gray-500 rounded-xl p-6">
               <p className="text-sm mb-1 text-gray-500">You are currently sharing:</p>
               <h2 className="text-xl font-semibold mb-5 text-gray-600">
                 {activeTab === "tool" ? "Google Fonts Pair Finder" : "10015 Tools"}
@@ -257,7 +257,7 @@ export default function ImageFilter({id="Image Filter"}) {
             </label>
             <textarea
               id="bugDescription"
-              className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+              className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
               placeholder="Description*"
               value={bugDescription}
               onChange={(e) => setBugDescription(e.target.value)}
@@ -265,7 +265,7 @@ export default function ImageFilter({id="Image Filter"}) {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Cancel
               </button>
@@ -279,7 +279,7 @@ export default function ImageFilter({id="Image Filter"}) {
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Submit
               </button>
@@ -291,7 +291,7 @@ export default function ImageFilter({id="Image Filter"}) {
       {!image && (
         <label
           htmlFor="file-upload"
-          className="w-full max-w-4xl h-40  border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer mb-8 bg-white transition"
+          className="w-full max-w-4xl h-40  border-2 border-dashed border-gray-500 rounded-lg flex flex-col items-center justify-center cursor-pointer mb-8 bg-white transition"
         >
           <input
             id="file-upload"
@@ -348,7 +348,7 @@ export default function ImageFilter({id="Image Filter"}) {
             </label>
             <select
               id="filter-select"
-              className="w-full border border-gray-300 rounded px-3 py-2 outline-none bottom-full"
+              className="w-full border border-gray-500 rounded px-3 py-2 outline-none bottom-full"
               value={selectedFilter.name}
               onChange={handleFilterChange}
             >
@@ -382,7 +382,7 @@ export default function ImageFilter({id="Image Filter"}) {
 
           <button
             onClick={handleApply}
-            className="cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] px-8 py-2 rounded-full transition"
+            className="cursor-pointer bg-[#273D58]  border border-white text-white px-8 py-2 rounded-full transition"
           >
             Apply
           </button>
@@ -390,14 +390,14 @@ export default function ImageFilter({id="Image Filter"}) {
           <div className="flex gap-4">
             <button
               onClick={handleReset}
-              className="cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] flex items-center gap-2 px-6 py-2 rounded-full transition"
+              className="cursor-pointer bg-[#273D58]  border border-white text-white flex items-center gap-2 px-6 py-2 rounded-full transition"
             >
               Reset
             </button>
 
             <button
               onClick={handleApplyAndDownload}
-              className="cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] flex items-center gap-2 px-6 py-2 rounded-full transition"
+              className="cursor-pointer bg-[#273D58]  border border-white text-white flex items-center gap-2 px-6 py-2 rounded-full transition"
             >
               Download
             </button>

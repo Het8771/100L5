@@ -109,30 +109,30 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
           <span className="text-4xl text-indigo-400">
             <MdOutlineContentPaste />
           </span>
-          <h1 className="text-2xl font-bold text-gray-900 md:text-lg lg:text-2xl sm:text-lg">
+          <h1 className="text-2xl font-bold text-white md:text-lg lg:text-2xl sm:text-lg">
             Lorem&nbsp;Ipsum&nbsp;Generator
           </h1>
         </div>
         <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 lg:justify-end lg:gap-2">
           <button
             onClick={() => setShareOpen(true)}
-            className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-500 bg-indigo-50 text-indigo-600 mb-2 md:mb-0 cursor-pointer"
+            className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white mb-2 md:mb-0 cursor-pointer"
           >
             <FiShare2 className="mr-2" size={18} />
             Share
           </button>
           <button
-            className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-500 bg-indigo-50 text-indigo-600 cursor-pointer hover:bg-indigo-100 transition"
+            className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white cursor-pointer transition"
             onClick={() => setOpen(true)}
           >
-            <FiAlertCircle className="text-indigo-600 text-base" />
+            <FiAlertCircle className="text-white text-base" />
             Report Bug
           </button>
           <button
             onClick={onFavoriteToggle}
             className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
-              ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-              : "bg-indigo-50 border-indigo-500 text-indigo-600"
+              ? "border border-white bg-[#273D58]  border border-white text-white"
+              : "bg-[#273D58]  border border-white text-white"
               }`}
           >
             {isFavorite ? (
@@ -152,9 +152,9 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
       {/* Sliders */}
       <div className="flex flex-col md:flex-row gap-6 mb-6">
         <div className="flex-1">
-          <label className="text-sm text-gray-500 block mb-1">
+          <label className="text-sm text-gray-400 block mb-1">
             Paragraph Count:{" "}
-            <span className="font-semibold text-indigo-500">{paragraphs}</span>
+            <span className="font-semibold text-gray-400">{paragraphs}</span>
           </label>
           <input
             type="range"
@@ -162,13 +162,13 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
             max={10}
             value={paragraphs}
             onChange={(e) => setParagraphs(Number(e.target.value))}
-            className="w-full accent-indigo-500"
+            className="w-full accent-white"
           />
         </div>
         <div className="flex-1">
-          <label className="text-sm text-gray-500 block mb-1">
+          <label className="text-sm text-gray-400 block mb-1">
             Avg. Words Per Sentence:{" "}
-            <span className="font-semibold text-indigo-500">
+            <span className="font-semibold text-gray-400">
               {wordsPerSentence}
             </span>
           </label>
@@ -178,13 +178,13 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
             max={40}
             value={wordsPerSentence}
             onChange={(e) => setWordsPerSentence(Number(e.target.value))}
-            className="w-full accent-indigo-500"
+            className="w-full accent-white"
           />
         </div>
         <div className="flex-1">
-          <label className="text-sm text-gray-500 block mb-1">
+          <label className="text-sm text-gray-400 block mb-1">
             Avg. Sentences Per Paragraph:{" "}
-            <span className="font-semibold text-indigo-500">
+            <span className="font-semibold text-gray-400">
               {sentencesPerParagraph}
             </span>
           </label>
@@ -194,18 +194,18 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
             max={20}
             value={sentencesPerParagraph}
             onChange={(e) => setSentencesPerParagraph(Number(e.target.value))}
-            className="w-full accent-indigo-500"
+            className="w-full accent-white"
           />
         </div>
       </div>
 
       {/* Output */}
-      <div className="bg-white rounded-2xl border border-gray-300 shadow-lg p-6 mb-6">
-        <div className="text-xs text-indigo-500 mb-2 font-semibold">
+      <div className="bg-[#16283E] rounded-2xl border border-white shadow-lg p-6 mb-6">
+        <div className="text-xs text-gray-400 mb-2 font-semibold">
           Lorem Ipsum Text
         </div>
         <div
-          className="text-gray-700 text-base whitespace-pre-line overflow-x-auto max-h-60"
+          className="text-gray-400 text-base whitespace-pre-line overflow-x-auto max-h-60"
           style={{ minHeight: 80 }}
         >
           {output || "Click Generate to create Lorem Ipsum text."}
@@ -216,14 +216,14 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
       <div className="flex flex-wrap gap-4">
         <button
           onClick={reset}
-          className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] px-5 py-2 rounded-xl shadow-md flex items-center cursor-pointer disabled:opacity-50"
+          className="bg-[#273D58]  border border-white text-white px-5 py-2 rounded-xl shadow-md flex items-center cursor-pointer disabled:opacity-50"
         >
           Reset
         </button>
         <button
           onClick={handleCopy}
           disabled={!output}
-          className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] px-5 py-2 rounded-xl shadow-md flex items-center cursor-pointer disabled:opacity-50"
+          className="bg-[#273D58]  border border-white text-white px-5 py-2 rounded-xl shadow-md flex items-center cursor-pointer disabled:opacity-50"
         >
           {!copied ? (
             <>
@@ -237,7 +237,7 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
 
         <button
           onClick={generate}
-          className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] px-5 py-2 rounded-xl shadow-md flex items-center cursor-pointer disabled:opacity-50"
+          className="bg-[#273D58]  border border-white text-white px-5 py-2 rounded-xl shadow-md flex items-center cursor-pointer disabled:opacity-50"
         >
           Generate
         </button>
@@ -246,13 +246,13 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
       {/* Share Popup */}
       {shareOpen && (
         <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
+          <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
             <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
               <button
                 onClick={() => setActiveTab("tool")}
                 className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
-                  ? "bg-indigo-600 text-white"
-                  : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
+                  ? "bg-[#273D58]  border border-white text-white"
+                  : "text-black hover:bg-[#273D58] hover:text-white"
                   }`}
               >
                 ⚙️ Share Tool
@@ -260,31 +260,31 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
               <button
                 onClick={() => setActiveTab("home")}
                 className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
-                  ? "bg-indigo-600 text-white"
-                  : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
+                  ? "bg-[#273D58]  border border-white text-white"
+                  : "text-black hover:bg-[#273D58] hover:text-white"
                   }`}
               >
                 🏠 Share 10015
               </button>
             </div>
-            <div className="text-center border border-gray-300 rounded-xl p-6">
-              <p className="text-sm mb-1 text-gray-500">
+            <div className="text-center border border-gray-500 rounded-xl p-6">
+              <p className="text-sm mb-1 text-white">
                 You are currently sharing:
               </p>
-              <h2 className="text-xl font-semibold mb-5 text-gray-600">
+              <h2 className="text-xl font-semibold mb-5 text-white">
                 {activeTab === "tool"
                   ? "Google Fonts Pair Finder"
                   : "10015 Tools"}
               </h2>
               <div className="flex justify-center mb-6">
-                <MdShare className="text-indigo-500 text-7xl" />
+                <MdShare className="text-white text-7xl" />
               </div>
               <div className="flex justify-center gap-4">
                 {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
                   (Icon, i) => (
                     <button
                       key={i}
-                      className="text-white bg-indigo-500 rounded-full w-10 h-10 flex items-center justify-center"
+                      className="text-black bg-white rounded-full w-10 h-10 flex items-center justify-center"
                     >
                       <Icon />
                     </button>
@@ -293,7 +293,7 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
               </div>
             </div>
             <button
-              className="absolute top-0 h-2 w-2 right-4 text-gray-600 text-lg cursor-pointer"
+              className="absolute top-0 h-2 w-2 right-4 text-white text-lg cursor-pointer"
               onClick={() => setShareOpen(false)}
             >
               ✕
@@ -304,8 +304,8 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
 
       {/* Bug Report Popup */}
       {open && (
-        <div className="fixed inset-0 bg-black/30 z-20 flex justify-center items-center">
-          <div className="bg-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
+        <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
+          <div className="bg-[#16283E] border border-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
             <h2 className="text-xl font-bold mb-2">Bug Report</h2>
             <p className="text-sm mb-4">
               <strong>Tool:</strong> Lorem Ipsum Generator
@@ -315,7 +315,7 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
             </label>
             <textarea
               id="bugDescription"
-              className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+              className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 "
               placeholder="Description*"
               value={bugDescription}
               onChange={(e) => setBugDescription(e.target.value)}
@@ -323,7 +323,7 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white border border-white rounded-lg"
               >
                 Cancel
               </button>
@@ -337,7 +337,7 @@ function LoremIpsumGenerator({ id = "Lorem Ipsum Generator" }) {
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
               >
                 Submit
               </button>

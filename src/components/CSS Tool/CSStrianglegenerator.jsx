@@ -275,7 +275,7 @@ border-color: ${borderStyles.borderColor};
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-lg hover:opacity-90 transition"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg hover:opacity-90 transition"
               >
                 Cancel
               </button>
@@ -289,7 +289,7 @@ border-color: ${borderStyles.borderColor};
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-lg hover:opacity-90 transition"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg hover:opacity-90 transition"
               >
                 Submit
               </button>
@@ -394,7 +394,7 @@ border-color: ${borderStyles.borderColor};
           {cssCode}
         </pre>
         <button
-          className="mt-2 px-6 py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg w-full sm:w-auto"
+          className="mt-2 px-6 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg w-full sm:w-auto"
           onClick={() => {
             navigator.clipboard.writeText(cssCode);
           }}

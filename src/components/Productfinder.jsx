@@ -13,13 +13,11 @@ import {
   FaHeart,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
 import search from "../image/search.svg";
 import explore from "../image/explore.svg";
 import finder from "../image/finder.svg";
 import firefox from "../image/firefox.svg";
-import Getleaf from "../image/Getleaf.svg";
-import productback from "../image/productback.svg";
+import productback1 from "../image/productback1.svg";
 import Text from "../image/Text.svg";
 import folder from "../image/folder.svg";
 import cloud2 from "../image/cloud2.svg";
@@ -59,7 +57,7 @@ const ProductFinderHero = () => {
       "Documentation",
       "Database",
       "Version Control",
-    ],
+    ],  
     design: ["Coloring", "Background", "Animation", "UX Tools"],
     marketing: ["Email Marketing", "Affiliation", "Conversion", "SEO"],
     business: ["Accounting", "CRM", "Project Management"],
@@ -221,9 +219,9 @@ const ProductFinderHero = () => {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative bg-[#16283E]">
         {/* Pink background that covers navbar */}
-        <div
+        {/* <div
           className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%] "
           style={{ zIndex: 1 }}
         >
@@ -232,15 +230,15 @@ const ProductFinderHero = () => {
             alt="Background Shape"
             className="w-full h-auto object-cover"
           />
-        </div>
+        </div> */}
 
-        <section className="w-full relative bg-white">
+        <section className="w-full relative bg-[#16283E]">
           <Navbar />
-          <img
-            src={leaf1}
+          {/* <img
+            src={leaf1} 
             alt="leav"
             className="top-15 absolute hidden lg:block"
-          />
+          /> */}
           <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
             <img
               src={Oval2}
@@ -251,10 +249,10 @@ const ProductFinderHero = () => {
           <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8 relative">
             <div className="py-12 flex flex-col lg:flex-row items-center justify-between relative z-10 gap-10">
               <div className="flex-1 text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
                   Product Finder
                 </h1>
-                <p className="text-gray-600 text-base sm:text-lg">
+                <p className="text-gray-500 text-base sm:text-lg">
                   Find Exactly What You Need <br /> Your Shortcut to the Right
                   Choice
                 </p>
@@ -263,7 +261,7 @@ const ProductFinderHero = () => {
                    <Link
                   to="/"
                   state={{ scrollTo: 'featured-tools' }}
-                  className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
+                  className="bg-[#273D58]  border border-white text-white font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
                 >
                   EXPLORE TOOL
                 </Link>
@@ -274,7 +272,7 @@ const ProductFinderHero = () => {
                     />
                   </div>
                   <div className="relative inline-flex items-center">
-                    <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer">
+                    <button className="bg-[#273D58]  border border-white text-white font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer">
                       PRODUCT FINDER
                     </button>
                     <img
@@ -288,18 +286,18 @@ const ProductFinderHero = () => {
                 <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6 mt-10 max-w-md mx-auto lg:mx-0">
                   <div className="flex flex-col items-center space-y-3">
                     <Link to="/Signup">
-                      <button className="bg-gray-100 px-8 py-2 rounded-full text-gray-600 font-semibold shadow-md whitespace-nowrap cursor-pointer">
+                      <button className="bg-[#273D58] px-8 py-2 rounded-full text-gray-400 font-semibold shadow-md whitespace-nowrap cursor-pointer">
                         LOGIN / REGISTER
                       </button>
                     </Link>
-                    <Link to="/Login">
+                    {/* <Link to="/Login">
                       <button className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
                         SIGN IN
                       </button>
-                    </Link>
+                    </Link> */}
                   </div>
 
-                  <div className="text-center ">
+                  {/* <div className="text-center ">
                     <p className="text-sm text-gray-500 mb-2 max-w-xs mx-auto sm:mx-0">
                       Get the extension and access all tools with just one click
                     </p>
@@ -331,7 +329,7 @@ const ProductFinderHero = () => {
                       </a>
                       <div className="h-px w-12 bg-gray-300" />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -345,12 +343,12 @@ const ProductFinderHero = () => {
             </div>
 
             {/* Category Buttons */}
-            <div className="bg-white relative z-10 rounded-lg">
+            <div className="bg-[#16283E] relative z-10 rounded-lg">
               <div
-                className="text-center py-2 bg-white bg-no-repeat bg-center bg-contain mb-10"
-                style={{ backgroundImage: `url(${productback})` }}
+                className="text-center py-2 bg-[#16283E] bg-no-repeat bg-center bg-contain mb-10 mt-10"
+                style={{ backgroundImage: `url(${productback1})` }}
               >
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#0D1440]">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white">
                   Product Categories
                 </h2>
                 <p className="text-sm text-gray-500 mt-1">
@@ -399,7 +397,7 @@ const ProductFinderHero = () => {
           {/* Tags Section */}
           <div className="w-full">
             <div
-              className="relative py-12 px-4 text-center bg-[#cbdcf6] bg-no-repeat bg-cover bg-center"
+              className="relative py-12 px-4 text-center bg-[#D5C7FF] bg-no-repeat bg-cover bg-center"
               style={{ backgroundImage: `url(${Text})` }}
             >
               <img
@@ -453,12 +451,12 @@ const ProductFinderHero = () => {
 
           <Link to="/Productfinder1">
             {/* Product Cards */}
-            <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+            <div className=" max-w-7xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
               {cards.length > 0 ? (
                 cards.map((card, index) => (
                   <div
                     key={index}
-                    className="bg-white shadow rounded-[24px] overflow-hidden"
+                    className="bg-[#273D58] shadow rounded-[24px] overflow-hidden"
                   >
                     <div className="relative">
                       <img
@@ -471,28 +469,28 @@ const ProductFinderHero = () => {
                       </button>
                     </div>
                     <div className="p-4">
-                      <h2 className="font-bold text-lg text-gray-900">
+                      <h2 className="font-bold text-lg text-white">
                         {card.title}
                       </h2>
                       <p className="text-sm text-gray-500 mb-1">boosted by</p>
-                      <p className="text-sm text-gray-600 mb-3">
+                      <p className="text-sm text-gray-500 mb-3">
                         {card.description}
                       </p>
                       <div className="flex flex-wrap gap-2 mb-3">
                         {card.tags.map((tag, i) => (
                           <span
                             key={i}
-                            className="bg-gray-200 text-gray-700 text-xs px-3 py-1 rounded-full"
+                            className="bg-[#16283E] text-gray-400 text-xs px-3 py-1 rounded-full"
                           >
                             {tag}
                           </span>
                         ))}
                       </div>
                       <div className="text-xs text-gray-500 flex justify-between pt-2 pt-3">
-                        <span className="font-medium text-black">
+                        <span className="font-medium text-white">
                           {card.price}
                         </span>
-                        <span className="text-gray-700">
+                        <span className="text-white">
                           {card.date} / {card.time}
                         </span>
                       </div>
@@ -508,10 +506,11 @@ const ProductFinderHero = () => {
           </Link>
         </section>
       </div>
-      <div className="max-w-7xl mx-auto p-2">
+      
+                  <div className="bg-[#16283E]">
         <Support />
-      </div>
       <Footer />
+      </div>
     </>
   );
 };

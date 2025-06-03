@@ -40,13 +40,13 @@ function Home() {
     {
       title: "AI Color Palette Generator",
       icon: a1,
-      bgColor: "bg-[#D5C7FF]",
+      bgColor: "bg-[#FAA9E4]",
       link: "/AIColor",
     },
     {
       title: "Tweet Generator",
       icon: a2,
-      bgColor: "bg-[#AEDFFF]",
+      bgColor: "bg-[#D5C7FF]",
       link: "/TweetGenerator",
     },
     {
@@ -58,39 +58,39 @@ function Home() {
     {
       title: "Text to Handwriting Converter",
       icon: a4,
-      bgColor: "bg-[#AEDFFF]",
+      bgColor: "bg-[#FAA9E4]",
       link: "/Text",
     },
     {
       title: "Code to Image Converter",
       icon: a5,
-      bgColor: "bg-[#D5C7FF]",
+      bgColor: "bg-[#FAA9E4]",
       style: "absolute -top-4 -left-4 w-10 h-10",
       link: "/CodetoImage",
     },
     {
       title: "CSS Loader Generator",
       icon: a6,
-      bgColor: "bg-[#AEDFFF]",
+      bgColor: "bg-[#D5C7FF]",
       link: "/Cssloader",
     },
     { title: "Image Caption Generator", icon: a7, bgColor: "bg-[#D5C7FF]" },
     {
       title: "Instagram Post Generator",
       icon: a8,
-      bgColor: "bg-[#AEDFFF]",
+      bgColor: "bg-[#FAA9E4]",
       link: "/InstagramPostGenerator",
     },
     {
       title: "CSS Glassmorphism Generator",
       icon: a7,
-      bgColor: "bg-[#D5C7FF]",
+      bgColor: "bg-[#FAA9E4]",
       link: "/Cssglassmorphism",
     },
     {
       title: "CSS Clip Path Generator",
       icon: a8,
-      bgColor: "bg-[#AEDFFF]",
+      bgColor: "bg-[#D5C7FF]",
       link: "/Cssclippathgenerator",
     },
     {
@@ -102,7 +102,7 @@ function Home() {
     {
       title: "SVG Pattern Generator",
       icon: a8,
-      bgColor: "bg-[#AEDFFF]",
+      bgColor: "bg-[#FAA9E4]",
       link: "/SVGpattern",
     },
     {
@@ -114,7 +114,7 @@ function Home() {
     {
       title: "Photo Censor",
       icon: a8,
-      bgColor: "bg-[#AEDFFF]",
+      bgColor: "bg-[#FAA9E4]",
       link: "/Photocensor",
     },
     {
@@ -212,6 +212,7 @@ function Home() {
   };
   return (
     <>
+    <div className="bg-[#16283E]">
       <div className="mx-auto">
         <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
           <img
@@ -220,7 +221,7 @@ function Home() {
             className="w-150 h-auto object-cover "
           />
         </div>
-        <div
+        {/* <div
           className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%]"
           style={{ zIndex: -1 }}
         >
@@ -229,7 +230,7 @@ function Home() {
             alt="Background Shape"
             className="w-full h-auto object-cover"
           />
-        </div>
+        </div> */}
         <Navbar />
         <img
           src={leaf1}
@@ -240,21 +241,21 @@ function Home() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-12 flex flex-col lg:flex-row items-center justify-between relative z-10 gap-10">
           <div className="flex-1 text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
               All Online Tools in <br />
               "One Box"
             </h1>
-            <p className="text-gray-600 text-base sm:text-lg">
+            <p className="text-gray-400 text-base sm:text-lg">
               No need to bookmark the tools you like separately.
             </p>
-            <p className="text-gray-600 text-base sm:text-lg">
+            <p className="text-gray-400 text-base sm:text-lg">
               10015.io is a "free all-in-one toolbox" solution created to ease
               your life by preventing bookmark mess.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
               <div className="relative inline-flex items-center">
                 <button
-                  className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer"
+                  className="bg-[#273D58]  border border-white text-white font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer"
                   onClick={scrollToFeaturedTools}
                 >
                   EXPLORE TOOL
@@ -267,7 +268,7 @@ function Home() {
               </div>
               <div className="relative inline-flex items-center">
                 <Link to="/Productfinder">
-                  <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer">
+                  <button className="bg-[#273D58]  border border-white text-white font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer">
                     PRODUCT FINDER
                   </button>
                 </Link>
@@ -282,18 +283,18 @@ function Home() {
             <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6 mt-10 max-w-md mx-auto lg:mx-0">
               <div className="flex flex-col items-center space-y-3">
                 <Link to="/Signup">
-                  <button className="bg-gray-100 px-8 py-2 rounded-full text-gray-600 font-semibold shadow-md whitespace-nowrap cursor-pointer">
+                  <button className="bg-[#273D58] px-8 py-2 rounded-full text-gray-400 font-semibold shadow-md whitespace-nowrap cursor-pointer">
                     LOGIN / REGISTER
                   </button>
                 </Link>
-                <Link to="/Login">
+            '    {/* <Link to="/Login">
                   <div className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
                     SIGN IN
                   </div>
-                </Link>
+                </Link>' */}
               </div>
 
-              <div className="text-center">
+              {/* <div className="text-center">
                 <p className="text-sm text-gray-500 mb-2 max-w-xs mx-auto sm:mx-0">
                   Get the extension and access all tools with just one click
                 </p>
@@ -325,7 +326,7 @@ function Home() {
                   </a>
                   <div className="h-px w-12 bg-gray-300" />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -339,7 +340,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="bg-[#BAD9FF] relative overflow-hidden">
+      <div className="bg-[#D5C7FF] relative overflow-hidden">
         <div className="absolute right-0 top-1/4 opacity-5 pointer-events-none">
           <img
             src={leaf2}
@@ -384,18 +385,18 @@ function Home() {
 
       <div
         ref={featuredToolsRef}
-        className="bg-white w-full overflow-hidden py-12 md:py-16"
+        className="bg-[#16283E] w-full overflow-hidden py-12 md:py-16"
       >
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="mb-0 lg:mb-0 w-full md:w-2/4 lg:w-1/5">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-navy-900">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white">
                 Featured Tools
               </h2>
-              <p className="text-lg text-gray-600 mt-2">
+              <p className="text-lg text-gray-400 mt-2">
                 Top Tools, Handpicked for You
               </p>
-              <p className="text-gray-500 mt-2">
+              <p className="text-gray-400 mt-2">
                 It's professional, user-focused, and conveys trust and quality.
               </p>
             </div>
@@ -448,7 +449,7 @@ function Home() {
       </div>
 
       {/* Tool Categories */}
-      <div className="w-full py-6 bg-white overflow-hidden relative ">
+      <div className="w-full py-6 bg-[#16283E] overflow-hidden relative ">
         <div className="flex items-center justify-center  rounded-lg overflow-hidden z-50 relative">
           <img
             src={tool}
@@ -458,7 +459,7 @@ function Home() {
 
           <div className="absolute md:top-12 left-0 w-full h flex flex-col items-center justify-center px-4">
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1F2B56]">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
                 Tool Categories
               </h2>
               <p className="text-gray-400 mt-1 text-sm md:text-base">
@@ -528,6 +529,7 @@ function Home() {
         </div>
       </div>
       <Footer />
+      </div>
     </>
   );
 }

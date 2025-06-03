@@ -249,7 +249,7 @@ const Twitteradrevenuegenerator = ({id="Twitter Ad Revenue Generator"}) => {
                 🏠 Share 10015
               </button>
             </div>
-            <div className="text-center border border-gray-300 rounded-xl p-6">
+            <div className="text-center border border-gray-500 rounded-xl p-6">
               <p className="text-sm mb-1 text-gray-500">
                 You are currently sharing:
               </p>
@@ -305,7 +305,7 @@ const Twitteradrevenuegenerator = ({id="Twitter Ad Revenue Generator"}) => {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Cancel
               </button>
@@ -319,7 +319,7 @@ const Twitteradrevenuegenerator = ({id="Twitter Ad Revenue Generator"}) => {
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Submit
               </button>
@@ -334,7 +334,7 @@ const Twitteradrevenuegenerator = ({id="Twitter Ad Revenue Generator"}) => {
         <div className="w-full md:w-1/3 flex justify-center">
           <div
             ref={phoneRef}
-            className="relative border-2 border-gray-300 rounded-3xl
+            className="relative border-2 border-gray-500 rounded-3xl
               h-[65vw] max-h-[600px] w-[90vw] max-w-[320px] min-w-[180px] overflow-hidden
               bg-white shadow-md"
             style={{ aspectRatio: "1/2" }}
@@ -429,7 +429,7 @@ const Twitteradrevenuegenerator = ({id="Twitter Ad Revenue Generator"}) => {
               <div className="relative z-10">
                 <button
                   type="button"
-                  className="w-full p-2.5 border border-gray-300 rounded-md bg-white flex items-center justify-between focus:outline-none"
+                  className="w-full p-2.5 border border-gray-500 rounded-md bg-white flex items-center justify-between focus:outline-none"
                   onClick={(e) => {
                     e.stopPropagation();
                     setDropdownOpen(!dropdownOpen);
@@ -502,7 +502,7 @@ const Twitteradrevenuegenerator = ({id="Twitter Ad Revenue Generator"}) => {
             <div className="flex items-center mx-4">or</div>
             <div className="w-full">
               <label
-                className={`flex items-center justify-center w-full p-2.5 border border-gray-300 rounded-md cursor-pointer ${
+                className={`flex items-center justify-center w-full p-2.5 border border-gray-500 rounded-md cursor-pointer ${
                   wallpaperType === "custom" ? "bg-blue-50" : "bg-white"
                 }`}
               >
@@ -542,7 +542,7 @@ const Twitteradrevenuegenerator = ({id="Twitter Ad Revenue Generator"}) => {
                 name="carrier"
                 value={formData.carrier}
                 onChange={handleInputChange}
-                className="w-full p-2.5 border border-gray-300 rounded-md outline-none"
+                className="w-full p-2.5 border border-gray-500 rounded-md outline-none"
                 autoComplete="off"
               />
             </div>
@@ -555,7 +555,7 @@ const Twitteradrevenuegenerator = ({id="Twitter Ad Revenue Generator"}) => {
                 name="revenue"
                 value={formData.revenue}
                 onChange={handleInputChange}
-                className="w-full p-2.5 border border-gray-300 rounded-md outline-none"
+                className="w-full p-2.5 border border-gray-500 rounded-md outline-none"
                 autoComplete="off"
               />
             </div>

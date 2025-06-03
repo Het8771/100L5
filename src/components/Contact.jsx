@@ -7,21 +7,20 @@ import Footer from "./Footer";
 import ston from "../image/ston.svg";
 import Oval2 from "../image/Oval2.svg";
 import leaf1 from "../image/leaf1.svg";
-import { Link } from "react-router-dom";  
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
-
   const exploreLinkState = {
-  scrollTo: 'featured-tools',
-  fromContactPage: true,
-  message: "Navigated from Contact Section",
-};
+    scrollTo: "featured-tools",
+    fromContactPage: true,
+    message: "Navigated from Contact Section",
+  };
 
   return (
     <>
       <div className="relative ">
         {/* Background Image - Hidden on mobile/tablet, visible on lg screens */}
-        <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
+        {/* <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
           <img
             src={Oval2}
             alt="Background"
@@ -32,8 +31,8 @@ const ContactSection = () => {
             alt="leav"
             className="top-15 absolute hidden lg:block"
           />
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%]"
           style={{ zIndex: 1 }}
         >
@@ -42,15 +41,15 @@ const ContactSection = () => {
             alt="Background Shape"
             className="w-full h-auto object-cover"
           />
-        </div>
+        </div> */}
         <Navbar />
         <div className=" max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           <div className="py-12 flex flex-col lg:flex-row items-center justify-between relative z-10 ">
             <div className="flex-1 text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
                 Contact us
               </h1>
-              <p className="text-gray-600 text-base sm:text-lg">
+              <p className="text-white text-base sm:text-lg">
                 You can contact via email for your issues related with 10015.io.
                 You can give feedback about current tools or suggest new tools
                 that you want to see on 10015 Tools.
@@ -85,14 +84,14 @@ const ContactSection = () => {
               <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6 mt-10 max-w-md mx-auto lg:mx-0">
                 <div className="flex flex-col items-center space-y-3 md:mx-auto lg:mx-25">
                   <Link to="/Signup">
-                    <button className="bg-gray-100 px-8 py-2 rounded-full text-gray-600 font-semibold shadow-md whitespace-nowrap cursor-pointer">
+                    <button className="bg-[#273D58] px-8 py-2 rounded-full text-white font-semibold shadow-md whitespace-nowrap cursor-pointer">
                       LOGIN / REGISTER
                     </button>
                   </Link>
                   <Link to="/Signup">
-                    <button className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
+                    {/* <button className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
                       SIGN IN
-                    </button>
+                    </button> */}
                   </Link>
                 </div>
 
@@ -122,6 +121,8 @@ const ContactSection = () => {
               />
             </div>
           </div>
+        
+
           <Support />
         </div>
         <Footer />

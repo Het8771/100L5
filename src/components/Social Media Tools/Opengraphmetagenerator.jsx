@@ -221,7 +221,7 @@ const Opengraphmetagenerator = ({id="Open Graph Meta Generator"}) => {
                 🏠 Share 10015
               </button>
             </div>
-            <div className="text-center border border-gray-300 rounded-xl p-6">
+            <div className="text-center border border-gray-500 rounded-xl p-6">
               <p className="text-sm mb-1 text-gray-500">
                 You are currently sharing:
               </p>
@@ -277,7 +277,7 @@ const Opengraphmetagenerator = ({id="Open Graph Meta Generator"}) => {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Cancel
               </button>
@@ -291,7 +291,7 @@ const Opengraphmetagenerator = ({id="Open Graph Meta Generator"}) => {
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Submit
               </button>
@@ -463,7 +463,7 @@ const Opengraphmetagenerator = ({id="Open Graph Meta Generator"}) => {
                   name="audioUrl"
                   value={formData.audioUrl}
                   onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded-md outline-none"
+                  className="w-full p-2 border border-gray-500 rounded-md outline-none"
                 />
               </div>
 
@@ -476,7 +476,7 @@ const Opengraphmetagenerator = ({id="Open Graph Meta Generator"}) => {
                   name="determiner"
                   value={formData.determiner}
                   onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded-md outline-none"
+                  className="w-full p-2 border border-gray-500 rounded-md outline-none"
                 />
               </div>
 
@@ -489,7 +489,7 @@ const Opengraphmetagenerator = ({id="Open Graph Meta Generator"}) => {
                   name="locale"
                   value={formData.locale}
                   onChange={handleChange}
-                  className="w-full p-2 border border-gray-300 rounded-md outline-none"
+                  className="w-full p-2 border border-gray-500 rounded-md outline-none"
                 />
               </div>
             </div>
@@ -500,13 +500,13 @@ const Opengraphmetagenerator = ({id="Open Graph Meta Generator"}) => {
         <div className="flex justify-center space-x-4 mt-8">
           <button
             onClick={handleReset}
-            className="px-6 py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg  flex items-center"
+            className="px-6 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg  flex items-center"
           >
             Reset
           </button>
           <button
             onClick={handleGenerate}
-            className="px-6 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center"
+            className="px-6 py-2 bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center"
           >
             Generate
           </button>

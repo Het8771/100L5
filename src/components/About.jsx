@@ -1,7 +1,6 @@
 import search from "../image/search.svg";
 import leaf1 from "../image/leaf1.svg";
 import boy from "../image/boy.svg";
-import ston from "../image/ston.svg";
 import facebook from "../image/facebook.svg";
 import instagram from "../image/instagram.svg";
 import linkedin from "../image/linkedin.svg";
@@ -21,7 +20,7 @@ import chrome from "../image/chrome.svg";
 export default function About() {
   return (
     <>
-      <div className="mx-auto">
+      <div className="mx-auto bg-[#16283E]">
         <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
           <img
             src={Oval2}
@@ -33,11 +32,7 @@ export default function About() {
           className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%] "
           style={{ zIndex: -1 }}
         >
-          <img
-            src={ston}
-            alt="Background Shape"
-            className="w-full h-auto object-cover"
-          />
+
         </div>
         <Navbar />
         <img
@@ -83,21 +78,17 @@ export default function About() {
               </div>
             </div>
 
-            <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6 mt-10 max-w-md mx-auto lg:mx-0">
-              <div className="flex flex-col items-center space-y-3">
-                <Link to="/Signup">
-                  <button className="bg-gray-100 px-8 py-2 rounded-full text-gray-600 font-semibold shadow-md whitespace-nowrap cursor-pointer">
-                    LOGIN / REGISTER
-                  </button>
-                </Link>
-                <Link to="/Signup">
-                  <button className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
-                    SIGN IN
-                  </button>
-                </Link>
-              </div>
+                <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6 mt-10 max-w-md mx-auto lg:mx-0">
+                  <div className="flex flex-col items-center space-y-3">
+                    <Link to="/Signup">
+                      <button className="bg-[#273D58] px-8 py-2 rounded-full text-gray-400 font-semibold shadow-md whitespace-nowrap cursor-pointer">
+                        LOGIN / REGISTER
+                      </button>
+                    </Link>
 
-              <div className="text-center ">
+                  </div>
+
+                  {/* <div className="text-center ">
                 <p className="text-sm text-gray-500 mb-2 max-w-xs mx-auto sm:mx-0">
                   Get the extension and access all tools with just one click
                 </p>
@@ -109,11 +100,7 @@ export default function About() {
                     rel="noopener noreferrer"
                     className="flex items-center py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    <img
-                      src={chrome}
-                      alt="Chrome"
-                      className="w-6 h-6"
-                    />
+                    <img src={chrome} alt="Chrome" className="w-6 h-6" />
                   </a>
                   <a
                     href="https://chrome.google.com/webstore"
@@ -121,55 +108,52 @@ export default function About() {
                     rel="noopener noreferrer"
                     className="flex items-center py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    <img
-                      src={firefox}
-                      alt="Firefox"
-                      className="w-6 h-6"
-                    />
+                    <img src={firefox} alt="Firefox" className="w-6 h-6" />
                   </a>
                   <div className="h-px w-12 bg-gray-300" />
                 </div>
+              </div> */}
+                </div>
+              </div>
+
+              <div className="flex-1 flex justify-center max-w-md w-full">
+                <img
+                  src={search}
+                  alt="Illustration"
+                  className="hidden lg:block w-full max-w-xs sm:max-w-sm md:max-w-md"
+                />
               </div>
             </div>
           </div>
-
-          <div className="flex-1 flex justify-center max-w-md w-full">
-            <img
-              src={search}
-              alt="Illustration"
-              className="hidden lg:block w-full max-w-xs sm:max-w-sm md:max-w-md"
-            />
-          </div>
         </div>
-      </div>
 
-      <div className="bg-[#BAD9FF] p-2">
-        <section className="max-w-7xl  mx-auto  px-4 py-10 items-center">
-          {/* Subtitle */}
-          <div className="flex flex-col items-center justify-center bg-[#bddafd] py-8 px-4 md:flex-row md:justify-center md:items-center">
-            {/* Illustration */}
-            <img
-              src={boy}
-              alt="Boy Illustration"
-              className="w-28 md:w-32 mb-4 md:mb-0 md:mr-8"
-            />
-            {/* Text Content */}
-            <div
-              style={{ fontFamily: "David Libre" }}
-              className="flex flex-col items-center md:items-start"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-[#23274b] text-center md:text-left mb-2">
-                ABOUT OUR
-              </h2>
-              <h2 className="text-4xl md:text-5xl ml-[10%] font-bold text-[#23274b] text-center md:text-left mb-2">
-                PROECT
-              </h2>
-              <p className="text-gray-500 text-center md:text-left">
-                Digitize your documents and save time with this smart and
-                reliable tool.
-              </p>
+        <div className="bg-[#D5C7FF] mb-7">
+          <section className="max-w-7xl  mx-auto  px-4 py-10 items-center">
+            {/* Subtitle */}
+            <div className="flex flex-col items-center justify-center  py-8 px-4 md:flex-row md:justify-center md:items-center">
+              {/* Illustration */}
+              <img
+                src={boy}
+                alt="Boy Illustration"
+                className="w-28 md:w-32 mb-4 md:mb-0 md:mr-8"
+              />
+              {/* Text Content */}
+              <div
+                style={{ fontFamily: "David Libre" }}
+                className="flex flex-col  items-center md:items-start"
+              >
+                <h2 className="text-4xl md:text-5xl font-bold text-[#23274b] text-center md:text-left mb-2">
+                  ABOUT OUR
+                </h2>
+                <h2 className="text-4xl md:text-5xl ml-[10%] font-bold text-[#23274b] text-center md:text-left mb-2">
+                  PROECT
+                </h2>
+                <p className="text-gray-500 text-center md:text-left">
+                  Digitize your documents and save time with this smart and
+                  reliable tool.
+                </p>
+              </div>
             </div>
-          </div>
 
           {/* Content */}
           <div className="max-w-5xl w-full space-y-8 ">
@@ -273,6 +257,8 @@ export default function About() {
       </div>
       <Support />
       <Footer />
+      </div>
+
     </>
   );
 }

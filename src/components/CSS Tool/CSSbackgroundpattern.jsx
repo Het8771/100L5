@@ -358,7 +358,7 @@ export default function PatternGenerator({id="CSS Background Pattern"}) {
                 🏠 Share 10015
               </button>
             </div>
-            <div className="text-center border border-gray-300 rounded-xl p-6">
+            <div className="text-center border border-gray-500 rounded-xl p-6">
               <p className="text-sm mb-1 text-gray-500">
                 You are currently sharing:
               </p>
@@ -414,7 +414,7 @@ export default function PatternGenerator({id="CSS Background Pattern"}) {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Cancel
               </button>
@@ -428,7 +428,7 @@ export default function PatternGenerator({id="CSS Background Pattern"}) {
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Submit
               </button>
@@ -542,13 +542,13 @@ export default function PatternGenerator({id="CSS Background Pattern"}) {
               <div className="flex flex-wrap gap-3 sm:gap-4">
                 <button
                   onClick={handleShuffle}
-                  className="px-4 py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg text-sm sm:text-base min-w-[120px]"
+                  className="px-4 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg text-sm sm:text-base min-w-[120px]"
                 >
                   Shuffle Colors
                 </button>
                 <button
                   onClick={handleReset}
-                  className="px-4 py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg text-sm sm:text-base min-w-[120px]"
+                  className="px-4 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg text-sm sm:text-base min-w-[120px]"
                 >
                   Reset
                 </button>
@@ -564,7 +564,7 @@ export default function PatternGenerator({id="CSS Background Pattern"}) {
             </pre>
             <button
               onClick={handleCopy}
-              className="absolute top-4 right-4 px-3 py-1 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg text-xs sm:text-sm"
+              className="absolute top-4 right-4 px-3 py-1 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg text-xs sm:text-sm"
             >
               {copied ? "Copied!" : "Copy"}
             </button>

@@ -18,7 +18,7 @@ function Csstool() {
           className="w-150 h-auto object-cover "
         />
       </div>
-      <div
+      {/* <div
         className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%] "
         style={{ zIndex: -1 }}
       >
@@ -27,7 +27,7 @@ function Csstool() {
           alt="Background Shape"
           className="w-full h-auto object-cover"
         />
-      </div>
+      </div> */}
       <Navbar />
       <img
         src={leaf1}
@@ -50,7 +50,9 @@ function Csstool() {
 
         <CSStool1 />
       </div>
+       <div className="bg-[#16283E]">
       <Footer />
+      </div>
     </>
   );
 }

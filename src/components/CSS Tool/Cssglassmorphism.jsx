@@ -218,7 +218,7 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
                 🏠 Share 10015
               </button>
             </div>
-            <div className="text-center border border-gray-300 rounded-xl p-6">
+            <div className="text-center border border-gray-500 rounded-xl p-6">
               <p className="text-sm mb-1 text-gray-500">
                 You are currently sharing:
               </p>
@@ -274,7 +274,7 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Cancel
               </button>
@@ -288,7 +288,7 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Submit
               </button>
@@ -433,7 +433,7 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
               <div className="mb-4 flex flex-col gap-3">
                 <button
                   onClick={shuffleBackground}
-                  className="w-full py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center justify-center gap-2 "
+                  className="w-full py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center gap-2 "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -453,7 +453,7 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
                 </button>
                 <button
                   onClick={shuffleGlassColor}
-                  className="w-full py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center justify-center gap-2 "
+                  className="w-full py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center gap-2 "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -495,13 +495,13 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
           <div className="bg-gray-50 px-4 py-3 border-t border-gray-200 flex justify-between">
             <button
               onClick={reset}
-              className="px-6 py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center "
+              className="px-6 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center "
             >
               Reset
             </button>
             <button
               onClick={() => navigator.clipboard.writeText(cssCode)}
-              className="px-6 py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center "
+              className="px-6 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center "
             >
               Copy
             </button>

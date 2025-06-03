@@ -99,168 +99,167 @@ const BarcodeGenerator = ({id="Bar Code Generator"}) => {
           <span className="text-4xl text-indigo-400 mt-3">
             <ImBarcode />
           </span>
-          <h1 className="text-xl sm:text-2xl md:text-lg font-bold text-gray-900 mt-3">
+          <h1 className="text-xl sm:text-2xl md:text-lg font-bold text-white mt-3">
             Bar&nbsp;Code&nbsp;Generator
           </h1>
         </div>
         <div className="flex flex-col w-full sm:w-auto md:flex-row md:justify-center md:items-center md:gap-4 lg:justify-end lg:gap-2">
           <button
             onClick={() => setShareOpen(true)}
-            className="flex items-center justify-center w-full sm:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-500 bg-indigo-50 text-indigo-600 mb-2 md:mb-0 cursor-pointer"
+            className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white mb-2 md:mb-0 cursor-pointer"
           >
             <FiShare2 className="mr-2" size={18} />
             Share
-          </button>
-          <button
-            className="flex items-center justify-center gap-2 w-full sm:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-500 bg-indigo-50 text-indigo-600 cursor-pointer hover:bg-indigo-100 transition"
+          </button>    <button
+            className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white cursor-pointer transition"
             onClick={() => setOpen(true)}
           >
-            <FiAlertCircle className="text-indigo-600 text-base" />
+            <FiAlertCircle className="text-white text-base" />
             Report Bug
           </button>
-          <button
-            onClick={onFavoriteToggle}
-            className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
-              ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-              : "bg-indigo-50 border-indigo-500 text-indigo-600"
-            }`}
-          >
-            {isFavorite ? (
-              <>
-                <FaCheck className="inline-block mr-1" size={12} /> Added
-              </>
-            ) : (
-              <>
-                <FaRegStar className="inline-block mr-1" size={12} /> Add to
-                Favorites
-              </>
-            )}
-          </button>
+           <button
+                     onClick={onFavoriteToggle}
+                     className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
+                       ? "border border-white bg-[#273D58]  border border-white text-white"
+                       : "bg-[#273D58]  border border-white text-white"
+                       }`}
+                   >
+                     {isFavorite ? (
+                       <>
+                         <FaCheck className="inline-block mr-1" size={12} /> Added
+                       </>
+                     ) : (
+                       <>
+                         <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                         Favorites
+                       </>
+                     )}
+                   </button>
         </div>
       </div>
 
       {/* Share Popup */}
-      {shareOpen && (
-        <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center px-2">
-          <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-xl max-w-xs sm:max-w-md w-full relative">
-            <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
-              <button
-                onClick={() => setActiveTab("tool")}
-                className={`w-1/2 px-2 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
-                  ? "bg-indigo-600 text-white"
-                  : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                  }`}
-              >
-                ⚙️ Share Tool
-              </button>
-              <button
-                onClick={() => setActiveTab("home")}
-                className={`w-1/2 px-2 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
-                  ? "bg-indigo-600 text-white"
-                  : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                  }`}
-              >
-                🏠 Share 10015
-              </button>
-            </div>
-            <div className="text-center border border-gray-300 rounded-xl p-4 sm:p-6">
-              <p className="text-sm mb-1 text-gray-500">
-                You are currently sharing:
-              </p>
-              <h2 className="text-lg sm:text-xl font-semibold mb-5 text-gray-600">
-                {activeTab === "tool"
-                  ? "Google Fonts Pair Finder"
-                  : "10015 Tools"}
-              </h2>
-              <div className="flex justify-center mb-6">
-                <MdShare className="text-indigo-500 text-5xl sm:text-7xl" />
-              </div>
-              <div className="flex justify-center gap-3 sm:gap-4">
-                {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
-                  (Icon, i) => (
+              {shareOpen && (
+                <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
+                    <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
+                      <button
+                        onClick={() => setActiveTab("tool")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        ⚙️ Share Tool
+                      </button>
+                      <button
+                        onClick={() => setActiveTab("home")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        🏠 Share 10015
+                      </button>
+                    </div>
+                    <div className="text-center border border-gray-500 rounded-xl p-6">
+                      <p className="text-sm mb-1 text-white">
+                        You are currently sharing:
+                      </p>
+                      <h2 className="text-xl font-semibold mb-5 text-white">
+                        {activeTab === "tool"
+                          ? "Google Fonts Pair Finder"
+                          : "10015 Tools"}
+                      </h2>
+                      <div className="flex justify-center mb-6">
+                        <MdShare className="text-white text-7xl" />
+                      </div>
+                      <div className="flex justify-center gap-4">
+                        {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
+                          (Icon, i) => (
+                            <button
+                              key={i}
+                              className="text-black bg-white rounded-full w-10 h-10 flex items-center justify-center"
+                            >
+                              <Icon />
+                            </button>
+                          )
+                        )}
+                      </div>
+                    </div>
                     <button
-                      key={i}
-                      className="text-white bg-indigo-500 rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"
+                      className="absolute top-0 h-2 w-2 right-4 text-white text-lg cursor-pointer"
+                      onClick={() => setShareOpen(false)}
                     >
-                      <Icon />
+                      ✕
                     </button>
-                  )
-                )}
-              </div>
-            </div>
-            <button
-              className="absolute top-2 right-4 text-gray-600 text-lg cursor-pointer"
-              onClick={() => setShareOpen(false)}
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Bug Report Popup */}
-      {open && (
-        <div className="fixed inset-0 bg-black/30 z-20 flex justify-center items-center px-2">
-          <div className="bg-white w-full max-w-xs sm:max-w-md p-4 sm:p-6 rounded-2xl shadow-lg relative">
-            <h2 className="text-lg sm:text-xl font-bold mb-2">Bug Report</h2>
-            <p className="text-sm mb-4">
-              <strong>Tool:</strong> Lorem Ipsum Generator
-            </p>
-            <label className="text-sm mb-1 block" htmlFor="bugDescription">
-              Please describe the issue.
-            </label>
-            <textarea
-              id="bugDescription"
-              className="w-full p-2 sm:p-3 border border-gray-300 rounded-xl text-base h-24 sm:h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-              placeholder="Description*"
-              value={bugDescription}
-              onChange={(e) => setBugDescription(e.target.value)}
-            />
-            <div className="flex flex-col sm:flex-row justify-end gap-3 mt-4">
-              <button
-                onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={() => {
-                  if (!bugDescription.trim()) {
-                    alert("Please enter a description.");
-                    return;
-                  }
-                  console.log("Bug description submitted:", bugDescription);
-                  setOpen(false);
-                  setBugDescription("");
-                }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+                  </div>
+                </div>
+              )}
+        
+              {/* Bug Report Popup */}
+              {open && (
+                <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
+                    <h2 className="text-xl font-bold mb-2">Bug Report</h2>
+                    <p className="text-sm mb-4">
+                      <strong>Tool:</strong> Lorem Ipsum Generator
+                    </p>
+                    <label className="text-sm mb-1 block" htmlFor="bugDescription">
+                      Please describe the issue.
+                    </label>
+                    <textarea
+                      id="bugDescription"
+                      className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 "
+                      placeholder="Description*"
+                      value={bugDescription}
+                      onChange={(e) => setBugDescription(e.target.value)}
+                    />
+                    <div className="flex justify-end gap-3 mt-4">
+                      <button
+                        onClick={() => setOpen(false)}
+                        className="px-4 py-2 bg-[#273D58]  border border-white text-white border border-white rounded-lg"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (!bugDescription.trim()) {
+                            alert("Please enter a description.");
+                            return;
+                          }
+                          console.log("Bug description submitted:", bugDescription);
+                          setOpen(false);
+                          setBugDescription("");
+                        }}
+                        className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
 
       {/* Form & Barcode */}
       <div className="mt-6 sm:mt-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Barcode Value</label>
+            <label className="block text-sm font-medium text-gray-400">Barcode Value</label>
             <input
               type="text"
               value={barcodeValue}
               onChange={(e) => setBarcodeValue(e.target.value)}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 outline-none text-base"
+              className="mt-1 block w-full border border-gray-500 rounded-md shadow-sm py-2 px-3 outline-none text-base"
               placeholder="Enter value for barcode"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Barcode Format</label>
+            <label className="block text-sm font-medium text-gray-400">Barcode Format</label>
             <select
               value={barcodeFormat}
               onChange={(e) => setBarcodeFormat(e.target.value)}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 outline-none text-base"
+              className="mt-1 block w-full bg-[#16283E] border border-gray-500 rounded-md shadow-sm py-2 px-3 outline-none text-base"
             >
               <option value="CODE128">Code 128</option>
               <option value="CODE39">Code 39</option>
@@ -272,7 +271,7 @@ const BarcodeGenerator = ({id="Bar Code Generator"}) => {
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-gray-400">
               Barcode Line Width: {lineWidth}px
             </label>
             <input
@@ -281,7 +280,7 @@ const BarcodeGenerator = ({id="Bar Code Generator"}) => {
               max="5"
               value={lineWidth}
               onChange={(e) => setLineWidth(parseInt(e.target.value))}
-              className="mt-1 w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+              className="mt-1 w-full h-2 bg-white rounded-lg appearance-none cursor-pointer accent-gray-400"
             />
           </div>
           <div>
@@ -294,7 +293,7 @@ const BarcodeGenerator = ({id="Bar Code Generator"}) => {
               max="200"
               value={lineHeight}
               onChange={(e) => setLineHeight(parseInt(e.target.value))}
-              className="mt-1 w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+              className="mt-1 w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-gray-400"
             />
           </div>
           <div className="flex items-center">
@@ -303,16 +302,16 @@ const BarcodeGenerator = ({id="Bar Code Generator"}) => {
               type="checkbox"
               checked={displayValue}
               onChange={(e) => setDisplayValue(e.target.checked)}
-              className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+              className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-500 rounded"
             />
-            <label htmlFor="display-value" className="ml-2 block text-sm text-gray-700">
+            <label htmlFor="display-value" className="ml-2 block text-sm text-gray-400">
               Display Value
             </label>
           </div>
           <div className="flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-2 sm:space-y-0 mt-2 sm:mt-0">
             <button
               onClick={handleReset}
-              className="py-2 px-4 rounded-md text-lg text-black border-indigo-300 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] cursor-pointer flex items-center justify-center"
+              className="py-2 px-4 rounded-md text-lg text-white border-indigo-300 bg-[#273D58] cursor-pointer flex items-center justify-center"
             >
               <svg className="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
@@ -321,7 +320,7 @@ const BarcodeGenerator = ({id="Bar Code Generator"}) => {
             </button>
             <button
               onClick={handleGenerate}
-              className="py-2 px-4 rounded-md text-lg text-black border-indigo-300 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] cursor-pointer flex items-center justify-center"
+              className="py-2 px-4 rounded-md text-lg text-white border-indigo-300 bg-[#273D58] cursor-pointer flex items-center justify-center"
             >
               <svg className="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
