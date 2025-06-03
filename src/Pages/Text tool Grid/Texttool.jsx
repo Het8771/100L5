@@ -20,16 +20,12 @@ function Texttool() {
      
     
       <Navbar />
-<<<<<<< HEAD
       
       <img
         src={leaf1}
         alt="leav"
         className="top-15 absolute hidden lg:block"
       />
-=======
-      <img src={leaf1} alt="leav" className="top-15 absolute hidden lg:block" />
->>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
       <div>
         <div className="">
           <Information

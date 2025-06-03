@@ -222,7 +222,7 @@ export default function About() {
           {/* Social Icons */}
           <div className="flex space-x mt-10">
             <Link
-              to="https://www.facebook.com/" className=" ">
+              to="https://www.facebook.com/" className=" "></Link>
               <img
                 src={boy}
                 alt="Boy Illustration"

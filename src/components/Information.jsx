@@ -10,7 +10,6 @@ function Information({
   exploreLinkState,
 }) {
   return (
-<<<<<<< HEAD
     <>
       <div className="bg-[#16283E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
@@ -33,28 +32,6 @@ function Information({
                   to="/"
                   state={exploreLinkState}
                 >
-=======
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between py-10 ">
-        {/* Left: Text Content */}
-        <div className="relative flex-1 w-full text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0">
-          <h1
-            style={{ fontFamily: "" }}
-            // David Libre font family if needed
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
-          >
-            {title}
-          </h1>
-          <p className="text-gray-500 text-base sm:text-lg text-justify">
-            {description}
-          </p>
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-4">
-            <Link
-      to="/"
-      state={exploreLinkState} 
-    >
->>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
 
                   <div className="relative inline-flex items-center cursor-pointer">
                     <button className="bg-[#273D58]  border border-white text-white font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap">
@@ -104,25 +81,6 @@ function Information({
 
 
           </div>
-<<<<<<< HEAD
-=======
-          {/* Login Button */}
-          <div className="flex justify-center lg:justify-center">
-            <Link to="/Login">
-              <button className="relative text-red-600 font-semibold mt-2 cursor-pointer hover:underline select-none ">
-                {buttonText2}
-              </button>
-            </Link>
-          </div>
-        </div>
-        {/* Right: Illustration */}
-        <div className="flex-1 flex justify-center  w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-          <img
-            src={srcImg1}
-            alt="Product Finder Illustration"
-            className="w-48 sm:w-64 md:w-80 lg:w-96 hidden lg:block "
-          />
->>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
         </div>
       </div>
     </>

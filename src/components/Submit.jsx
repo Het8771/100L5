@@ -35,48 +35,16 @@ const ProductFinderHero = () => {
   };
 
   return (
-<<<<<<< HEAD
+    <>
     <section className="w-full relative bg-[#16283E] ">
       <Navbar />
              <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
-=======
-    <>
-      <div className="mx-auto">
-        <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
-          <img
-            src={Oval2}
-            alt="Background"
-            className="w-150 h-auto object-cover "
-          />
-        </div>
-        <div
-          className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%] "
-          style={{ zIndex: -1 }}
-        >
-          <img
-            src={ston}
-            alt="Background Shape"
-            className="w-full h-auto object-cover"
-          />
-        </div>
-        <Navbar />
-        <img
-          src={leaf1}
-          alt="leav"
-          className="top-15 absolute hidden lg:block"
-        />
-      </div>
-      <section className="w-full relative ">
-        {/* <Navbar /> */}
-        {/* <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
->>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
           <img
             src={Oval2}
             alt="Background"
             className="w-150 h-auto object-cover"
           />
         </div>
-<<<<<<< HEAD
       {/* <div
         className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%] "
         style={{ zIndex: -1 }}
@@ -96,13 +64,10 @@ const ProductFinderHero = () => {
       />
       <div className="max-w-7xl mx-auto">
         {/* Main Blur Container */}
-=======
->>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
         <div
           className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%] "
           style={{ zIndex: -1 }}
         >
-<<<<<<< HEAD
           <div className="py-12 px-4 relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left space-y-6">
@@ -227,13 +192,7 @@ const ProductFinderHero = () => {
               submission form. Please review the fields.
             </p>
           </div>
-=======
-          <img
-            src={ston}
-            alt="Background Shape"
-            className="w-full h-auto object-cover"
-          />
->>>>>>> 3e71842c3111221cdebeb608ffea5f647d569ffa
+          </div>
         </div>
 
         {/* Leaf Background */}
