@@ -183,7 +183,7 @@ export default function InstagramFilters({id="Instagram Filters"}) {
                                 🏠 Share 10015
                             </button>
                         </div>
-                        <div className="text-center border border-gray-300 rounded-xl p-6">
+                        <div className="text-center border border-gray-500 rounded-xl p-6">
                             <p className="text-sm mb-1 text-gray-500">
                                 You are currently sharing:
                             </p>
@@ -231,7 +231,7 @@ export default function InstagramFilters({id="Instagram Filters"}) {
                         </label>
                         <textarea
                             id="bugDescription"
-                            className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                            className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                             placeholder="Description*"
                             value={bugDescription}
                             onChange={(e) => setBugDescription(e.target.value)}
@@ -239,7 +239,7 @@ export default function InstagramFilters({id="Instagram Filters"}) {
                         <div className="flex justify-end gap-3 mt-4">
                             <button
                                 onClick={() => setOpen(false)}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                             >
                                 Cancel
                             </button>
@@ -253,7 +253,7 @@ export default function InstagramFilters({id="Instagram Filters"}) {
                                     setOpen(false);
                                     setBugDescription("");
                                 }}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                             >
                                 Submit
                             </button>
@@ -270,7 +270,7 @@ export default function InstagramFilters({id="Instagram Filters"}) {
                         className="hidden"
                         onChange={(e) => e.target.files && handleFile(e.target.files[0])}
                     />
-                    <span className="w-full block cursor-pointer py-2 rounded-md text-center  bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B]">
+                    <span className="w-full block cursor-pointer py-2 rounded-md text-center  bg-[#273D58]  border border-white text-white">
                         <svg className="inline mr-2" width="18" height="18" fill="none" viewBox="0 0 24 24">
                             <path stroke="#fff" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                         </svg>
@@ -283,11 +283,11 @@ export default function InstagramFilters({id="Instagram Filters"}) {
                         placeholder="Upload from URL"
                         value={urlInput}
                         onChange={(e) => setUrlInput(e.target.value)}
-                        className="flex-1 rounded-l-md border border-gray-300 px-3 py-2 focus:outline-none"
+                        className="flex-1 rounded-l-md border border-gray-500 px-3 py-2 focus:outline-none"
                     />
                     <button
                         onClick={handleUrlUpload}
-                        className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-r-md  transition"
+                        className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-r-md  transition"
                     >
                         Upload from URL
                     </button>
@@ -299,7 +299,7 @@ export default function InstagramFilters({id="Instagram Filters"}) {
                 ref={dropRef}
                 onDrop={handleDrop}
                 onDragOver={(e) => e.preventDefault()}
-                className="w-full border-2 border-dashed border-gray-300 rounded-lg px-4 py-6 text-center mb-4 bg-white"
+                className="w-full border-2 border-dashed border-gray-500 rounded-lg px-4 py-6 text-center mb-4 bg-white"
                 style={{ minHeight: "80px" }}
             >
                 <div className="text-gray-500">
@@ -415,14 +415,14 @@ export default function InstagramFilters({id="Instagram Filters"}) {
             <div className="flex flex-col sm:flex-row w-full gap-2 justify-between items-center">
                 <button
                     onClick={() => setActive("Normal")}
-                    className="w-full sm:w-auto cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] px-6 py-2 rounded-full "
+                    className="w-full sm:w-auto cursor-pointer bg-[#273D58]  border border-white text-white px-6 py-2 rounded-full "
                 >
                     Reset
                 </button>
                 <button
                     onClick={handleDownload}
                     disabled={!imgSrc}
-                    className={`w-full sm:w-auto cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] px-6 py-2 rounded-full  flex items-center gap-2 ${imgSrc
+                    className={`w-full sm:w-auto cursor-pointer bg-[#273D58]  border border-white text-white px-6 py-2 rounded-full  flex items-center gap-2 ${imgSrc
                         ? ""
                         : "bg-violet-100 text-gray-400 cursor-not-allowed"
                         }`}

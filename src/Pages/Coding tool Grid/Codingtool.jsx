@@ -12,6 +12,7 @@ import coding from "../../image/coding.svg";
 function Codingtool() {
   return (
     <>
+    <div className="bg-[#16283E]">
       <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
         <img
           src={Oval2}
@@ -19,7 +20,7 @@ function Codingtool() {
           className="w-150 h-auto object-cover "
         />
       </div>
-      <div
+      {/* <div
         className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%] "
         style={{ zIndex: -1 }}
       >
@@ -28,7 +29,7 @@ function Codingtool() {
           alt="Background Shape"
           className="w-full h-auto object-cover"
         />
-      </div>
+      </div> */}
       <Navbar />
       <img
         src={leaf1}
@@ -54,7 +55,10 @@ function Codingtool() {
           <Codingtool1 />
         </div>
       </div>
+       <div className="bg-[#16283E]">
       <Footer />
+      </div>
+    </div>
     </>
   );
 }

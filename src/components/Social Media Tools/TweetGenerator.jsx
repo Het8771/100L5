@@ -232,7 +232,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                                       🏠 Share 10015
                                   </button>
                               </div>
-                              <div className="text-center border border-gray-300 rounded-xl p-6">
+                              <div className="text-center border border-gray-500 rounded-xl p-6">
                                   <p className="text-sm mb-1 text-gray-500">
                                       You are currently sharing:
                                   </p>
@@ -280,7 +280,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                               </label>
                               <textarea
                                   id="bugDescription"
-                                  className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                                  className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                                   placeholder="Description*"
                                   value={bugDescription}
                                   onChange={(e) => setBugDescription(e.target.value)}
@@ -288,7 +288,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                               <div className="flex justify-end gap-3 mt-4">
                                   <button
                                       onClick={() => setOpen(false)}
-                                      className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                      className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                                   >
                                       Cancel
                                   </button>
@@ -302,7 +302,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                                           setOpen(false);
                                           setBugDescription("");
                                       }}
-                                      className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                      className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                                   >
                                       Submit
                                   </button>
@@ -315,7 +315,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                     {/* Preview */}
                     <div
                         ref={previewRef}
-                        className={`rounded-lg p-4 mb-6 border  border-gray-300 ${theme === "Dark" ? "bg-gray-900 text-white" : "bg-white text-black"
+                        className={`rounded-lg p-4 mb-6 border  border-gray-500 ${theme === "Dark" ? "bg-gray-900 text-white" : "bg-white text-black"
                             }`}
                     >
                         <div className="flex items-center mb-2">
@@ -367,7 +367,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                         <div>
                             <label className="block font-medium mb-1 outline-none">Theme</label>
                             <select
-                                className="w-full border  border-gray-300 rounded px-2 py-1 outline-none"
+                                className="w-full border  border-gray-500 rounded px-2 py-1 outline-none"
                                 value={theme}
                                 onChange={(e) => setTheme(e.target.value)}
                             >
@@ -397,7 +397,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                         <div>
                             <label className="block font-medium mb-1">Name</label>
                             <input
-                                className="w-full border  border-gray-300 rounded px-2 py-1 outline-none"
+                                className="w-full border  border-gray-500 rounded px-2 py-1 outline-none"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                             />
@@ -405,7 +405,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                         <div>
                             <label className="block font-medium mb-1">Username</label>
                             <input
-                                className="w-full border  border-gray-300 rounded px-2 py-1 outline-none"
+                                className="w-full border  border-gray-500 rounded px-2 py-1 outline-none"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                             />
@@ -424,7 +424,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                             <label className="block font-medium mb-1">Tweet Date</label>
                             <input
                             type="datetime-local"
-                                className="w-full border  border-gray-300 rounded px-2 py-1 outline-none"
+                                className="w-full border  border-gray-500 rounded px-2 py-1 outline-none"
                                 value={tweetDate}
                                 onChange={(e) => setTweetDate(e.target.value)}
                             />
@@ -433,7 +433,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                     <div className="mb-4">
                         <label className="block font-medium mb-1">Tweet Text</label>
                         <textarea
-                            className="w-full border   border-gray-300  rounded px-2 py-1 outline-none"
+                            className="w-full border   border-gray-500  rounded px-2 py-1 outline-none"
                             rows={3}
                             value={tweetText}
                             onChange={(e) => setTweetText(e.target.value)}
@@ -448,7 +448,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                             <label className="block font-medium mb-1">Reply Count</label>
                             <input
                                 type="number"
-                                className="w-full border  border-gray-300 rounded px-2 py-1 outline-none"
+                                className="w-full border  border-gray-500 rounded px-2 py-1 outline-none"
                                 value={replyCount}
                                 onChange={(e) => setReplyCount(Number(e.target.value))}
                             />
@@ -457,7 +457,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                             <label className="block font-medium mb-1">Retweet Count</label>
                             <input
                                 type="number"
-                                className="w-full border   border-gray-300  rounded px-2 py-1 outline-none"
+                                className="w-full border   border-gray-500  rounded px-2 py-1 outline-none"
                                 value={retweetCount}
                                 onChange={(e) => setRetweetCount(Number(e.target.value))}
                             />
@@ -466,7 +466,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                             <label className="block font-medium mb-1">Like Count</label>
                             <input
                                 type="number"
-                                className="w-full border  border-gray-300  rounded px-2 py-1 outline-none"
+                                className="w-full border  border-gray-500  rounded px-2 py-1 outline-none"
                                 value={likeCount}
                                 onChange={(e) => setLikeCount(Number(e.target.value))}
                             />
@@ -475,7 +475,7 @@ function TweetGenerator({id="Tweet Generator"}) {
                             <label className="block font-medium mb-1">View Count</label>
                             <input
                                 type="number"
-                                className="w-full border  border-gray-300 rounded px-2 py-1 outline-none"
+                                className="w-full border  border-gray-500 rounded px-2 py-1 outline-none"
                                 value={viewCount}
                                 onChange={(e) => setViewCount(Number(e.target.value))}
                             />
@@ -485,14 +485,14 @@ function TweetGenerator({id="Tweet Generator"}) {
                     {/* Export Button & Dropdown */}
                     <div className="relative">
                         <button
-                            className="cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B]   px-6 py-2 rounded-lg"
+                            className="cursor-pointer bg-[#273D58]  border border-white text-white   px-6 py-2 rounded-lg"
                             onClick={() => setExportMenuOpen((v) => !v)}
                             type="button"
                         >
                             Export Tweet Image ▼
                         </button>
                         {exportMenuOpen && (
-                            <div className="absolute left-0 mt-2 bg-white border  border-gray-300 rounded shadow w-56 z-10">
+                            <div className="absolute left-0 mt-2 bg-white border  border-gray-500 rounded shadow w-56 z-10">
                                 <button
                                     className="w-full text-left px-4 py-2 hover:bg-gray-100"
                                     onClick={exportImage}

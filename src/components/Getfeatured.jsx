@@ -29,13 +29,14 @@ const ProductFinderHero = () => {
 
   return (
     <>
+        <section className="w-full relative bg-[#16283E]">
       <img
         src={Oval2}
         alt="Background"
         className="absolute w-150 h-auto object-cover hidden lg:block  "
       />
       <Navbar />
-      <div
+      {/* <div
         className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[64%] "
         style={{ zIndex: -1 }}
       >
@@ -44,8 +45,7 @@ const ProductFinderHero = () => {
           alt="Background Shape"
           className="w-full h-auto object-cover"
         />
-      </div>
-      <section className="w-full relative">
+      </div> */}
         {/* Leaf Background */}
         <img
           src={Getleaf}
@@ -61,10 +61,10 @@ const ProductFinderHero = () => {
           >
             <div className="py-12 flex flex-col lg:flex-row items-center justify-between relative z-10 gap-10">
               <div className="flex-1 text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0 px-5">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
                   Product Finder
                 </h1>
-                <p className="text-gray-600 text-base sm:text-lg">
+                <p className="text-gray-400 text-base sm:text-lg">
                   Find Exactly What You Need <br /> Your Shortcut to the Right
                   Choice
                 </p>
@@ -73,7 +73,7 @@ const ProductFinderHero = () => {
                     <Link
                   to="/"
                   state={{ scrollTo: 'featured-tools' }}
-                  className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
+                  className="bg-[#273D58]  border border-white text-white font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
                 >
                   EXPLORE TOOL
                 </Link>
@@ -84,7 +84,7 @@ const ProductFinderHero = () => {
                     />
                   </div>
                   <div className="relative inline-flex items-center">
-                    <Link to ="/Productfinder"><button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer">
+                    <Link to ="/Productfinder"><button className="bg-[#273D58]  border border-white text-white font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer">
                       PRODUCT FINDER
                     </button></Link>
                     <img
@@ -97,15 +97,15 @@ const ProductFinderHero = () => {
 
                 <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6 mt-10 max-w-md mx-auto lg:mx-0">
                   <div className="flex flex-col items-center space-y-3">
-                    <button className="bg-gray-100 px-8 py-2 rounded-full text-gray-600 font-semibold shadow-md whitespace-nowrap">
+                    <button className="bg-[#273D58] px-8 py-2 rounded-full text-gray-400 font-semibold shadow-md whitespace-nowrap">
                       LOGIN / REGISTER
                     </button>
-                    <div className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
+                    {/* <div className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
                       SIGN IN
-                    </div>
+                    </div> */}
                   </div>
 
-                  <div className="text-center">
+                  {/* <div className="text-center">
                     <p className="text-sm text-gray-500 mb-2 max-w-xs mx-auto sm:mx-0">
                       Get the extension and access all tools with just one click
                     </p>
@@ -137,7 +137,7 @@ const ProductFinderHero = () => {
                       </a>
                       <div className="h-px w-12 bg-gray-300" />
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -151,21 +151,21 @@ const ProductFinderHero = () => {
             </div>
 
             {/* Bottom Section */}
-            <section className="max-w-7xl mx-auto bg-gray-100 py-12 px-4 rounded-xl shadow-sm relative z-0 ">
+            <section className="max-w-7xl mx-auto bg-[#273D58] py-12 px-4 rounded-xl shadow-sm relative z-0 mb-4">
               <div className="max-w-5xl mx-auto space-y-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-800 ">
+                <h2 className="text-2xl md:text-3xl font-bold text-white ">
                   Feature your product
                 </h2>
 
                 {/* Product Selector - Fixed the onChange handler */}
                 <div className="space-y-4">
-                  <label className="block text-left font-medium text-gray-600">
+                  <label className="block text-left font-medium text-white">
                     Please choose your product*
                   </label>
                   <select
                     value={selectedProduct}
                     onChange={(e) => setSelectedProduct(e.target.value)}
-                    className="w-full max-w-md mx-auto px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none"
+                    className="w-full max-w-md mx-auto px-4 py-3 bg-[#16283E] rounded-lg shadow-sm outline-none text-gray-400 "
                   >
                     <option value="">Select Your Plan</option>
                     <option value="Basic Plan">Basic Plan</option>
@@ -175,22 +175,22 @@ const ProductFinderHero = () => {
                 </div>
 
                 {/* Package Cards */}
-                <label className="block text-left font-medium text-gray-600 ">
+                <label className="block text-left font-medium text-white ">
                   Please choose your package*
                 </label>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
                   {[1, 2, 3].map((num) => (
                     <div
                       key={num}
-                      className={`relative bg-white p-6 rounded-2xl shadow-lg cursor-pointer ${
-                        selectedPackage === num ? "ring-2 ring-blue-500" : ""
+                      className={`relative bg-[#16283E] p-6 rounded-2xl shadow-lg cursor-pointer ${
+                        selectedPackage === num ? "" : ""
                       }`}
                       onClick={() => setSelectedPackage(num)}
                     >
                       <div className="absolute top-4 right-4 text-yellow-400 text-2xl">
                         <Star fill="currentColor" className="w-6 h-6" />
                       </div>
-                      <h3 className="text-center text-sm font-bold tracking-wider text-[#14143B] uppercase">
+                      <h3 className="text-center text-sm font-bold tracking-wider text-white uppercase">
                         {num === 1
                           ? "Basic"
                           : num === 2
@@ -198,9 +198,9 @@ const ProductFinderHero = () => {
                           : "Premium"}{" "}
                         <br /> Category Star
                       </h3>
-                      <p className="text-center text-3xl font-bold  text-[#14143B] mt-3">
+                      <p className="text-center text-3xl font-bold  text-white mt-3">
                         ${num === 1 ? "29.99" : num === 2 ? "49.99" : "99.99"}{" "}
-                        <span className="text-base font-medium text-gray-500">
+                        <span className="text-base font-medium text-gray-400">
                           / month
                         </span>
                       </p>
@@ -215,7 +215,7 @@ const ProductFinderHero = () => {
                             />
                           ))}
                       </div>
-                      <ul className="mt-4 text-sm text-gray-600 space-y-2 text-left">
+                      <ul className="mt-4 text-sm text-gray-400 space-y-2 text-left">
                         <li>Featured on your product's categories</li>
                         <li>Featured on your product's tags</li>
                         <li>
@@ -224,7 +224,7 @@ const ProductFinderHero = () => {
                       </ul>
                       <button
                         onClick={handleSubmit}
-                        className="mt-6 w-full bg-[#14143B] text-white font-semibold py-2 rounded-full transition cursor-pointer"
+                        className="mt-6 w-full bg-[#D5C7FF] text-black font-semibold py-2 rounded-full transition cursor-pointer"
                       >
                         Submit
                       </button>
@@ -267,10 +267,10 @@ const ProductFinderHero = () => {
             </div>
           )}
 
-          <Support />
         </div>
-      </section>
+          <Support />
       <Footer />
+      </section>
     </>
   );
 };

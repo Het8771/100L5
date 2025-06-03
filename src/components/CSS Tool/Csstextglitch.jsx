@@ -220,7 +220,7 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
                 🏠 Share 10015
               </button>
             </div>
-            <div className="text-center border border-gray-300 rounded-xl p-4 sm:p-6">
+            <div className="text-center border border-gray-500 rounded-xl p-4 sm:p-6">
               <p className="text-sm mb-1 text-gray-500">You are currently sharing:</p>
               <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-5 text-gray-600">
                 {activeTab === "tool" ? "Google Fonts Pair Finder" : "10015 Tools"}
@@ -284,7 +284,7 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-lg hover:opacity-90 transition"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg hover:opacity-90 transition"
               >
                 Submit
               </button>
@@ -300,7 +300,7 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
           <div>
             <label className="block text-sm text-gray-600 mb-1">Glitch Effect</label>
             <select
-              className="w-full p-3 border border-gray-300 rounded outline-none text-sm"
+              className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
               value={glitchEffect}
               onChange={(e) => setGlitchEffect(e.target.value)}
             >
@@ -313,7 +313,7 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
             <label className="block text-sm text-gray-600 mb-1">Text</label>
             <input
               type="text"
-              className="w-full p-3 border border-gray-300 rounded outline-none text-sm"
+              className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
               value={text}
               onChange={(e) => setText(e.target.value)}
             />
@@ -393,7 +393,7 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
               <div className="w-6 h-6 rounded" style={{ backgroundColor: backgroundColor }}></div>
               <input
                 type="text"
-                className="w-full p-3 border border-gray-300 rounded outline-none text-sm"
+                className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
                 value={backgroundColor}
                 onChange={(e) => setBackgroundColor(e.target.value)}
               />
@@ -405,7 +405,7 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
               <div className="w-6 h-6 rounded" style={{ backgroundColor: textColor }}></div>
               <input
                 type="text"
-                className="w-full p-3 border border-gray-300 rounded outline-none text-sm"
+                className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
                 value={textColor}
                 onChange={(e) => setTextColor(e.target.value)}
               />
@@ -417,7 +417,7 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
               <div className="w-6 h-6 rounded" style={{ backgroundColor: glitchColor1 }}></div>
               <input
                 type="text"
-                className="w-full p-3 border border-gray-300 rounded outline-none text-sm"
+                className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
                 value={glitchColor1}
                 onChange={(e) => setGlitchColor1(e.target.value)}
               />
@@ -429,7 +429,7 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
               <div className="w-6 h-6 rounded" style={{ backgroundColor: glitchColor2 }}></div>
               <input
                 type="text"
-                className="w-full p-3 border border-gray-300 rounded outline-none text-sm"
+                className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
                 value={glitchColor2}
                 onChange={(e) => setGlitchColor2(e.target.value)}
               />
@@ -440,7 +440,7 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
         {/* Code Display */}
         <div>
           <label className="block text-sm text-gray-600 mb-1">HTML & CSS Code</label>
-          <div className="border border-gray-300 rounded bg-gray-50 p-4 overflow-x-auto">
+          <div className="border border-gray-500 rounded bg-gray-50 p-4 overflow-x-auto">
             <pre className="text-xs sm:text-sm whitespace-pre-wrap" ref={codeRef}>
               <code className="language-html">{generateCode()}</code>
             </pre>
@@ -452,12 +452,12 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
         <button
           onClick={handleReset}
-          className="w-full sm:w-40 px-6 py-3 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
+          className="w-full sm:w-40 px-6 py-3 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
         >
           Reset
         </button>
         <button
-          className="w-full sm:w-40 px-6 py-3 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
+          className="w-full sm:w-40 px-6 py-3 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
           onClick={() => {
             navigator.clipboard.writeText(generateCode());
           }}

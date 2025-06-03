@@ -199,7 +199,7 @@ const Youtubethumbnailgrabber = ({id="YouTube Thumbnail Grabber"}) => {
                 🏠 Share 10015
               </button>
             </div>
-            <div className="text-center border border-gray-300 rounded-xl p-6">
+            <div className="text-center border border-gray-500 rounded-xl p-6">
               <p className="text-sm mb-1 text-gray-500">
                 You are currently sharing:
               </p>
@@ -255,7 +255,7 @@ const Youtubethumbnailgrabber = ({id="YouTube Thumbnail Grabber"}) => {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Cancel
               </button>
@@ -269,7 +269,7 @@ const Youtubethumbnailgrabber = ({id="YouTube Thumbnail Grabber"}) => {
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Submit
               </button>
@@ -290,7 +290,7 @@ const Youtubethumbnailgrabber = ({id="YouTube Thumbnail Grabber"}) => {
             type="text"
             id="youtubeUrl"
             placeholder="e.g. https://www.youtube.com/watch?v=XqZsoesa55w"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
+            className="w-full p-3 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-base"
             value={youtubeUrl}
             onChange={handleUrlChange}
           />
@@ -327,7 +327,7 @@ const Youtubethumbnailgrabber = ({id="YouTube Thumbnail Grabber"}) => {
                     <div className="text-center mb-2"></div>
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-2 w-full">
                       <button
-                        className="w-full sm:w-auto px-3 py-1 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100"
+                        className="w-full sm:w-auto px-3 py-1 border border-gray-500 rounded-md text-gray-700 hover:bg-gray-100"
                         onClick={() => navigator.clipboard.writeText(thumb.url)}
                       >
                         Copy URL

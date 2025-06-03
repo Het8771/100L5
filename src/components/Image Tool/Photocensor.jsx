@@ -234,7 +234,7 @@ export default function Photocensor({id="Photo Censor"}) {
                                     🏠 Share 10015
                                 </button>
                             </div>
-                            <div className="text-center border border-gray-300 rounded-xl p-6">
+                            <div className="text-center border border-gray-500 rounded-xl p-6">
                                 <p className="text-sm mb-1 text-gray-500">
                                     You are currently sharing:
                                 </p>
@@ -282,7 +282,7 @@ export default function Photocensor({id="Photo Censor"}) {
                             </label>
                             <textarea
                                 id="bugDescription"
-                                className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                                className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                                 placeholder="Description*"
                                 value={bugDescription}
                                 onChange={(e) => setBugDescription(e.target.value)}
@@ -290,7 +290,7 @@ export default function Photocensor({id="Photo Censor"}) {
                             <div className="flex justify-end gap-3 mt-4">
                                 <button
                                     onClick={() => setOpen(false)}
-                                    className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                    className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                                 >
                                     Cancel
                                 </button>
@@ -304,7 +304,7 @@ export default function Photocensor({id="Photo Censor"}) {
                                         setOpen(false);
                                         setBugDescription("");
                                     }}
-                                    className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                    className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                                 >
                                     Submit
                                 </button>
@@ -313,7 +313,7 @@ export default function Photocensor({id="Photo Censor"}) {
                     </div>
                 )}
         {!imageSrc && (
-          <div className="border-2 border-dashed border-gray-300 rounded-lg h-40 flex flex-col items-center justify-center mb-6">
+          <div className="border-2 border-dashed border-gray-500 rounded-lg h-40 flex flex-col items-center justify-center mb-6">
             <label className="cursor-pointer flex flex-col items-center text-indigo-400">
               <svg width="36" height="36" fill="none" stroke="currentColor" strokeWidth="2" className="mb-2">
                 <path d="M12 16v6h8v-6h5l-9-9-9 9h5z"></path>
@@ -382,20 +382,20 @@ export default function Photocensor({id="Photo Censor"}) {
         </div>
         <div className="flex gap-2">
           <button
-            className={`cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] flex-1 py-2 rounded-lg `}
+            className={`cursor-pointer bg-[#273D58]  border border-white text-white flex-1 py-2 rounded-lg `}
             onClick={handleCensor}
             disabled={!imageSrc || !croppedAreaPixels || censoredImg}
           >
             Censor
           </button>
           <button
-            className="cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] flex-1 py-2 rounded-lg border border-gray-300 "
+            className="cursor-pointer bg-[#273D58]  border border-white text-white flex-1 py-2 rounded-lg border border-gray-500 "
             onClick={handleReset}
           >
             Reset
           </button>
           <button
-            className={`cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] flex-1 py-2 rounded-lg `}
+            className={`cursor-pointer bg-[#273D58]  border border-white text-white flex-1 py-2 rounded-lg `}
             onClick={handleDownload}
             disabled={!censoredImg}
           >

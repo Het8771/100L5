@@ -426,7 +426,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
                 🏠 Share 10015
               </button>
             </div>
-            <div className="text-center border border-gray-300 rounded-xl p-6">
+            <div className="text-center border border-gray-500 rounded-xl p-6">
               <p className="text-sm mb-1 text-gray-500">
                 You are currently sharing:
               </p>
@@ -482,7 +482,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Cancel
               </button>
@@ -496,7 +496,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
               >
                 Submit
               </button>
@@ -514,7 +514,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
               <select
                 value={shape}
                 onChange={handleShapeChange}
-                className="block w-full px-3 sm:px-4 py-1 sm:py-2 pr-8 border border-gray-300 rounded-md focus:outline-none  appearance-none text-xs sm:text-sm"
+                className="block w-full px-3 sm:px-4 py-1 sm:py-2 pr-8 border border-gray-500 rounded-md focus:outline-none  appearance-none text-xs sm:text-sm"
               >
                 {Object.entries(shapes).map(([key, { name }]) => (
                   <option key={key} value={key}>
@@ -676,7 +676,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
         <div className="flex flex-wrap gap-3 sm:gap-4 mt-3 sm:mt-4">
           <button
             onClick={handleShuffleImage}
-            className="px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-300 rounded-md flex items-center gap-1 hover:bg-gray-50"
+            className="px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-500 rounded-md flex items-center gap-1 hover:bg-gray-50"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -705,7 +705,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
               id="customBackground"
               checked={customBackground}
               onChange={(e) => setCustomBackground(e.target.checked)}
-              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-500 rounded focus:ring-blue-500"
             />
             <label htmlFor="customBackground" className="text-xs sm:text-sm">
               Custom Background
@@ -719,11 +719,11 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
                 placeholder="Background URL"
                 value={customBackgroundUrl}
                 onChange={(e) => setCustomBackgroundUrl(e.target.value)}
-                className="flex-1 px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button
                 onClick={handleSetCustomBackground}
-                className="px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-300 rounded-md hover:bg-gray-50"
+                className="px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-500 rounded-md hover:bg-gray-50"
               >
                 Set
               </button>
@@ -736,7 +736,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
               id="showOutside"
               checked={showOutside}
               onChange={(e) => setShowOutside(e.target.checked)}
-              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-500 rounded focus:ring-blue-500"
             />
             <label htmlFor="showOutside" className="text-xs sm:text-sm">
               Show Outside
@@ -749,7 +749,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
               id="hideGuides"
               checked={hideGuides}
               onChange={(e) => setHideGuides(e.target.checked)}
-              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-500 rounded focus:ring-blue-500"
             />
             <label htmlFor="hideGuides" className="text-xs sm:text-sm">
               Hide Guides
@@ -768,13 +768,13 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
       <div className="flex justify-center gap-3 sm:gap-4">
         <button
           onClick={handleReset}
-          className="px-3 sm:px-4 py-1 sm:py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg text-xs sm:text-base"
+          className="px-3 sm:px-4 py-1 sm:py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg text-xs sm:text-base"
         >
           Reset
         </button>
         <button
           onClick={handleCopy}
-          className="px-3 sm:px-4 py-1 sm:py-2 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center gap-2 text-xs sm:text-base"
+          className="px-3 sm:px-4 py-1 sm:py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center gap-2 text-xs sm:text-base"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

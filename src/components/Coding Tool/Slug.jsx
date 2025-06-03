@@ -121,7 +121,7 @@ const UrlSlugGenerator = () => {
                        <button onClick={() => setActiveTab("tool")} className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool" ? "bg-indigo-600 text-white" : "text-indigo-600 hover:bg-indigo-600 hover:text-white"}`}>⚙️ Share Tool</button>
                        <button onClick={() => setActiveTab("home")} className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home" ? "bg-indigo-600 text-white" : "text-indigo-600 hover:bg-indigo-600 hover:text-white"}`}>🏠 Share 10015</button>
                      </div>
-                     <div className="text-center border border-gray-300 rounded-xl p-6">
+                     <div className="text-center border border-gray-500 rounded-xl p-6">
                        <p className="text-sm mb-1 text-gray-500">You are currently sharing:</p>
                        <h2 className="text-xl font-semibold mb-5 text-gray-600">{activeTab === "tool" ? "Google Fonts Pair Finder" : "10015 Tools"}</h2>
                        <div className="flex justify-center mb-6">
@@ -149,13 +149,13 @@ const UrlSlugGenerator = () => {
                      <label className="text-sm mb-1 block" htmlFor="bugDescription">Please describe the issue.</label>
                      <textarea
                        id="bugDescription"
-                       className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                       className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                        placeholder="Description*"
                        value={bugDescription}
                        onChange={(e) => setBugDescription(e.target.value)}
                      />
                      <div className="flex justify-end gap-3 mt-4">
-                       <button onClick={() => setOpen(false)} className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg">Cancel</button>
+                       <button onClick={() => setOpen(false)} className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg">Cancel</button>
                        <button
                          onClick={() => {
                            if (!bugDescription.trim()) {
@@ -166,7 +166,7 @@ const UrlSlugGenerator = () => {
                            setOpen(false);
                            setBugDescription("");
                          }}
-                         className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                         className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                        >
                          Submit
                        </button>
@@ -178,7 +178,7 @@ const UrlSlugGenerator = () => {
       <input
         type="text"
         placeholder="Article Title, Blog Post Title etc."
-        className="w-full p-3 border border-gray-300 outline-none rounded-lg mb-2 "
+        className="w-full p-3 border border-gray-500 outline-none rounded-lg mb-2 "
         value={title}
         onChange={(e) => {
           setTitle(e.target.value);
@@ -243,13 +243,13 @@ const UrlSlugGenerator = () => {
       <div className="relative">
         <input
           type="text"
-          className=" mt-2 w-full p-3 border border-gray-300 outline-none rounded-lg bg-gray-50"
+          className=" mt-2 w-full p-3 border border-gray-500 outline-none rounded-lg bg-gray-50"
           value={slug}
           readOnly
           placeholder="Slug will be shown here automatically..."
         />
         <button
-          className="absolute right-2 top-3 bottom-2 px-4 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-md"
+          className="absolute right-2 top-3 bottom-2 px-4 bg-[#273D58]  border border-white text-white cursor-pointer rounded-md"
           onClick={handleCopy}
         >
           Copy

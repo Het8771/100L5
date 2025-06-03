@@ -211,7 +211,7 @@ export default function JsFormatter({ id = "JavaScript Formatter" }) {
                   🏠 Share 10015
                 </button>
               </div>
-              <div className="text-center border border-gray-300 rounded-xl p-6">
+              <div className="text-center border border-gray-500 rounded-xl p-6">
                 <p className="text-sm mb-1 text-gray-500">You are currently sharing:</p>
                 <h2 className="text-xl font-semibold mb-5 text-gray-600">
                   {activeTab === "tool" ? "Google Fonts Pair Finder" : "10015 Tools"}
@@ -253,7 +253,7 @@ export default function JsFormatter({ id = "JavaScript Formatter" }) {
               </label>
               <textarea
                 id="bugDescription"
-                className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                 placeholder="Description*"
                 value={bugDescription}
                 onChange={(e) => setBugDescription(e.target.value)}
@@ -261,7 +261,7 @@ export default function JsFormatter({ id = "JavaScript Formatter" }) {
               <div className="flex justify-end gap-3 mt-4">
                 <button
                   onClick={() => setOpen(false)}
-                  className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                 >
                   Cancel
                 </button>
@@ -275,7 +275,7 @@ export default function JsFormatter({ id = "JavaScript Formatter" }) {
                     setOpen(false);
                     setBugDescription("");
                   }}
-                  className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                 >
                   Submit
                 </button>
@@ -344,20 +344,20 @@ export default function JsFormatter({ id = "JavaScript Formatter" }) {
         {/* Action Buttons */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 max-w-4xl mx-auto mt-2">
           <button
-            className="px-8 py-3  bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg transition flex items-center gap-2"
+            className="px-8 py-3  bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg transition flex items-center gap-2"
             onClick={handleReset}
           >
             Reset
           </button>
           <button
-            className={`px-12 py-3  bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg ${!input.trim() ? " cursor-not-allowed" : ""}`}
+            className={`px-12 py-3  bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg ${!input.trim() ? " cursor-not-allowed" : ""}`}
             onClick={handleFormat}
             disabled={!input.trim()}
           >
             Format
           </button>
           <button
-            className="px-8 py-3  bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center gap-2 "
+            className="px-8 py-3  bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center gap-2 "
             onClick={handleDownload}
             disabled={!output}
           >
@@ -368,7 +368,7 @@ export default function JsFormatter({ id = "JavaScript Formatter" }) {
             Download
           </button>
           <button
-            className={`px-8 py-3  bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center gap-2 transition${isCopied
+            className={`px-8 py-3  bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center gap-2 transition${isCopied
                 ? "text-green-600 bg-green-50 border-green-200"
                 : "text-[#a99cff] hover:bg-[#f3f0ff]"
               }`}

@@ -1,5 +1,4 @@
 import arror from "../../image/arror.svg";
-import ston from "../../image/ston.svg";
 import Information from "../../components/Information";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -11,24 +10,17 @@ import Texttool1 from "../Text tool Grid/Texttool1";
 function Texttool() {
   return (
     <>
-      <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
+      <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100  ">
         <img
           src={Oval2}
           alt="Background"
           className="w-150 h-auto object-cover "
         />
       </div>
-      <div
-        className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%] "
-        style={{ zIndex: -1 }}
-      >
-        <img
-          src={ston}
-          alt="Background Shape"
-          className="w-full h-auto object-cover"
-        />
-      </div>
+     
+    
       <Navbar />
+      
       <img
         src={leaf1}
         alt="leav"
@@ -43,7 +35,6 @@ function Texttool() {
 Our text tools are the best in the web and they're all available for free. Whether you're looking for a tool to help you with generating, editing, formatting, converting, manipulating text, or just general writing, we've got you covered."
             buttonText="EXPLORE TOOL"
             buttonText1="LOGIN / REGISTER"
-            buttonText2="SIGN IN"
             srcImg={arror}
             srcImg1={Textimg}
             exploreLinkState={{ scrollTo: 'featured-tools' }}
@@ -55,7 +46,9 @@ Our text tools are the best in the web and they're all available for free. Wheth
           <Texttool1 />
         </div>
       </div>
+      <div className="bg-[#16283E]">
       <Footer />
+      </div>
     </>
   );
 }

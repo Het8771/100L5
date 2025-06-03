@@ -293,7 +293,7 @@ export default function ImageCropper({ id = "Image Cropper" }) {
                                 🏠 Share 10015
                             </button>
                         </div>
-                        <div className="text-center border border-gray-300 rounded-xl p-6">
+                        <div className="text-center border border-gray-500 rounded-xl p-6">
                             <p className="text-sm mb-1 text-gray-500">
                                 You are currently sharing:
                             </p>
@@ -341,7 +341,7 @@ export default function ImageCropper({ id = "Image Cropper" }) {
                         </label>
                         <textarea
                             id="bugDescription"
-                            className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                            className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                             placeholder="Description*"
                             value={bugDescription}
                             onChange={(e) => setBugDescription(e.target.value)}
@@ -349,7 +349,7 @@ export default function ImageCropper({ id = "Image Cropper" }) {
                         <div className="flex justify-end gap-3 mt-4">
                             <button
                                 onClick={() => setOpen(false)}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                             >
                                 Cancel
                             </button>
@@ -363,7 +363,7 @@ export default function ImageCropper({ id = "Image Cropper" }) {
                                     setOpen(false);
                                     setBugDescription("");
                                 }}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                             >
                                 Submit
                             </button>
@@ -375,7 +375,7 @@ export default function ImageCropper({ id = "Image Cropper" }) {
 
             {/* Upload / Drag Area */}
             <div
-                className={`w-full max-w-4xl border-2 border-dashed rounded-lg flex flex-col items-center justify-center py-8 mb-8 transition-colors ${dragActive ? "border-indigo-400 bg-indigo-50" : "border-gray-300 bg-white"}`}
+                className={`w-full max-w-4xl border-2 border-dashed rounded-lg flex flex-col items-center justify-center py-8 mb-8 transition-colors ${dragActive ? "border-indigo-400 bg-indigo-50" : "border-gray-500 bg-white"}`}
                 onDragEnter={handleDrag}
                 onDragOver={handleDrag}
                 onDragLeave={handleDrag}
@@ -418,27 +418,27 @@ export default function ImageCropper({ id = "Image Cropper" }) {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row w-full max-w-4xl gap-3 sm:gap-4 justify-between mb-4 px-2 sm:px-4">
                 <button
-                    className="w-full sm:w-auto px-6 py-2 rounded-lg cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] disabled:opacity-50"
+                    className="w-full sm:w-auto px-6 py-2 rounded-lg cursor-pointer bg-[#273D58]  border border-white text-white disabled:opacity-50"
                     onClick={handleRotate}
                     disabled={!rotatedImg}
                 >
                     &#8635; Rotate
                 </button>
                 <button
-                    className="w-full sm:w-auto px-6 py-2 rounded-lg cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] disabled:opacity-50"
+                    className="w-full sm:w-auto px-6 py-2 rounded-lg cursor-pointer bg-[#273D58]  border border-white text-white disabled:opacity-50"
                     onClick={handleCrop}
                     disabled={!rotatedImg}
                 >
                     Crop
                 </button>
                 <button
-                    className="w-full sm:w-auto px-6 py-2 rounded-lg cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B]"
+                    className="w-full sm:w-auto px-6 py-2 rounded-lg cursor-pointer bg-[#273D58]  border border-white text-white"
                     onClick={handleReset}
                 >
                     Reset
                 </button>
                 <button
-                    className="w-full sm:w-auto px-6 py-2 rounded-lg cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] disabled:opacity-50"
+                    className="w-full sm:w-auto px-6 py-2 rounded-lg cursor-pointer bg-[#273D58]  border border-white text-white disabled:opacity-50"
                     onClick={handleDownload}
                     disabled={!completedCrop || !rotatedImg || !imageLoaded}
                 >

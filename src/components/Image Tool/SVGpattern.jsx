@@ -312,7 +312,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                                 🏠 Share 10015
                             </button>
                         </div>
-                        <div className="text-center border border-gray-300 rounded-xl p-6">
+                        <div className="text-center border border-gray-500 rounded-xl p-6">
                             <p className="text-sm mb-1 text-gray-500">
                                 You are currently sharing:
                             </p>
@@ -360,7 +360,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                         </label>
                         <textarea
                             id="bugDescription"
-                            className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                            className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                             placeholder="Description*"
                             value={bugDescription}
                             onChange={(e) => setBugDescription(e.target.value)}
@@ -368,7 +368,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                         <div className="flex justify-end gap-3 mt-4">
                             <button
                                 onClick={() => setOpen(false)}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                             >
                                 Cancel
                             </button>
@@ -382,7 +382,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                                     setOpen(false);
                                     setBugDescription("");
                                 }}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                             >
                                 Submit
                             </button>
@@ -413,7 +413,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                         <div className="p-4 flex justify-center">
                             <button
                                 onClick={handleFullScreenPreview}
-                                className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+                                className="inline-flex items-center px-4 py-2 border border-gray-500 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
                             >
                                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5" />
@@ -432,7 +432,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                         <div className="relative">
                             <button
                                 onClick={() => setShowDropdown(!showDropdown)}
-                                className="relative w-full bg-white border border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                className="relative w-full bg-white border border-gray-500 rounded-md shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             >
                                 <div className="flex items-center">
                                     {patternType === "circle" && (
@@ -577,7 +577,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                                     type="text"
                                     value={patternColor}
                                     onChange={(e) => setPatternColor(e.target.value)}
-                                    className="ml-2 flex-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                    className="ml-2 flex-1 block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                 />
                             </div>
                         </div>
@@ -594,7 +594,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                                     type="text"
                                     value={backgroundColor}
                                     onChange={(e) => setBackgroundColor(e.target.value)}
-                                    className="ml-2 flex-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                    className="ml-2 flex-1 block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                 />
                             </div>
                         </div>
@@ -606,7 +606,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                             <h3 className="text-lg font-medium text-gray-900">Pattern Settings</h3>
                             <button
                                 onClick={handleReset}
-                                className="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50"
+                                className="inline-flex items-center px-2.5 py-1.5 border border-gray-500 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50"
                             >
                                 Reset
                             </button>
@@ -696,7 +696,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">Background Template</label>
                             <select
-                                className="w-full border border-gray-300 rounded-md shadow-sm py-2 pl-3 pr-10 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                className="w-full border border-gray-500 rounded-md shadow-sm py-2 pl-3 pr-10 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             >
                                 <option>OG Image</option>
                                 <option>Twitter Banner</option>
@@ -711,7 +711,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                                     type="number"
                                     value={width}
                                     onChange={(e) => setWidth(parseInt(e.target.value))}
-                                    className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                    className="block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                 />
                             </div>
                             <div>
@@ -720,7 +720,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                                     type="number"
                                     value={height}
                                     onChange={(e) => setHeight(parseInt(e.target.value))}
-                                    className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                    className="block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                 />
                             </div>
                         </div>
@@ -730,7 +730,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                     <div className="grid grid-cols-2 gap-4">
                         <button
                             onClick={shuffleColors}
-                            className="inline-flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm  rounded-md text-gray-700  bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B]"
+                            className="inline-flex justify-center items-center px-4 py-2 border border-gray-500 shadow-sm text-sm  rounded-md text-gray-700  bg-[#273D58]  border border-white text-white"
                         >
                             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -739,7 +739,7 @@ const SVGpattern = ({id="SVGpattern"}) => {
                         </button>
                         <button
                             onClick={handleExport}
-                            className=" cursor-pointer bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] inline-flex justify-center items-center px-4 py-2  text-sm  rounded-md shadow-sm "
+                            className=" cursor-pointer bg-[#273D58]  border border-white text-white inline-flex justify-center items-center px-4 py-2  text-sm  rounded-md shadow-sm "
                         >
                             Export
                         </button>

@@ -207,7 +207,7 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
                   🏠 Share 10015
                 </button>
               </div>
-              <div className="text-center border border-gray-300 rounded-xl p-6">
+              <div className="text-center border border-gray-500 rounded-xl p-6">
                 <p className="text-sm mb-1 text-gray-500">
                   You are currently sharing:
                 </p>
@@ -263,7 +263,7 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
               <div className="flex justify-end gap-3 mt-4">
                 <button
                   onClick={() => setOpen(false)}
-                  className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                 >
                   Cancel
                 </button>
@@ -277,7 +277,7 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
                     setOpen(false);
                     setBugDescription("");
                   }}
-                  className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
                 >
                   Submit
                 </button>
@@ -497,18 +497,18 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
             <label className="block text-xs font-medium text-gray-500 mb-1 ">
               CSS
             </label>
-            <pre className="bg-[#f7f8fa] border border-gray-300 rounded px-3 py-2 font-mono text-sm text-gray-900 whitespace-pre mb-2 overflow-auto">
+            <pre className="bg-[#f7f8fa] border border-gray-500 rounded px-3 py-2 font-mono text-sm text-gray-900 whitespace-pre mb-2 overflow-auto">
               {cssOut}
             </pre>
             <div className="flex flex-wrap gap-3">
               <button
-                className="px-4 py-1.5 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg text-sm flex items-center gap-1"
+                className="px-4 py-1.5 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg text-sm flex items-center gap-1"
                 onClick={handleReset}
               >
                 Reset
               </button>
               <button
-                className="px-4 py-1.5 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg text-sm font-semibold flex items-center gap-1"
+                className="px-4 py-1.5 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg text-sm font-semibold flex items-center gap-1"
                 onClick={handleCopy}
               >
                 <svg

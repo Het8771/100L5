@@ -10,13 +10,14 @@ export default function Support() {
     });
   };
   return (
-    <div className="relative p-2  max-w-7xl mx-auto mt-10 mx-auto bg-[#BAD9FF] py-12 px-7 lg:px-20 rounded-3xl overflow-hidden">
+    
+    <div className="relative p-2  max-w-7xl mx-auto  mx-auto bg-[#D5C7FF] py-12 px-7 lg:px-20 rounded-3xl overflow-hidden">
       {/* Leaf Background Image */}
-      <img
+      {/* <img
         src={leaf}
         alt="Decorative Leaf"
         className="absolute bottom-1 right-1 w-30 opacity-90 pointer-events-none select-none"
-      />
+      /> */}
 
       <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
         {/* Text */}
@@ -29,7 +30,7 @@ export default function Support() {
           <div className="relative inline-block">
             <Link to="/Contact">
               <button
-                className="mt-2 bg-[#070742] text-white font-semibold px-8 py-3 rounded-full text-sm uppercase shadow-md cursor-pointer"
+                className="mt-2 bg-white text-black font-semibold px-8 py-3 rounded-full text-sm uppercase shadow-md cursor-pointer"
                 onClick={scrollToTop}
               >
                 Contact Us
@@ -42,15 +43,15 @@ export default function Support() {
         </div>
 
         {/* Email Input */}
-        <div className="bg-white shadow-lg rounded-full px-4 py-2 flex items-center w-full max-w-md">
+        <div className="bg-[#16283E] shadow-lg rounded-full px-4 py-2 flex items-center w-full max-w-md">
           <input
             type="email"
             placeholder="Enter your email address.."
-            className="flex-grow outline-none bg-transparent px-2 text-sm text-gray-700"
+            className="flex-grow outline-none bg-transparent px-2 text-sm text-gray-100 placeholder-gray-400"
           />
           <Link to="/Signup">
             <button
-              className="bg-[#14143B] text-white px-5 py-2 rounded-full font-semibold text-sm cursor-pointer"
+              className="bg-[#D5C7FF] text-black px-5 py-2 rounded-full font-semibold text-sm cursor-pointer"
               onClick={scrollToTop}
             >
               Sign up

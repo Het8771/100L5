@@ -34,7 +34,7 @@ const ProductFinderHero = () => {
   };
 
   return (
-    <section className="w-full relative">
+    <section className="w-full relative bg-[#16283E] ">
       <Navbar />
              <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
           <img
@@ -43,7 +43,7 @@ const ProductFinderHero = () => {
             className="w-150 h-auto object-cover"
           />
         </div>
-      <div
+      {/* <div
         className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%] "
         style={{ zIndex: -1 }}
       >
@@ -52,7 +52,7 @@ const ProductFinderHero = () => {
           alt="Background Shape"
           className="w-full h-auto object-cover"
         />
-      </div>
+      </div> */}
 
       {/* Leaf Background */}
       <img
@@ -70,10 +70,10 @@ const ProductFinderHero = () => {
           <div className="py-12 px-4 relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
             {/* Left Content */}
             <div className="flex-1 text-center lg:text-left space-y-6">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
+              <h1 className="text-4xl md:text-5xl font-bold text-white">
                 Product Finder
               </h1>
-              <p className="text-gray-600 text-lg">
+              <p className="text-gray-400 text-lg">
                 Find Exactly What You Need <br /> Your Shortcut to the Right
                 Choice
               </p>
@@ -81,7 +81,7 @@ const ProductFinderHero = () => {
               {/* Buttons */}
                <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
                                <div className="relative inline-flex items-center">
-                                 <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap">
+                                 <button className="bg-[#273D58]  border border-white text-white font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap">
                                    EXPLORE TOOL
                                  </button>
                                  <img
@@ -91,7 +91,7 @@ const ProductFinderHero = () => {
                                  />
                                </div>
                                <div className="relative inline-flex items-center">
-                                 <Link to ="/Productfinder"><button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer">
+                                 <Link to ="/Productfinder"><button className="bg-[#273D58]  border border-white text-white font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer">
                                    PRODUCT FINDER
                                  </button></Link>
                                  <img
@@ -106,16 +106,16 @@ const ProductFinderHero = () => {
               <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-8 mt-10">
                 {/* Login/Register Section */}
                 <div className="flex flex-col items-center space-y-3">
-                  <button className="bg-gray-100 px-8 py-2 rounded-full text-gray-600 font-semibold shadow-md">
+                  <button className="bg-[#273D58] px-8 py-2 rounded-full text-gray-400 font-semibold shadow-md">
                     LOGIN / REGISTER
                   </button>
-                  <div className="text-red-600 font-semibold cursor-pointer hover:underline">
+                  {/* <div className="text-red-600 font-semibold cursor-pointer hover:underline">
                     SIGN IN
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Extension Info */}
-                <div className="text-center">
+                {/* <div className="text-center">
                   <p className="text-sm text-gray-500 mb-2">
                     Get the extension and access all tools with just one click
                   </p>
@@ -147,7 +147,7 @@ const ProductFinderHero = () => {
                     </a>
                     <div className="h-px w-12 bg-gray-300" />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -160,14 +160,14 @@ const ProductFinderHero = () => {
               />
             </div>
           </div>
-          <div class="bg-[#f8f8fb] rounded-3xl p-8 max-w-7xl mx-auto mb-5 shadow-lg">
-            <h2 class="text-2xl font-bold text-[#23233c] mb-6 ">
+          <div class="bg-[#273D58] rounded-3xl p-8 max-w-7xl mx-auto mb-5 shadow-lg">
+            <h2 class="text-2xl font-bold text-white mb-6 ">
               Submit your product
             </h2>
-            <div class="bg-white rounded-2xl p-6 flex flex-col md:flex-row items-center gap-4">
+            <div class="bg-[#16283E] rounded-2xl p-6 flex flex-col md:flex-row items-center gap-4">
               <div class="flex-1 w-full">
                 <label
-                  class="block text-base font-medium text-[#23233c] mb-1 bg-white"
+                  class="block text-base font-medium text-white mb-1 "
                   for="product-url"
                 >
                   1. Please enter the webpage of your product*
@@ -181,7 +181,7 @@ const ProductFinderHero = () => {
               </div>
               <button
                 type="submit"
-                class="bg-[#0a1330] text-white font-medium rounded-full px-8 py-2 transition hover:bg-[#23233c]"
+                class="bg-[#D5C7FF] text-black font-medium rounded-full px-8 py-2 transition hover:bg-[#23233c]"
               >
                 Submit
               </button>

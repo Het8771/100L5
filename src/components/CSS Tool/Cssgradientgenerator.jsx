@@ -266,7 +266,7 @@ const GradientGenerator = ({ id = "CSS Gradient Generator" }) => {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-lg hover:opacity-90 transition"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg hover:opacity-90 transition"
               >
                 Cancel
               </button>
@@ -280,7 +280,7 @@ const GradientGenerator = ({ id = "CSS Gradient Generator" }) => {
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-lg hover:opacity-90 transition"
+                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg hover:opacity-90 transition"
               >
                 Submit
               </button>
@@ -399,7 +399,7 @@ const GradientGenerator = ({ id = "CSS Gradient Generator" }) => {
 
           <button
             onClick={handleShuffle}
-            className="transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg px-6 py-2 w-full sm:w-auto"
+            className="transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg px-6 py-2 w-full sm:w-auto"
           >
             Shuffle Colors
           </button>
@@ -415,7 +415,7 @@ const GradientGenerator = ({ id = "CSS Gradient Generator" }) => {
 
       <div className="flex flex-col sm:flex-row gap-4 mb-6">
         <button
-          className="w-full sm:w-40 px-6 py-3 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
+          className="w-full sm:w-40 px-6 py-3 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
           onClick={() => {
             setStartColor("#474bff");
             setEndColor("#bc48ff");
@@ -430,7 +430,7 @@ const GradientGenerator = ({ id = "CSS Gradient Generator" }) => {
         </button>
         <button
           onClick={() => navigator.clipboard.writeText(cssOutput)}
-          className="w-full sm:w-40 px-6 py-3 transition bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
+          className="w-full sm:w-40 px-6 py-3 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
         >
           Copy
         </button>
