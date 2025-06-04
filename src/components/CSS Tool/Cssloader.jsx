@@ -1,12 +1,12 @@
-import { useState, useEffect, useRef,useContext } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { Share, Heart, Bug, ChevronLeft, ChevronRight } from "lucide-react";
- import { PiFileCssLight } from "react-icons/pi";
- import { PiFileJsxBold } from "react-icons/pi";
- import { FiShare2 } from "react-icons/fi";
- import { FiAlertCircle } from 'react-icons/fi';
- import { LuLoader } from "react-icons/lu";
+import { PiFileCssLight } from "react-icons/pi";
+import { PiFileJsxBold } from "react-icons/pi";
+import { FiShare2 } from "react-icons/fi";
+import { FiAlertCircle } from "react-icons/fi";
+import { LuLoader } from "react-icons/lu";
 
- import {
+import {
   FaCheck,
   FaRegCopy,
   FaFacebookF,
@@ -20,7 +20,7 @@ import { MdOutlineContentPaste, MdShare } from "react-icons/md";
 import Comment from "../Text tools/Comment";
 import { FavoritesContext } from "../../Context/FavoriteContext";
 
-export default function CSSLoaderGenerator({id="CSS Loader"}) {
+export default function CSSLoaderGenerator({ id = "CSS Loader" }) {
   const { updateFavorites } = useContext(FavoritesContext);
   const [selectedCategory, setSelectedCategory] = useState("spinners");
   const [currentPage, setCurrentPage] = useState(1);
@@ -1886,520 +1886,525 @@ export default function CSSLoaderGenerator({id="CSS Loader"}) {
       }
     );
   };
-   const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const [bugDescription, setBugDescription] = useState("");
   const [shareOpen, setShareOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("tool");
   const [isFavorite, setIsFavorite] = useState(false);
-     const onFavoriteToggle = () => {
-        const favorites = JSON.parse(localStorage.getItem("FavoriteTools") || "[]");
-        let newFavorites;
-    
-        if (favorites.includes(id)) {
-          newFavorites = favorites.filter((favId) => favId !== id);
-          setIsFavorite(false);
-        } else {
-          newFavorites = [...favorites, id];
-          setIsFavorite(true);
-        }
-    
-        localStorage.setItem("FavoriteTools", JSON.stringify(newFavorites));
-        updateFavorites();
-      };
-    
-      useEffect(() => {
-        const favorites = JSON.parse(localStorage.getItem("FavoriteTools") || "[]");
-        setIsFavorite(favorites.includes(id));
-      }, [id]);
-  
+  const onFavoriteToggle = () => {
+    const favorites = JSON.parse(localStorage.getItem("FavoriteTools") || "[]");
+    let newFavorites;
+
+    if (favorites.includes(id)) {
+      newFavorites = favorites.filter((favId) => favId !== id);
+      setIsFavorite(false);
+    } else {
+      newFavorites = [...favorites, id];
+      setIsFavorite(true);
+    }
+
+    localStorage.setItem("FavoriteTools", JSON.stringify(newFavorites));
+    updateFavorites();
+  };
+
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem("FavoriteTools") || "[]");
+    setIsFavorite(favorites.includes(id));
+  }, [id]);
 
   return (
     <>
-    <div className="max-w-4xl mx-auto mt-7 p-2">
-      {/* Header */}
- <div className="flex flex-col sm:flex-row items-center justify-between mb-4 gap-2">
-        <div className="flex items-center gap-3 mb-2 sm:mb-0">
-          <span className="text-4xl text-indigo-400">
-           <LuLoader />
-
-          </span>
-          <span className="text-2xl font-bold text-gray-900 md:text-lg lg:text-2xl sm:text-lg">
-            CSS&nbsp;Loader&nbsp;Generator
-          </span>
-        </div>
-        <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 lg:justify-end lg:gap-2">
-          <button
-            onClick={() => setShareOpen(true)}
-            className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 mb-2 md:mb-0 cursor-pointer"
-          >
-            <FiShare2 className="mr-2" size={18} />
-            Share
-          </button>
-          <button
-            className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 cursor-pointer hover:bg-indigo-100 transition"
-            onClick={() => setOpen(true)}
-          >
-            <FiAlertCircle className="text-indigo-600 text-base" />
-            Report Bug
-          </button>
-          <button
-            onClick={onFavoriteToggle}
-            className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer border-indigo-600 ${isFavorite
-              ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-              : "bg-indigo-50 border-indigo-300 text-indigo-600"
+      <div className="max-w-4xl mx-auto mt-7 p-2">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row items-center justify-between mb-4 gap-2">
+          <div className="flex items-center gap-3 mb-2 sm:mb-0">
+            <span className="text-4xl text-indigo-400">
+              <LuLoader />
+            </span>
+            <span className="text-2xl font-bold text-white md:text-lg lg:text-2xl sm:text-lg">
+              CSS&nbsp;Loader&nbsp;Generator
+            </span>
+          </div>
+          <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 lg:justify-end lg:gap-2">
+            <button
+              onClick={() => setShareOpen(true)}
+              className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]   text-white mb-2 md:mb-0 cursor-pointer"
+            >
+              <FiShare2 className="mr-2" size={18} />
+              Share
+            </button>{" "}
+            <button
+              className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]   text-white cursor-pointer transition"
+              onClick={() => setOpen(true)}
+            >
+              <FiAlertCircle className="text-white text-base" />
+              Report Bug
+            </button>
+            <button
+              onClick={onFavoriteToggle}
+              className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${
+                isFavorite
+                  ? "border border-white bg-[#273D58]   text-white"
+                  : "bg-[#273D58]  border border-white text-white"
               }`}
-          >
-            {isFavorite ? (
-              <>
-                <FaCheck className="inline-block mr-1" size={12} /> Added
-              </>
-            ) : (
-              <>
-                <FaRegStar className="inline-block mr-1" size={12} /> Add to
-                Favorites
-              </>
-            )}
-          </button>
+            >
+              {isFavorite ? (
+                <>
+                  <FaCheck className="inline-block mr-1" size={12} /> Added
+                </>
+              ) : (
+                <>
+                  <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                  Favorites
+                </>
+              )}
+            </button>
+          </div>
         </div>
-      </div>
-      {/* Share Popup */}
-      {shareOpen && (
-        <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
-            <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
-              <button
-                onClick={() => setActiveTab("tool")}
-                className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
-                  ? "bg-indigo-600 text-white"
-                  : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
+        {/* Share Popup */}
+        {shareOpen && (
+          <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
+            <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
+              <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
+                <button
+                  onClick={() => setActiveTab("tool")}
+                  className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${
+                    activeTab === "tool"
+                      ? "bg-[#273D58]  border border-white text-white"
+                      : "text-black hover:bg-[#273D58] hover:text-white"
                   }`}
-              >
-                ⚙️ Share Tool
-              </button>
-              <button
-                onClick={() => setActiveTab("home")}
-                className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
-                  ? "bg-indigo-600 text-white"
-                  : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
+                >
+                  ⚙️ Share Tool
+                </button>
+                <button
+                  onClick={() => setActiveTab("home")}
+                  className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${
+                    activeTab === "home"
+                      ? "bg-[#273D58]  border border-white text-white"
+                      : "text-black hover:bg-[#273D58] hover:text-white"
                   }`}
-              >
-                🏠 Share 10015
-              </button>
-            </div>
-            <div className="text-center border border-gray-500 rounded-xl p-6">
-              <p className="text-sm mb-1 text-gray-500">
-                You are currently sharing:
-              </p>
-              <h2 className="text-xl font-semibold mb-5 text-gray-600">
-                {activeTab === "tool"
-                  ? "Google Fonts Pair Finder"
-                  : "10015 Tools"}
-              </h2>
-              <div className="flex justify-center mb-6">
-                <MdShare className="text-indigo-500 text-7xl" />
+                >
+                  🏠 Share 10015
+                </button>
               </div>
-              <div className="flex justify-center gap-4">
-                {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
-                  (Icon, i) => (
+              <div className="text-center border border-gray-500 rounded-xl p-6">
+                <p className="text-sm mb-1 text-white">
+                  You are currently sharing:
+                </p>
+                <h2 className="text-xl font-semibold mb-5 text-white">
+                  {activeTab === "tool"
+                    ? "Google Fonts Pair Finder"
+                    : "10015 Tools"}
+                </h2>
+                <div className="flex justify-center mb-6">
+                  <MdShare className="text-white text-7xl" />
+                </div>
+                <div className="flex justify-center gap-4">
+                  {[
+                    FaFacebookF,
+                    FaTwitter,
+                    FaLinkedinIn,
+                    FaEnvelope,
+                    FaCopy,
+                  ].map((Icon, i) => (
                     <button
                       key={i}
-                      className="text-white bg-indigo-500 rounded-full w-10 h-10 flex items-center justify-center"
+                      className="text-black bg-white rounded-full w-10 h-10 flex items-center justify-center"
                     >
                       <Icon />
                     </button>
-                  )
-                )}
+                  ))}
+                </div>
               </div>
-            </div>
-            <button
-              className="absolute top-0 h-2 w-2 right-4 text-gray-600 text-lg cursor-pointer"
-              onClick={() => setShareOpen(false)}
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Bug Report Popup */}
-      {open && (
-        <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
-          <div className="bg-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
-            <h2 className="text-xl font-bold mb-2">Bug Report</h2>
-            <p className="text-sm mb-4">
-              <strong>Tool:</strong> Lorem Ipsum Generator
-            </p>
-            <label className="text-sm mb-1 block" htmlFor="bugDescription">
-              Please describe the issue.
-            </label>
-            <textarea
-              id="bugDescription"
-              className="w-full p-3 border border-blue-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-              placeholder="Description*"
-              value={bugDescription}
-              onChange={(e) => setBugDescription(e.target.value)}
-            />
-            <div className="flex justify-end gap-3 mt-4">
               <button
-                onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
+                className="absolute top-0 h-2 w-2 right-4 text-white text-lg cursor-pointer"
+                onClick={() => setShareOpen(false)}
               >
-                Cancel
-              </button>
-              <button
-                onClick={() => {
-                  if (!bugDescription.trim()) {
-                    alert("Please enter a description.");
-                    return;
-                  }
-                  console.log("Bug description submitted:", bugDescription);
-                  setOpen(false);
-                  setBugDescription("");
-                }}
-                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
-              >
-                Submit
+                ✕
               </button>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-6">
-      
-
-        {/* Category selector and counter */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-          <div className="w-full sm:w-64 relative" ref={dropdownRef}>
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="w-full flex items-center justify-between px-4 py-2 border border-gray-500 rounded-md bg-white text-sm"
-            >
-              <span>
-                {loaderCategories.find((cat) => cat.value === selectedCategory)
-                  ?.label || "Select Category"}
-              </span>
-              <ChevronRight
-                className={`h-4 w-4 transition-transform ${
-                  isDropdownOpen ? "rotate-90" : ""
-                }`}
+        {/* Bug Report Popup */}
+        {open && (
+          <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
+            <div className="bg-[#16283E] border border-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
+              <h2 className="text-xl font-bold mb-2 text-white">Bug Report</h2>
+              <p className="text-sm mb-4"></p>
+              <label
+                className="text-sm mb-1 block text-white"
+                htmlFor="bugDescription"
+              >
+                Please describe the issue.
+              </label>
+              <textarea
+                id="bugDescription"
+                className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 text-white"
+                placeholder="Description*"
+                value={bugDescription}
+                onChange={(e) => setBugDescription(e.target.value)}
               />
-            </button>
-
-            {isDropdownOpen && (
-              <div className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg">
-                {loaderCategories.map((category) => (
-                  <button
-                    key={category.value}
-                    className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 ${
-                      selectedCategory === category.value
-                        ? "bg-indigo-50 text-indigo-600"
-                        : ""
-                    }`}
-                    onClick={() => {
-                      setSelectedCategory(category.value);
-                      setIsDropdownOpen(false);
-                      setCurrentPage(1); // Reset to first page when changing category
-                    }}
-                  >
-                    {category.label}
-                  </button>
-                ))}
+              <div className="flex justify-end gap-3 mt-4">
+                <button
+                  onClick={() => setOpen(false)}
+                  className="px-4 py-2 bg-[#273D58]  border border-white text-white border border-white rounded-lg"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={() => {
+                    if (!bugDescription.trim()) {
+                      alert("Please enter a description.");
+                      return;
+                    }
+                    console.log("Bug description submitted:", bugDescription);
+                    setOpen(false);
+                    setBugDescription("");
+                  }}
+                  className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
+                >
+                  Submit
+                </button>
               </div>
-            )}
+            </div>
           </div>
+        )}
 
-          <div className="text-gray-600 text-sm sm:text-base">
-            Total CSS Loader Count:{" "}
-            <span className="font-semibold">{filteredLoaders.length}</span>
-          </div>
-        </div>
+        <main className="max-w-4xl mx-auto px-4 sm:px-6 py-6">
+          {/* Category selector and counter */}
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+            <div className="w-full sm:w-64 relative" ref={dropdownRef}>
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="w-full flex items-center justify-between px-4 py-2 border border-gray-500 rounded-md bg-[#16283E] text-white text-sm "
+              >
+                <span>
+                  {loaderCategories.find(
+                    (cat) => cat.value === selectedCategory
+                  )?.label || "Select Category"}
+                </span>
+                <ChevronRight
+                  className={`h-4 w-4 transition-transform ${
+                    isDropdownOpen ? "rotate-90" : ""
+                  }`}
+                />
+              </button>
 
-        {/* Loader grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {currentLoaders.map((loader) => (
-            <div
-              key={loader.id}
-              className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center h-40 relative cursor-pointer transition-all hover:shadow-md"
-              onMouseEnter={() => setHoveredLoaderId(loader.id)}
-              onMouseLeave={() => setHoveredLoaderId(null)}
-              onClick={() => setSelectedLoader(loader)}
-            >
-              <div className="flex items-center justify-center h-full w-full">
-                {renderLoader(loader.type)}
-              </div>
-
-              {hoveredLoaderId === loader.id && (
-                <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center rounded-lg">
-                  <button
-                    className="bg-white px-3 py-1 rounded-md shadow-sm hover:bg-indigo-50 transition-colors"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelectedLoader(loader);
-                    }}
-                  >
-                    View Code
-                  </button>
+              {isDropdownOpen && (
+                <div className="absolute z-10 w-full mt-1  border border-gray-500 bg-[#16283E] text-white rounded-md shadow-lg ">
+                  {loaderCategories.map((category) => (
+                    <button
+                      key={category.value}
+                      className={`w-full text-left px-4 py-2 text-sm  cursor-pointer ${
+                        selectedCategory === category.value
+                          ? " text-gray-200 bg-indigo-600"
+                          : ""
+                      }`}
+                      onClick={() => {
+                        setSelectedCategory(category.value);
+                        setIsDropdownOpen(false);
+                        setCurrentPage(1); // Reset to first page when changing category
+                      }}
+                    >
+                      {category.label}
+                    </button>
+                  ))}
                 </div>
               )}
-
-              <div className="mt-2 text-sm text-center text-gray-600">
-                {loader.name}
-              </div>
             </div>
-          ))}
-        </div>
 
-        {/* Pagination */}
-        <div className="flex items-center justify-center gap-2 mb-8">
-          <button
-            onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="p-2 rounded-full hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
-            aria-label="Previous page"
-          >
-            <ChevronLeft className="h-5 w-5" />
-            <span className="hidden sm:inline ml-1">Prev</span>
-          </button>
-
-          <div className="hidden sm:flex items-center gap-1">
-            {pageNumbers.map((page, index) =>
-              page === "..." ? (
-                <span key={`ellipsis-${index}`} className="px-2">
-                  ...
-                </span>
-              ) : (
-                <button
-                  key={`page-${page}`}
-                  onClick={() =>
-                    typeof page === "number" && setCurrentPage(page)
-                  }
-                  className={`h-8 w-8 flex items-center justify-center rounded-full ${
-                    currentPage === page
-                      ? "bg-indigo-600 text-white"
-                      : "text-gray-700 hover:bg-gray-100"
-                  }`}
-                >
-                  {page}
-                </button>
-              )
-            )}
+            <div className=" text-sm text-white sm:text-base">
+              Total CSS Loader Count:{" "}
+              <span className="font-semibold">{filteredLoaders.length}</span>
+            </div>
           </div>
 
-          <div className="flex sm:hidden space-x-1">
-            {[...Array(totalPages)].map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrentPage(i + 1)}
-                className={`h-2 w-2 rounded-full ${
-                  currentPage === i + 1 ? "bg-indigo-600" : "bg-gray-300"
-                }`}
-                aria-label={`Page ${i + 1}`}
-              />
+          {/* Loader grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            {currentLoaders.map((loader) => (
+              <div
+                key={loader.id}
+                className="bg-[#16283E] border border-gray-500 rounded-lg p-4 flex flex-col items-center justify-center h-40 relative cursor-pointer transition-all hover:shadow-md"
+                onMouseEnter={() => setHoveredLoaderId(loader.id)}
+                onMouseLeave={() => setHoveredLoaderId(null)}
+                onClick={() => setSelectedLoader(loader)}
+              >
+                <div className="flex items-center justify-center h-full w-full">
+                  {renderLoader(loader.type)}
+                </div>
+
+                {hoveredLoaderId === loader.id && (
+                  <div className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center rounded-lg">
+                    <button
+                      className="bg-white px-3 py-1 rounded-md shadow-sm hover:bg-indigo-50 transition-colors"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelectedLoader(loader);
+                      }}
+                    >
+                      View Code
+                    </button>
+                  </div>
+                )}
+
+                <div className="mt-2 text-sm text-center  text-white">
+                  {loader.name}
+                </div>
+              </div>
             ))}
           </div>
 
-          <button
-            onClick={() =>
-              currentPage < totalPages && setCurrentPage(currentPage + 1)
-            }
-            disabled={currentPage === totalPages}
-            className="p-2 rounded-full hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
-            aria-label="Next page"
-          >
-            <span className="hidden sm:inline mr-1">Next</span>
-            <ChevronRight className="h-5 w-5" />
-          </button>
-        </div>
-      </main>
+          {/* Pagination */}
+          <div className="flex items-center justify-center gap-2 mb-8">
+            <button
+              onClick={() => currentPage > 1 && setCurrentPage(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="p-2 rounded-full cursor-pointer text-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+              aria-label="Previous page"
+            >
+              <ChevronLeft className="h-5 w-5" />
+              <span className="hidden sm:inline ml-1">Prev</span>
+            </button>
 
-      {/* Code Modal */}
-      {selectedLoader && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div
-            className="bg-white rounded-lg shadow-xl w-full max-w-3xl max-h-[90vh] overflow-auto code-modal"
-            ref={modalRef}
-          >
-            <div className="p-4 border-b border-gray-200 flex justify-between items-center">
-              <h2 className="text-xl font-semibold text-gray-800">
-                {selectedLoader.name} Code
-              </h2>
-              <button
-                className="text-gray-500 hover:text-gray-700"
-                onClick={() => setSelectedLoader(null)}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+            <div className="hidden sm:flex items-center gap-1 ">
+              {pageNumbers.map((page, index) =>
+                page === "..." ? (
+                  <span key={`ellipsis-${index}`} className="px-2">
+                    ...
+                  </span>
+                ) : (
+                  <button
+                    key={`page-${page}`}
+                    onClick={() =>
+                      typeof page === "number" && setCurrentPage(page)
+                    }
+                    className={`h-8 w-8 flex items-center justify-center rounded-full ${
+                      currentPage === page
+                        ? "bg-indigo-600 text-white"
+                        : "text-gray-500 hover:bg-gray-100"
+                    }`}
+                  >
+                    {page}
+                  </button>
+                )
+              )}
+            </div>
+
+            <div className="flex sm:hidden space-x-1">
+              {[...Array(totalPages)].map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentPage(i + 1)}
+                  className={`h-2 w-2 rounded-full ${
+                    currentPage === i + 1 ? "bg-indigo-600" : "bg-gray-300"
+                  }`}
+                  aria-label={`Page ${i + 1}`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={() =>
+                currentPage < totalPages && setCurrentPage(currentPage + 1)
+              }
+              disabled={currentPage === totalPages}
+              className="p-2 rounded-full cursor-pointer text-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+              aria-label="Next page"
+            >
+              <span className="hidden sm:inline mr-1">Next</span>
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </div>
+        </main>
+
+        {/* Code Modal */}
+        {selectedLoader && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+            <div
+              className="bg-white rounded-lg shadow-xl w-full max-w-3xl max-h-[90vh] overflow-auto code-modal"
+              ref={modalRef}
+            >
+              <div className="p-4 border-b border-gray-200 flex justify-between items-center">
+                <h2 className="text-xl font-semibold text-gray-800">
+                  {selectedLoader.name} Code
+                </h2>
+                <button
+                  className="text-gray-500 hover:text-gray-700"
+                  onClick={() => setSelectedLoader(null)}
                 >
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-              </button>
-            </div>
-
-            <div className="p-4 sm:p-6">
-              <div className="mb-6">
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-lg font-medium text-gray-800">HTML</h3>
-                  <button
-                    className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-sm ${
-                      isCopied && copyType === "html"
-                        ? "bg-green-100 text-green-800"
-                        : "bg-gray-100 hover:bg-gray-200 text-gray-800"
-                    }`}
-                    onClick={() =>
-                      copyToClipboard(
-                        generateHTMLCode(selectedLoader.type),
-                        "html"
-                      )
-                    }
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
-                    {isCopied && copyType === "html" ? (
-                      <>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="h-4 w-4"
-                        >
-                          <path d="M20 6 9 17l-5-5" />
-                        </svg>
-                        Copied!
-                      </>
-                    ) : (
-                      <>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="h-4 w-4"
-                        >
-                          <rect
-                            x="9"
-                            y="9"
-                            width="13"
-                            height="13"
-                            rx="2"
-                            ry="2"
-                          />
-                          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                        </svg>
-                        Copy HTML
-                      </>
-                    )}
-                  </button>
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </button>
+              </div>
+
+              <div className="p-4 sm:p-6">
+                <div className="mb-6">
+                  <div className="flex justify-between items-center mb-2">
+                    <h3 className="text-lg font-medium text-gray-800">HTML</h3>
+                    <button
+                      className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-sm ${
+                        isCopied && copyType === "html"
+                          ? "bg-green-100 text-green-800"
+                          : "bg-gray-100 hover:bg-gray-200 text-gray-800"
+                      }`}
+                      onClick={() =>
+                        copyToClipboard(
+                          generateHTMLCode(selectedLoader.type),
+                          "html"
+                        )
+                      }
+                    >
+                      {isCopied && copyType === "html" ? (
+                        <>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="h-4 w-4"
+                          >
+                            <path d="M20 6 9 17l-5-5" />
+                          </svg>
+                          Copied!
+                        </>
+                      ) : (
+                        <>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="h-4 w-4"
+                          >
+                            <rect
+                              x="9"
+                              y="9"
+                              width="13"
+                              height="13"
+                              rx="2"
+                              ry="2"
+                            />
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                          </svg>
+                          Copy HTML
+                        </>
+                      )}
+                    </button>
+                  </div>
+                  <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-auto">
+                    <pre className="text-sm whitespace-pre-wrap">
+                      {generateHTMLCode(selectedLoader.type)}
+                    </pre>
+                  </div>
                 </div>
-                <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-auto">
-                  <pre className="text-sm whitespace-pre-wrap">
-                    {generateHTMLCode(selectedLoader.type)}
-                  </pre>
+
+                <div>
+                  <div className="flex justify-between items-center mb-2">
+                    <h3 className="text-lg font-medium text-gray-800">CSS</h3>
+                    <button
+                      className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-sm ${
+                        isCopied && copyType === "css"
+                          ? "bg-green-100 text-green-800"
+                          : "bg-gray-100 hover:bg-gray-200 text-gray-800"
+                      }`}
+                      onClick={() =>
+                        copyToClipboard(
+                          generateCSSCode(selectedLoader.type),
+                          "css"
+                        )
+                      }
+                    >
+                      {isCopied && copyType === "css" ? (
+                        <>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="h-4 w-4"
+                          >
+                            <path d="M20 6 9 17l-5-5" />
+                          </svg>
+                          Copied!
+                        </>
+                      ) : (
+                        <>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="h-4 w-4"
+                          >
+                            <rect
+                              x="9"
+                              y="9"
+                              width="13"
+                              height="13"
+                              rx="2"
+                              ry="2"
+                            />
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                          </svg>
+                          Copy CSS
+                        </>
+                      )}
+                    </button>
+                  </div>
+                  <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-auto">
+                    <pre className="text-sm whitespace-pre-wrap">
+                      {generateCSSCode(selectedLoader.type)}
+                    </pre>
+                  </div>
                 </div>
               </div>
 
-              <div>
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-lg font-medium text-gray-800">CSS</h3>
-                  <button
-                    className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-sm ${
-                      isCopied && copyType === "css"
-                        ? "bg-green-100 text-green-800"
-                        : "bg-gray-100 hover:bg-gray-200 text-gray-800"
-                    }`}
-                    onClick={() =>
-                      copyToClipboard(
-                        generateCSSCode(selectedLoader.type),
-                        "css"
-                      )
-                    }
-                  >
-                    {isCopied && copyType === "css" ? (
-                      <>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="h-4 w-4"
-                        >
-                          <path d="M20 6 9 17l-5-5" />
-                        </svg>
-                        Copied!
-                      </>
-                    ) : (
-                      <>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="h-4 w-4"
-                        >
-                          <rect
-                            x="9"
-                            y="9"
-                            width="13"
-                            height="13"
-                            rx="2"
-                            ry="2"
-                          />
-                          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                        </svg>
-                        Copy CSS
-                      </>
-                    )}
-                  </button>
-                </div>
-                <div className="bg-gray-900 text-gray-100 p-4 rounded-md overflow-auto">
-                  <pre className="text-sm whitespace-pre-wrap">
-                    {generateCSSCode(selectedLoader.type)}
-                  </pre>
-                </div>
+              <div className="p-4 border-t border-gray-200 flex justify-end">
+                <button
+                  className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors"
+                  onClick={() => setSelectedLoader(null)}
+                >
+                  Close
+                </button>
               </div>
-            </div>
-
-            <div className="p-4 border-t border-gray-200 flex justify-end">
-              <button
-                className="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors"
-                onClick={() => setSelectedLoader(null)}
-              >
-                Close
-              </button>
             </div>
           </div>
-        </div>
-      )}
-    </div>
-      <Comment/>
-      </>
+        )}
+      </div>
+      <Comment />
+    </>
   );
 }

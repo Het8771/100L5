@@ -13,7 +13,7 @@ import {
   FaCopy,
   FaRegStar,
 } from "react-icons/fa6";
-import { MdOutlineContentPaste, MdShare } from "react-icons/md";
+import { MdShare } from "react-icons/md";
 import Comment from "../Text tools/Comment";
 import { FavoritesContext } from "../../Context/FavoriteContext";
 
@@ -90,304 +90,303 @@ box-shadow: ${shadowValue};
 
   return (
     <>
-    <div className="w-full max-w-4xl mx-auto mt-6 px-4 sm:px-6 md:px-8">
-      <div className="bg-white shadow-md p-4 sm:p-6 rounded-xl">
-        {/* Header */}
-        <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
-          <div className="flex items-center gap-3">
-            <span className="text-3xl sm:text-4xl text-indigo-400">
-              <FaBoxArchive />
-            </span>
-            <span className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 text-center">
-              CSS&nbsp;Box&nbsp;Shadow&nbsp;Generator
-            </span>
-          </div>
-          <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 md:mt-5 lg:justify-end lg:gap-2">
-            <button
-              onClick={() => setShareOpen(true)}
-              className="flex items-center justify-center px-4 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 transition w-full sm:w-auto min-w-[120px]"
-            >
-              <FiShare2 className="mr-2" size={18} />
-              Share
-            </button>
-            <button
-              className="flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 transition w-full sm:w-auto min-w-[120px]"
-              onClick={() => setOpen(true)}
-            >
-              <FiAlertCircle className="text-indigo-600 text-base" />
-              Report Bug
-            </button>
-            <button
-              onClick={onFavoriteToggle}
-              className={`flex items-center justify-center px-4 py-2 rounded-xl border text-sm cursor-pointer border-indigo-600 ${
-                isFavorite
-                  ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-                  : "bg-indigo-50 border-indigo-300 text-indigo-600"
-              } hover:bg-indigo-100 transition w-full sm:w-auto min-w-[120px]`}
-            >
-              {isFavorite ? (
-                <>
-                  <FaCheck className="inline-block mr-1" size={12} /> Added
-                </>
-              ) : (
-                <>
-                  <FaRegStar className="inline-block mr-1" size={12} /> Add to Favorites
-                </>
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Share Popup */}
-        {shareOpen && (
-          <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center px-4 py-6">
-            <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-xl w-full max-w-md">
-              <div className="flex flex-col sm:flex-row justify-between mb-4 bg-indigo-50 p-1 rounded-xl gap-2">
+      <div className=" bg-[#16283E] ">
+        <div className="w-full max-w-4xl mx-auto  px-4 sm:px-6 md:px-8">
+          <div className=" shadow-md p-4 sm:p-6 rounded-xl">
+            {/* Header */}
+            <div className="flex flex-col sm:flex-row items-center justify-between mb-4 gap-2">
+              <div className="flex items-center gap-3 mb-2 mt-5 sm:mb-0">
+                <span className="text-4xl text-indigo-400 mt-5">
+                  <FaBoxArchive />
+                </span>
+                <span className="text-2xl font-bold text-white md:text-lg lg:text-2xl sm:text-lg mt-5">
+                  Image&nbsp;Color&nbsp;Picker
+                </span>
+              </div>
+              <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 md:mt-5 lg:justify-end lg:gap-2 mt-5">
                 <button
-                  onClick={() => setActiveTab("tool")}
-                  className={`flex-1 px-4 py-2 rounded-xl font-semibold text-sm ${
-                    activeTab === "tool"
-                      ? "bg-indigo-600 text-white"
-                      : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                  }`}
+                  onClick={() => setShareOpen(true)}
+                  className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border mb-2 md:mb-0 cursor-pointer text-white bg-[#273D58]"
                 >
-                  ⚙️ Share Tool
+                  <FiShare2 className="mr-2" size={18} />
+                  Share
                 </button>
                 <button
-                  onClick={() => setActiveTab("home")}
-                  className={`flex-1 px-4 py-2 rounded-xl font-semibold text-sm ${
-                    activeTab === "home"
-                      ? "bg-indigo-600 text-white"
-                      : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                  }`}
+                  className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border cursor-pointer bg-[#273D58] text-white transition"
+                  onClick={() => setOpen(true)}
                 >
-                  🏠 Share 10015
+                  <FiAlertCircle className="text-white text-base" />
+                  Report Bug
+                </button>
+                <button
+                  onClick={onFavoriteToggle}
+                  className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer bg-[#273D58] text-white ${isFavorite
+                    ? ""
+                    : "bg"
+                    }`}
+                >
+                  {isFavorite ? (
+                    <>
+                      <FaCheck className="inline-block mr-1" size={12} /> Added
+                    </>
+                  ) : (
+                    <>
+                      <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                      Favorites
+                    </>
+                  )}
                 </button>
               </div>
-              <div className="text-center border border-gray-200 rounded-xl p-4 sm:p-6">
-                <p className="text-sm mb-1 text-gray-500">You are currently sharing:</p>
-                <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-5 text-gray-600">
-                  {activeTab === "tool" ? "Google Fonts Pair Finder" : "10015 Tools"}
-                </h2>
-                <div className="flex justify-center mb-4 sm:mb-6">
-                  <MdShare className="text-indigo-500 text-5xl sm:text-6xl" />
-                </div>
-                <div className="flex justify-center gap-3 sm:gap-4 flex-wrap">
-                  {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map((Icon, i) => (
+            </div>
+
+            {/* Share Popup */}
+            {shareOpen && (
+              <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center px-4 py-6">
+                <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-xl w-full max-w-md">
+                  <div className="flex flex-col sm:flex-row justify-between mb-4 bg-indigo-50 p-1 rounded-xl gap-2">
                     <button
-                      key={i}
-                      className="text-white bg-indigo-500 rounded-full w-10 h-10 flex items-center justify-center hover:bg-indigo-600 transition"
+                      onClick={() => setActiveTab("tool")}
+                      className={`flex-1 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
+                        ? "bg-indigo-600 text-white"
+                        : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
+                        }`}
                     >
-                      <Icon size={20} />
+                      ⚙️ Share Tool
                     </button>
+                    <button
+                      onClick={() => setActiveTab("home")}
+                      className={`flex-1 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
+                        ? "bg-indigo-600 text-white"
+                        : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
+                        }`}
+                    >
+                      🏠 Share 10015
+                    </button>
+                  </div>
+                  <div className="text-center border border-gray-200 rounded-xl p-4 sm:p-6">
+                    <p className="text-sm mb-1 text-gray-500">You are currently sharing:</p>
+                    <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-5 text-gray-600">
+                      {activeTab === "tool" ? "Google Fonts Pair Finder" : "10015 Tools"}
+                    </h2>
+                    <div className="flex justify-center mb-4 sm:mb-6">
+                      <MdShare className="text-indigo-500 text-5xl sm:text-6xl" />
+                    </div>
+                    <div className="flex justify-center gap-3 sm:gap-4 flex-wrap">
+                      {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map((Icon, i) => (
+                        <button
+                          key={i}
+                          className="text-white bg-indigo-500 rounded-full w-10 h-10 flex items-center justify-center hover:bg-indigo-600 transition"
+                        >
+                          <Icon size={20} />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <button
+                    className="absolute top-3 right-3 text-gray-600 text-lg cursor-pointer"
+                    onClick={() => setShareOpen(false)}
+                  >
+                    ✕
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Bug Report Popup */}
+            {open && (
+              <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center px-4 py-6">
+                <div className="bg-white w-full max-w-md p-4 sm:p-6 rounded-2xl shadow-lg relative">
+                  <h2 className="text-lg sm:text-xl font-bold mb-2">Bug Report</h2>
+                  <p className="text-sm mb-4">
+                    <strong>Tool:</strong> Lorem Ipsum Generator
+                  </p>
+                  <label className="text-sm mb-1 block" htmlFor="bugDescription">
+                    Please describe the issue.
+                  </label>
+                  <textarea
+                    id="bugDescription"
+                    className="w-full p-3 border border-blue-300 rounded-xl text-sm sm:text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300 resize-none"
+                    placeholder="Description*"
+                    value={bugDescription}
+                    onChange={(e) => setBugDescription(e.target.value)}
+                  />
+                  <div className="flex justify-end gap-3 mt-4">
+                    <button
+                      onClick={() => setOpen(false)}
+                      className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-lg hover:opacity-90 transition"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (!bugDescription.trim()) {
+                          alert("Please enter a description.");
+                          return;
+                        }
+                        console.log("Bug description submitted:", bugDescription);
+                        setOpen(false);
+                        setBugDescription("");
+                      }}
+                      className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] rounded-lg hover:opacity-90 transition"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Main Content */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white mt-8 ">
+              {/* Shape & Preview */}
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-4">
+                  {["Box", "Circle", "Header"].map((type) => (
+                    <label key={type.toLowerCase()} className="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        value={type.toLowerCase()}
+                        checked={shape === type.toLowerCase()}
+                        onChange={(e) => setShape(e.target.value)}
+                        className="h-5 w-5"
+                      />
+                      <span className="text-sm sm:text-base">{type}</span>
+                    </label>
                   ))}
                 </div>
+
+                {/* Preview Area */}
+                <div
+                  className="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-xl border border-gray-200 flex items-center justify-center overflow-hidden"
+                  style={{
+                    backgroundColor: bgColor,
+                    transition: "background 0.2s",
+                  }}
+                >
+                  <div
+                    className={`${shapeStyles[shape]}`}
+                    style={{
+                      backgroundColor: boxColor,
+                      boxShadow: shadowValue,
+                      transition: "all 0.2s",
+                    }}
+                  ></div>
+                </div>
               </div>
+
+              {/* Sliders */}
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm sm:text-base">Horizontal Offset: {hOffset}px</label>
+                  <input
+                    type="range"
+                    min="-50"
+                    max="50"
+                    value={hOffset}
+                    onChange={(e) => setHOffset(+e.target.value)}
+                    className="w-full h-2 bg-blue-500 rounded-lg appearance-none cursor-pointer"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm sm:text-base">Vertical Offset: {vOffset}px</label>
+                  <input
+                    type="range"
+                    min="-50"
+                    max="50"
+                    value={vOffset}
+                    onChange={(e) => setVOffset(+e.target.value)}
+                    className="w-full h-2 bg-blue-500 rounded-lg appearance-none cursor-pointer"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm sm:text-base">Blur: {blur}px</label>
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value={blur}
+                    onChange={(e) => setBlur(+e.target.value)}
+                    className="w-full h-2 bg-blue-500 rounded-lg appearance-none cursor-pointer"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm sm:text-base">Spread: {spread}px</label>
+                  <input
+                    type="range"
+                    min="-50"
+                    max="50"
+                    value={spread}
+                    onChange={(e) => setSpread(+e.target.value)}
+                    className="w-full h-2 bg-blue-500 rounded-lg appearance-none cursor-pointer"
+                  />
+                </div>
+              </div>
+
+              {/* Color & Inset */}
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm sm:text-base">Background Color</label>
+                  <input
+                    type="color"
+                    value={bgColor}
+                    onChange={(e) => setBgColor(e.target.value)}
+                    className="w-full h-10 sm:h-12 p-1 rounded"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm sm:text-base">Box Color</label>
+                  <input
+                    type="color"
+                    value={boxColor}
+                    onChange={(e) => setBoxColor(e.target.value)}
+                    className="w-full h-10 sm:h-12 p-1 rounded"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm sm:text-base">Shadow Color</label>
+                  <input
+                    type="color"
+                    value={shadowColor}
+                    onChange={(e) => setShadowColor(e.target.value)}
+                    className="w-full h-10 sm:h-12 p-1 rounded"
+                  />
+                </div>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={inset}
+                    onChange={(e) => setInset(e.target.checked)}
+                    className="h-5 w-5"
+                  />
+                  <label className="text-sm sm:text-base">Inset</label>
+                </div>
+              </div>
+            </div>
+
+            {/* CSS Output */}
+            <div className="border border-gray-200 bg-gray-100 p-4 rounded mt-6 font-mono text-xs sm:text-sm whitespace-pre-wrap overflow-x-auto">
+              <h1 className="text-sm sm:text-base font-semibold mb-2">CSS</h1>
+              {cssCode}
+            </div>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row justify-end gap-4 mt-4">
               <button
-                className="absolute top-3 right-3 text-gray-600 text-lg cursor-pointer"
-                onClick={() => setShareOpen(false)}
+                onClick={handleReset}
+                className="w-full sm:w-40 px-6 py-2 transition bg-[#273D58] text-white border cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
               >
-                ✕
+                Reset
+              </button>
+              <button
+                onClick={handleCopy}
+                className="w-full sm:w-40 px-6 py-2 transition bg-[#273D58] text-white  border cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
+              >
+                Copy
               </button>
             </div>
           </div>
-        )}
 
-        {/* Bug Report Popup */}
-        {open && (
-          <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center px-4 py-6">
-            <div className="bg-white w-full max-w-md p-4 sm:p-6 rounded-2xl shadow-lg relative">
-              <h2 className="text-lg sm:text-xl font-bold mb-2">Bug Report</h2>
-              <p className="text-sm mb-4">
-                <strong>Tool:</strong> Lorem Ipsum Generator
-              </p>
-              <label className="text-sm mb-1 block" htmlFor="bugDescription">
-                Please describe the issue.
-              </label>
-              <textarea
-                id="bugDescription"
-                className="w-full p-3 border border-blue-300 rounded-xl text-sm sm:text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300 resize-none"
-                placeholder="Description*"
-                value={bugDescription}
-                onChange={(e) => setBugDescription(e.target.value)}
-              />
-              <div className="flex justify-end gap-3 mt-4">
-                <button
-                  onClick={() => setOpen(false)}
-                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg hover:opacity-90 transition"
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={() => {
-                    if (!bugDescription.trim()) {
-                      alert("Please enter a description.");
-                      return;
-                    }
-                    console.log("Bug description submitted:", bugDescription);
-                    setOpen(false);
-                    setBugDescription("");
-                  }}
-                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg hover:opacity-90 transition"
-                >
-                  Submit
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Shape & Preview */}
-          <div className="space-y-4">
-            <div className="flex flex-wrap gap-4">
-              {["Box", "Circle", "Header"].map((type) => (
-                <label key={type.toLowerCase()} className="flex items-center gap-2">
-                  <input
-                    type="radio"
-                    value={type.toLowerCase()}
-                    checked={shape === type.toLowerCase()}
-                    onChange={(e) => setShape(e.target.value)}
-                    className="h-5 w-5"
-                  />
-                  <span className="text-sm sm:text-base">{type}</span>
-                </label>
-              ))}
-            </div>
-
-            {/* Preview Area */}
-            <div
-              className="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-xl border border-gray-200 flex items-center justify-center overflow-hidden"
-              style={{
-                backgroundColor: bgColor,
-                transition: "background 0.2s",
-              }}
-            >
-              <div
-                className={`${shapeStyles[shape]}`}
-                style={{
-                  backgroundColor: boxColor,
-                  boxShadow: shadowValue,
-                  transition: "all 0.2s",
-                }}
-              ></div>
-            </div>
-          </div>
-
-          {/* Sliders */}
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm sm:text-base">Horizontal Offset: {hOffset}px</label>
-              <input
-                type="range"
-                min="-50"
-                max="50"
-                value={hOffset}
-                onChange={(e) => setHOffset(+e.target.value)}
-                className="w-full h-2 bg-blue-500 rounded-lg appearance-none cursor-pointer"
-              />
-            </div>
-            <div>
-              <label className="block text-sm sm:text-base">Vertical Offset: {vOffset}px</label>
-              <input
-                type="range"
-                min="-50"
-                max="50"
-                value={vOffset}
-                onChange={(e) => setVOffset(+e.target.value)}
-                className="w-full h-2 bg-blue-500 rounded-lg appearance-none cursor-pointer"
-              />
-            </div>
-            <div>
-              <label className="block text-sm sm:text-base">Blur: {blur}px</label>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value={blur}
-                onChange={(e) => setBlur(+e.target.value)}
-                className="w-full h-2 bg-blue-500 rounded-lg appearance-none cursor-pointer"
-              />
-            </div>
-            <div>
-              <label className="block text-sm sm:text-base">Spread: {spread}px</label>
-              <input
-                type="range"
-                min="-50"
-                max="50"
-                value={spread}
-                onChange={(e) => setSpread(+e.target.value)}
-                className="w-full h-2 bg-blue-500 rounded-lg appearance-none cursor-pointer"
-              />
-            </div>
-          </div>
-
-          {/* Color & Inset */}
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm sm:text-base">Background Color</label>
-              <input
-                type="color"
-                value={bgColor}
-                onChange={(e) => setBgColor(e.target.value)}
-                className="w-full h-10 sm:h-12 p-1 rounded"
-              />
-            </div>
-            <div>
-              <label className="block text-sm sm:text-base">Box Color</label>
-              <input
-                type="color"
-                value={boxColor}
-                onChange={(e) => setBoxColor(e.target.value)}
-                className="w-full h-10 sm:h-12 p-1 rounded"
-              />
-            </div>
-            <div>
-              <label className="block text-sm sm:text-base">Shadow Color</label>
-              <input
-                type="color"
-                value={shadowColor}
-                onChange={(e) => setShadowColor(e.target.value)}
-                className="w-full h-10 sm:h-12 p-1 rounded"
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                checked={inset}
-                onChange={(e) => setInset(e.target.checked)}
-                className="h-5 w-5"
-              />
-              <label className="text-sm sm:text-base">Inset</label>
-            </div>
-          </div>
-        </div>
-
-        {/* CSS Output */}
-        <div className="border border-gray-200 bg-gray-100 p-4 rounded mt-6 font-mono text-xs sm:text-sm whitespace-pre-wrap overflow-x-auto">
-          <h1 className="text-sm sm:text-base font-semibold mb-2">CSS</h1>
-          {cssCode}
-        </div>
-
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row justify-end gap-4 mt-4">
-          <button
-            onClick={handleReset}
-            className="w-full sm:w-40 px-6 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
-          >
-            Reset
-          </button>
-          <button
-            onClick={handleCopy}
-            className="w-full sm:w-40 px-6 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
-          >
-            Copy
-          </button>
-        </div>
-      </div>
-
-      <style jsx global>{`
+          <style jsx global>{`
         /* Range input styling for consistency */
         input[type="range"]::-webkit-slider-thumb {
           -webkit-appearance: none;
@@ -578,9 +577,10 @@ box-shadow: ${shadowValue};
           }
         }
       `}</style>
-    </div>
+        </div>
+      </div>
       <Comment />
-      </>
+    </>
   );
 };
 

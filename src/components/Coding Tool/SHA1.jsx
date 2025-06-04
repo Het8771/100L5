@@ -198,7 +198,7 @@ export default function Sha1EncryptDecrypt() {
             <div className="flex justify-end gap-3 mt-4">
               <button
                 onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58] text-white border border-white rounded-lg"
               >
                 Cancel
               </button>
@@ -212,7 +212,7 @@ export default function Sha1EncryptDecrypt() {
                   setOpen(false);
                   setBugDescription("");
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                className="px-4 py-2 bg-[#273D58] text-white border border-white rounded-lg"
               >
                 Submit
               </button>
@@ -226,7 +226,7 @@ export default function Sha1EncryptDecrypt() {
         <button
           className={`px-8 py-2 rounded-t-lg font-semibold text-base transition ${
             tab === "encrypt"
-              ? " bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg text-sm"
+              ? " bg-[#273D58] text-white border border-white cursor-pointer rounded-lg text-sm"
               : "bg-white text-[#4f5fff]"
           }`}
           onClick={() => {
@@ -239,7 +239,7 @@ export default function Sha1EncryptDecrypt() {
         <button
           className={`px-8 py-2 rounded-t-lg font-semibold text-base transition ml-2 ${
             tab === "decrypt"
-              ? " bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg text-sm"
+              ? " bg-[#273D58] text-white border border-white cursor-pointer rounded-lg text-sm"
               : "bg-[#e7eafe] text-[#4f5fff]"
           }`}
           onClick={() => setTab("decrypt")}
@@ -285,7 +285,7 @@ export default function Sha1EncryptDecrypt() {
         {tab === "decrypt" && (
           <button
             onClick={toggleSettings}
-            className={`px-6 py-4  bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg text-sm ${showSettings ? 'border-[#4f5fff] text-[#4f5fff]' : 'border-[#e7eafe] text-[#4f5fff]'} bg-white flex items-center`}
+            className={`px-6 py-4  bg-[#273D58] text-white border border-white cursor-pointer rounded-lg text-sm ${showSettings ? 'border-[#4f5fff] text-[#4f5fff]' : 'border-[#e7eafe] text-[#4f5fff]'} bg-white flex items-center`}
             style={{ minWidth: 180 }}
           >
             Decryption Settings
@@ -303,21 +303,21 @@ export default function Sha1EncryptDecrypt() {
         <button
           className={`px-12 py-3 rounded-full text-base transition ${
             tab === "decrypt"
-              ? " bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg"
-              : " bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg"
+              ? " bg-[#273D58] text-white border border-white cursor-pointer rounded-lg"
+              : " bg-[#273D58] text-white border border-white cursor-pointer rounded-lg"
           }`}
           onClick={tab === "decrypt" ? handleDecrypt : undefined}
         >
           {tab === "decrypt" ? "Decrypt >" : "Encrypt >"}
         </button>
         <button
-          className="px-8 py-3  bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg"
+          className="px-8 py-3  bg-[#273D58] text-white border border-white cursor-pointer rounded-lg"
           onClick={handleReset}
         >
           Reset
         </button>
         <button
-          className={`px-9 py-3  bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg gap-2 transition${
+          className={`px-9 py-3  bg-[#273D58] text-white border border-white cursor-pointer rounded-lg gap-2 transition${
             isCopied
               ? "text-green-600 bg-green-50 border-green-200"
               : "text-[#4f5fff] hover:bg-[#f3f0ff]"

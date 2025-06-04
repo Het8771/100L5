@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { PiFileCssLight } from "react-icons/pi";
 import { LuSpline } from "react-icons/lu";
@@ -144,153 +145,156 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
               <LuSpline />
 
             </span>
-            <span className="text-xl font-bold text-gray-900 md:text-lg lg:text-2xl sm:text-lg">
+            <span className="text-xl font-bold text-white md:text-lg lg:text-2xl sm:text-lg">
               CSS&nbsp;Cubic&nbsp;Bezier&nbsp;Generator
             </span>
           </div>
           <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 lg:justify-end lg:gap-2">
-            <button
-              onClick={() => setShareOpen(true)}
-              className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 mb-2 md:mb-0 cursor-pointer"
-            >
-              <FiShare2 className="mr-2" size={18} />
-              Share
-            </button>
-            <button
-              className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 cursor-pointer hover:bg-indigo-100 transition"
-              onClick={() => setOpen(true)}
-            >
-              <FiAlertCircle className="text-indigo-600 text-base" />
-              Report Bug
-            </button>
-            <button
-              onClick={onFavoriteToggle}
-              className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer border-indigo-600 ${isFavorite
-                  ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-                  : "bg-indigo-50 border-indigo-300 text-indigo-600"
-                }`}
-            >
-              {isFavorite ? (
-                <>
-                  <FaCheck className="inline-block mr-1" size={12} /> Added
-                </>
-              ) : (
-                <>
-                  <FaRegStar className="inline-block mr-1" size={12} /> Add to
-                  Favorites
-                </>
-              )}
-            </button>
+            
+                         <button
+                             onClick={() => setShareOpen(true)}
+                             className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white mb-2 md:mb-0 cursor-pointer"
+                           >
+                             <FiShare2 className="mr-2" size={18} />
+                             Share
+                           </button>    <button
+                             className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white cursor-pointer transition"
+                             onClick={() => setOpen(true)}
+                           >
+                             <FiAlertCircle className="text-white text-base" />
+                             Report Bug
+                           </button>
+                            <button
+                                      onClick={onFavoriteToggle}
+                                      className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
+                                        ? "border border-white bg-[#273D58]  border border-white text-white"
+                                        : "bg-[#273D58]  border border-white text-white"
+                                        }`}
+                                    >
+                                      {isFavorite ? (
+                                        <>
+                                          <FaCheck className="inline-block mr-1" size={12} /> Added
+                                        </>
+                                      ) : (
+                                        <>
+                                          <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                                          Favorites
+                                        </>
+                                      )}
+                                    </button>
+
           </div>
         </div>
         {/* Share Popup */}
-        {shareOpen && (
-          <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
-            <div className="bg-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
-              <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
-                <button
-                  onClick={() => setActiveTab("tool")}
-                  className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
-                      ? "bg-indigo-600 text-white"
-                      : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                    }`}
-                >
-                  ⚙️ Share Tool
-                </button>
-                <button
-                  onClick={() => setActiveTab("home")}
-                  className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
-                      ? "bg-indigo-600 text-white"
-                      : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                    }`}
-                >
-                  🏠 Share 10015
-                </button>
-              </div>
-              <div className="text-center border border-gray-500 rounded-xl p-6">
-                <p className="text-sm mb-1 text-gray-500">
-                  You are currently sharing:
-                </p>
-                <h2 className="text-xl font-semibold mb-5 text-gray-600">
-                  {activeTab === "tool"
-                    ? "Google Fonts Pair Finder"
-                    : "10015 Tools"}
-                </h2>
-                <div className="flex justify-center mb-6">
-                  <MdShare className="text-indigo-500 text-7xl" />
-                </div>
-                <div className="flex justify-center gap-4">
-                  {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
-                    (Icon, i) => (
+    {shareOpen && (
+                <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
+                    <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
                       <button
-                        key={i}
-                        className="text-white bg-indigo-500 rounded-full w-10 h-10 flex items-center justify-center"
+                        onClick={() => setActiveTab("tool")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
                       >
-                        <Icon />
+                        ⚙️ Share Tool
                       </button>
-                    )
-                  )}
+                      <button
+                        onClick={() => setActiveTab("home")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        🏠 Share 10015
+                      </button>
+                    </div>
+                    <div className="text-center border border-gray-500 rounded-xl p-6">
+                      <p className="text-sm mb-1 text-white">
+                        You are currently sharing:
+                      </p>
+                      <h2 className="text-xl font-semibold mb-5 text-white">
+                        {activeTab === "tool"
+                          ? "Google Fonts Pair Finder"
+                          : "10015 Tools"}
+                      </h2>
+                      <div className="flex justify-center mb-6">
+                        <MdShare className="text-white text-7xl" />
+                      </div>
+                      <div className="flex justify-center gap-4">
+                        {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
+                          (Icon, i) => (
+                            <button
+                              key={i}
+                              className="text-black bg-white rounded-full w-10 h-10 flex items-center justify-center"
+                            >
+                              <Icon />
+                            </button>
+                          )
+                        )}
+                      </div>
+                    </div>
+                    <button
+                      className="absolute top-0 h-2 w-2 right-4 text-white text-lg cursor-pointer"
+                      onClick={() => setShareOpen(false)}
+                    >
+                      ✕
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <button
-                className="absolute top-0 h-2 w-2 right-4 text-gray-600 text-lg cursor-pointer"
-                onClick={() => setShareOpen(false)}
-              >
-                ✕
-              </button>
-            </div>
-          </div>
-        )}
+              )}
 
         {/* Bug Report Popup */}
-        {open && (
-          <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
-            <div className="bg-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
-              <h2 className="text-xl font-bold mb-2">Bug Report</h2>
-              <p className="text-sm mb-4">
-                <strong>Tool:</strong> Lorem Ipsum Generator
-              </p>
-              <label className="text-sm mb-1 block" htmlFor="bugDescription">
-                Please describe the issue.
-              </label>
-              <textarea
-                id="bugDescription"
-                className="w-full p-3 border border-blue-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-                placeholder="Description*"
-                value={bugDescription}
-                onChange={(e) => setBugDescription(e.target.value)}
-              />
-              <div className="flex justify-end gap-3 mt-4">
-                <button
-                  onClick={() => setOpen(false)}
-                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={() => {
-                    if (!bugDescription.trim()) {
-                      alert("Please enter a description.");
-                      return;
-                    }
-                    console.log("Bug description submitted:", bugDescription);
-                    setOpen(false);
-                    setBugDescription("");
-                  }}
-                  className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
-                >
-                  Submit
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+   {open && (
+                <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
+                    <h2 className="text-xl font-bold mb-2 text-white">Bug Report</h2>
+                    <p className="text-sm mb-4">
+                     
+
+                    </p>
+                    <label className="text-sm mb-1 block text-white" htmlFor="bugDescription">
+                      Please describe the issue.
+                    </label>
+                    <textarea
+                      id="bugDescription"
+                      className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 text-white"
+                      placeholder="Description*"
+                      value={bugDescription}
+                      onChange={(e) => setBugDescription(e.target.value)}
+                    />
+                    <div className="flex justify-end gap-3 mt-4">
+                      <button
+                        onClick={() => setOpen(false)}
+                        className="px-4 py-2 bg-[#273D58]  border border-white text-white border border-white rounded-lg"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (!bugDescription.trim()) {
+                            alert("Please enter a description.");
+                            return;
+                          }
+                          console.log("Bug description submitted:", bugDescription);
+                          setOpen(false);
+                          setBugDescription("");
+                        }}
+                        className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
 
         {/* Main Card */}
-        <div className="bg-white rounded-xl shadow-md p-6 flex flex-col gap-6 max-w-6xl mx-auto">
+        <div className="bg-[#16283E] rounded-xl shadow-md p-6 flex flex-col gap-6 max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6">
             {/* SVG Graph */}
-            <div className="bg-[#f7f8fa] rounded-lg border px-4 py-3 flex flex-col items-center w-full max-w-md mx-auto">
+            <div className="bg-[#16283E] text-white rounded-lg border px-4 py-3 flex flex-col items-center w-full max-w-md mx-auto">
               <svg width={width} height={height} className="mb-2">
                 <line
                   x1={pad}
@@ -340,7 +344,7 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
                 <text x={ex + 6} y={ey - 8} fontSize="12" fill="#555">
                   (1,1)
                 </text>
-                <text x={width / 2 - 18} y={height - 2} fontSize="13" fill="#888">
+                <text x={width / 2 - 18} y={height - 2} fontSize="13" fill="#888"  >
                   Time
                 </text>
                 <text
@@ -354,7 +358,7 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
                 </text>
               </svg>
               <div className="text-center mt-1">
-                <div className="text-xs text-gray-500">
+                <div className="text-xs text-white">
                   Cubic Bezier Coordinates
                 </div>
                 <div className="font-mono text-lg font-bold">
@@ -367,11 +371,11 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
             <div className="flex-1 flex flex-col gap-4">
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex-1">
-                  <label className="block text-xs font-medium text-gray-500 mb-1">
+                  <label className="block text-xs font-medium text-white mb-1">
                     Predefined Easing Functions
                   </label>
                   <select
-                    className="w-full border border-gray-200 outline-none rounded px-2 py-1 bg-white text-gray-900"
+                    className="w-full border border-gray-200 outline-none rounded px-2 py-1 bg-[#16283E] text-white"
                     value={preset}
                     onChange={handlePreset}
                   >
@@ -383,9 +387,9 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
                   </select>
                 </div>
                 <div className="flex-1">
-                  <label className="block text-xs font-medium text-gray-500 mb-1">
+                  <label className="block text-xs font-medium text-white mb-1">
                     Animation Duration:{" "}
-                    <span className="font-semibold text-gray-700">
+                    <span className="font-semibold text-white">
                       {duration}s
                     </span>
                   </label>
@@ -396,7 +400,7 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
                     step="0.01"
                     value={duration}
                     onChange={(e) => handleDuration(e.target.value)}
-                    className="w-full accent-blue-500"
+                    className="w-full accent-white"
                   />
                 </div>
               </div>
@@ -418,9 +422,9 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
                         Dot)
                       </span>
                     </div>
-                    <label className="block text-xs text-gray-500 mb-0.5">
+                    <label className="block text-xs text-white mb-0.5">
                       X{i / 2 + 1}:{" "}
-                      <span className="text-gray-700">
+                      <span className="text-white">
                         {formatNum(points[i])}
                       </span>
                     </label>
@@ -431,11 +435,11 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
                       step="0.01"
                       value={points[i]}
                       onChange={(e) => handleSlider(i, e.target.value)}
-                      className="w-full accent-blue-500"
+                      className="w-full accent-white"
                     />
-                    <label className="block text-xs text-gray-500 mt-2 mb-0.5">
+                    <label className="block text-xs text-white mt-2 mb-0.5">
                       Y{i / 2 + 1}:{" "}
-                      <span className="text-gray-700">
+                      <span className="text-white">
                         {formatNum(points[i + 1])}
                       </span>
                     </label>
@@ -446,7 +450,7 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
                       step="0.01"
                       value={points[i + 1]}
                       onChange={(e) => handleSlider(i + 1, e.target.value)}
-                      className="w-full accent-blue-500"
+                      className="w-full accent-white"
                     />
                   </div>
                 ))}
@@ -497,18 +501,18 @@ export default function CubicBezierGenerator({ id = "CSS Cubic Bezier Generator"
             <label className="block text-xs font-medium text-gray-500 mb-1 ">
               CSS
             </label>
-            <pre className="bg-[#f7f8fa] border border-gray-500 rounded px-3 py-2 font-mono text-sm text-gray-900 whitespace-pre mb-2 overflow-auto">
+            <pre className="bg-[#16283E] border border-gray-300 rounded px-3 py-2 font-mono text-sm text-white whitespace-pre mb-2 overflow-auto">
               {cssOut}
             </pre>
             <div className="flex flex-wrap gap-3">
               <button
-                className="px-4 py-1.5 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg text-sm flex items-center gap-1"
+                className="px-4 py-1.5 transition bg-[#273D58] border border-white text-white cursor-pointer rounded-lg text-sm flex items-center gap-1"
                 onClick={handleReset}
               >
                 Reset
               </button>
               <button
-                className="px-4 py-1.5 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg text-sm font-semibold flex items-center gap-1"
+                className="px-4 py-1.5 transition bg-[#273D58] border border-white text-white cursor-pointer rounded-lg text-sm font-semibold flex items-center gap-1"
                 onClick={handleCopy}
               >
                 <svg

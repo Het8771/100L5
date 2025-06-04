@@ -22,73 +22,73 @@ function Codingtools1() {
     {
       title: "Code to Image Converter",
       description: "Convert your codes to fancy images and share with your friends or colleagues",
-      icon: <RiCodeBlock className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <RiCodeBlock className="w-[60px] h-[60px] text-blue-400" />,
       filename: "/CodetoImage",
     },
     {
       title: "URL Slug Generator",
       description: "Generate SEO-friendly slugs from titles or any other strings for your webpages or blog posts",
-      icon: <FaLink className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <FaLink className="w-[60px] h-[60px] text-yellow-400" />,
       filename: "/Slug",
     },
     {
       title: "React Native Shadow Generator",
       description: "Generate fancy box shadows in React Native both for iOS and Android",
-      icon: <FaReact className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <FaReact className="w-[60px] h-[60px] text-pink-400" />,
       filename: "/Shadow",
     },
     {
       title: "Base64 Encoder Decoder",
       description: "Encode your strings to Base64 or decode strings encoded with Base64",
-      icon: <PiDatabaseBold className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <PiDatabaseBold className="w-[60px] h-[60px] text-orange-400" />,
       filename: "/BaseEncoderDecoder",
     },
     {
       title: "HTML Encoder/Decoder",
       description: "Encode or decode your HTML by replacing special characters into equivalent escape forms",
-      icon: <TbHtml className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <TbHtml className="w-[60px] h-[60px] text-pink-400" />,
       filename: "/HTMLEncoderDecoder",
     },
     {
       title: "URL Encoder/Decoder",
       description: "Encode your URL by escaping characters that may break your navigation and decode it",
-      icon: <PiFileHtmlBold className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <PiFileHtmlBold className="w-[60px] h-[60px] text-orange-400" />,
       filename: "/URLEncoderDecoder",
     },
     {
       title: "HTML Minifier",
       description: "Minify your HTML code, then copy it to clipboard or download as .html file",
-      icon: <ImHtmlFive2 className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <ImHtmlFive2 className="w-[60px] h-[60px] text-blue-400" />,
       filename: "/HTMLMinifier",
     },
     {
       title: "CSS Minifier",
       description: "Minify your CSS code, then copy it to clipboard or download as style.min.css file",
-      icon: <PiFileCssLight className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <PiFileCssLight className="w-[60px] h-[60px] text-yellow-400" />,
       filename: "/CSSMinifier",
     },
     {
       title: "JavaScript Minifier",
       description: "Minify your JavaScript code, then copy it to clipboard or download as .min.js file",
-      icon: <PiFileJsxBold className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <PiFileJsxBold className="w-[60px] h-[60px] text-blue-400" />,
       filename: "/JavaScriptMinifier",
     },
     {
       title: "HTML Formatter",
       description: "Format HTML with beautifier, then copy or download the result",
-      icon: <LiaHtml5 className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <LiaHtml5 className="w-[60px] h-[60px] text-yellow-400" />,
       filename: "/Hf",
     },
     {
       title: "CSS Formatter",
       description: "Beautify CSS code, then copy to clipboard or download as style.css",
-      icon: <SiCsswizardry className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <SiCsswizardry className="w-[60px] h-[60px] text-pink-400" />,
       filename: "/Cs",
     },
     {
       title: "JavaScript Formatter",
       description: "Beautify JavaScript code, then copy to clipboard or download as file",
-      icon: <PiFileJsxBold className="w-[60px] h-[60px] text-indigo-400" />,
+      icon: <PiFileJsxBold className="w-[60px] h-[60px] text-orange-400" />,
       filename: "/Javaf",
     },
   ];
@@ -134,7 +134,7 @@ function Codingtools1() {
     return (
       <div
         key={index}
-        className="relative rounded-2xl shadow-md cursor-pointer p-6 bg-[#F6F5F8] flex flex-col justify-between transition-all duration-300 hover:shadow-lg w-full max-w-[280px]"
+        className="group relative rounded-2xl shadow-md cursor-pointer p-6 bg-[#273D58] flex flex-col justify-between transition-all duration-300 hover:shadow-lg w-full max-w-[280px]"
         onClick={() => handleCardClick(tool.filename)}
       >
         {/* Wishlist Icon */}
@@ -150,7 +150,7 @@ function Codingtools1() {
             <img
               src={whishlist2 || "/placeholder.svg"}
               alt="Wishlist"
-              className="absolute top-1 right-2 w-5 h-5 transition-opacity duration-300 opacity-0 group-hover:opacity-100 cursor-pointer hover:scale-110"
+              className="absolute top-1 right-2 w-5 h-5 transition-opacity duration-300 opacity-10 hover:opacity-100 cursor-pointer hover:scale-110"
             />
           )}
         </div>
@@ -159,14 +159,14 @@ function Codingtools1() {
         <div className="rounded-md flex items-center justify-start mb-4">{tool.icon}</div>
 
         {/* Title */}
-        <h3 className="text-left font-semibold text-[#1F2B56] mb-2 break-words">{tool.title}</h3>
+        <h3 className="text-left font-semibold text-white mb-2 break-words">{tool.title}</h3>
 
         {/* Description */}
-        <p className="text-left text-gray-600 mb-8">{tool.description}</p>
+        <p className="text-left text-gray-400 mb-8">{tool.description}</p>
 
         {/* Arrow Button */}
         <div className="group absolute bottom-5.5 right-1">
-          <div className="relative w-28 h-10 flex items-center justify-center bg-gray-100 rounded-full z-0 transition-all duration-300">
+          <div className="relative w-28 h-10 flex items-center justify-center  rounded-full z-0 transition-all duration-300">
             <img
               src={arrow || "/placeholder.svg"}
               alt="Arrow"
@@ -184,11 +184,11 @@ function Codingtools1() {
   };
 
   return (
-      <div className="bg-[#16283E]">
+    <div className="bg-[#16293B]">
       <div className="py-10 px-4 md:px-10 max-w-7xl mx-auto">
         <h2
           style={{ fontFamily: "David Libre" }}
-          className="text-2xl md:text-4xl font-semibold text-center text-[#1F2B56] mb-2"
+          className="text-2xl md:text-4xl font-semibold text-center text-white mb-2"
         >
           Coding Tools
         </h2>

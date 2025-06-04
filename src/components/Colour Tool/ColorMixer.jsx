@@ -123,161 +123,159 @@ export default function RgbaToHexConverter({id="Color Mixer"}) {
                     <span className="text-4xl text-indigo-400">
                         <HiCircleStack />
                     </span>
-                    <h1 className="text-xl sm:text-2xl lg:text-lg font-bold text-gray-900">
+                    <h1 className="text-xl sm:text-2xl lg:text-lg font-bold text-white">
                         Color&nbsp;Mixer
                     </h1>
                 </div>
                 <div className="flex flex-col w-full sm:w-auto sm:flex-row sm:items-center gap-2 sm:gap-3">
-                    <button
-                        onClick={() => setShareOpen(true)}
-                        className="flex items-center justify-center w-full sm:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 cursor-pointer"
-                    >
-                        <FiShare2 className="mr-2" size={18} />
-                        Share
-                    </button>
-                    <button
-                        className="flex items-center justify-center gap-2 w-full sm:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 cursor-pointer hover:bg-indigo-100 transition"
-                        onClick={() => setOpen(true)}
-                    >
-                        <FiAlertCircle className="text-indigo-600 text-base" />
-                        Report Bug
-                    </button>
-                    <button
-                        onClick={onFavoriteToggle}
-                        className={`px-3 py-2 rounded-xl border text-sm w-full sm:w-auto ${
-                            isFavorite
-                                ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-                                : "bg-indigo-50 border-indigo-600 text-indigo-600"
-                        }`}
-                    >
-                        {isFavorite ? (
-                            <>
-                                <FaCheck className="inline-block mr-1" size={12} /> Added
-                            </>
-                        ) : (
-                            <>
-                                <FaRegStar className="inline-block mr-1" size={12} /> Add to Favorites
-                            </>
-                        )}
-                    </button>
+                  <button
+                             onClick={() => setShareOpen(true)}
+                             className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white mb-2 md:mb-0 cursor-pointer"
+                           >
+                             <FiShare2 className="mr-2" size={18} />
+                             Share
+                           </button>    <button
+                             className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white cursor-pointer transition"
+                             onClick={() => setOpen(true)}
+                           >
+                             <FiAlertCircle className="text-white text-base" />
+                             Report Bug
+                           </button>
+                            <button
+                                      onClick={onFavoriteToggle}
+                                      className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
+                                        ? "border border-white bg-[#273D58]  border border-white text-white"
+                                        : "bg-[#273D58]  border border-white text-white"
+                                        }`}
+                                    >
+                                      {isFavorite ? (
+                                        <>
+                                          <FaCheck className="inline-block mr-1" size={12} /> Added
+                                        </>
+                                      ) : (
+                                        <>
+                                          <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                                          Favorites
+                                        </>
+                                      )}
+                                    </button>
                 </div>
             </div>
 
-            {/* Share Popup */}
-            {shareOpen && (
-                <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center p-2">
-                    <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-xl max-w-xs sm:max-w-md w-full relative overflow-y-auto max-h-[90vh]">
-                        <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
-                            <button
-                                onClick={() => setActiveTab("tool")}
-                                className={`w-1/2 px-2 py-2 rounded-xl font-semibold text-sm ${
-                                    activeTab === "tool"
-                                        ? "bg-indigo-600 text-white"
-                                        : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                                }`}
-                            >
-                                ⚙️ Share Tool
-                            </button>
-                            <button
-                                onClick={() => setActiveTab("home")}
-                                className={`w-1/2 px-2 py-2 rounded-xl font-semibold text-sm ${
-                                    activeTab === "home"
-                                        ? "bg-indigo-600 text-white"
-                                        : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                                }`}
-                            >
-                                🏠 Share 10015
-                            </button>
-                        </div>
-                        <div className="text-center border border-gray-300 rounded-xl p-4 sm:p-6">
-                            <p className="text-sm mb-1 text-gray-500">
-                                You are currently sharing:
-                            </p>
-                            <h2 className="text-lg sm:text-xl font-semibold mb-5 text-gray-600">
-                                {activeTab === "tool"
-                                    ? "Google Fonts Pair Finder"
-                                    : "10015 Tools"}
-                            </h2>
-                            <div className="flex justify-center mb-6">
-                                <MdShare className="text-indigo-500 text-5xl sm:text-7xl" />
-                            </div>
-                            <div className="flex justify-center gap-3 sm:gap-4">
-                                {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
-                                    (Icon, i) => (
-                                        <button
-                                            key={i}
-                                            className="text-white bg-indigo-500 rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center"
-                                        >
-                                            <Icon />
-                                        </button>
-                                    )
-                                )}
-                            </div>
-                        </div>
-                        <button
-                            className="absolute top-2 right-4 text-gray-600 text-lg cursor-pointer"
-                            onClick={() => setShareOpen(false)}
-                        >
-                            ✕
-                        </button>
+        {/* Share Popup */}
+              {shareOpen && (
+                <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
+                    <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
+                      <button
+                        onClick={() => setActiveTab("tool")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        ⚙️ Share Tool
+                      </button>
+                      <button
+                        onClick={() => setActiveTab("home")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        🏠 Share 10015
+                      </button>
                     </div>
-                </div>
-            )}
-
-            {/* Bug Report Popup */}
-            {open && (
-                <div className="fixed inset-0 bg-black/30 flex z-40 justify-center items-center p-2">
-                    <div className="bg-white max-w-xs sm:max-w-md w-full p-4 sm:p-6 rounded-2xl shadow-lg relative overflow-y-auto max-h-[90vh]">
-                        <h2 className="text-lg sm:text-xl font-bold mb-2">Bug Report</h2>
-                        <p className="text-sm mb-4">
-                            <strong>Tool:</strong> RGBA to HEX Converter
-                        </p>
-                        <label className="text-sm mb-1 block" htmlFor="bugDescription">
-                            Please describe the issue.
-                        </label>
-                        <textarea
-                            id="bugDescription"
-                            className="w-full p-2 sm:p-3 border border-gray-300 rounded-xl text-base h-24 sm:h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-                            placeholder="Description*"
-                            value={bugDescription}
-                            onChange={(e) => setBugDescription(e.target.value)}
-                        />
-                        <div className="flex flex-col sm:flex-row justify-end gap-3 mt-4">
+                    <div className="text-center border border-gray-500 rounded-xl p-6">
+                      <p className="text-sm mb-1 text-white">
+                        You are currently sharing:
+                      </p>
+                      <h2 className="text-xl font-semibold mb-5 text-white">
+                        {activeTab === "tool"
+                          ? "Google Fonts Pair Finder"
+                          : "10015 Tools"}
+                      </h2>
+                      <div className="flex justify-center mb-6">
+                        <MdShare className="text-white text-7xl" />
+                      </div>
+                      <div className="flex justify-center gap-4">
+                        {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
+                          (Icon, i) => (
                             <button
-                                onClick={() => setOpen(false)}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                              key={i}
+                              className="text-black bg-white rounded-full w-10 h-10 flex items-center justify-center"
                             >
-                                Cancel
+                              <Icon />
                             </button>
-                            <button
-                                onClick={() => {
-                                    if (!bugDescription.trim()) {
-                                        alert("Please enter a description.");
-                                        return;
-                                    }
-                                    setOpen(false);
-                                    setBugDescription("");
-                                }}
-                                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
-                            >
-                                Submit
-                            </button>
-                        </div>
+                          )
+                        )}
+                      </div>
                     </div>
+                    <button
+                      className="absolute top-0 h-2 w-2 right-4 text-white text-lg cursor-pointer"
+                      onClick={() => setShareOpen(false)}
+                    >
+                      ✕
+                    </button>
+                  </div>
                 </div>
-            )}
+              )}
+        
+              {/* Bug Report Popup */}
+              {open && (
+                <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
+                    <h2 className="text-xl font-bold mb-2">Bug Report</h2>
+                    <p className="text-sm mb-4">
+                      <strong>Tool:</strong> Lorem Ipsum Generator
+                    </p>
+                    <label className="text-sm mb-1 block" htmlFor="bugDescription">
+                      Please describe the issue.
+                    </label>
+                    <textarea
+                      id="bugDescription"
+                      className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 "
+                      placeholder="Description*"
+                      value={bugDescription}
+                      onChange={(e) => setBugDescription(e.target.value)}
+                    />
+                    <div className="flex justify-end gap-3 mt-4">
+                      <button
+                        onClick={() => setOpen(false)}
+                        className="px-4 py-2 bg-[#273D58]  border border-white text-white border border-white rounded-lg"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (!bugDescription.trim()) {
+                            alert("Please enter a description.");
+                            return;
+                          }
+                          console.log("Bug description submitted:", bugDescription);
+                          setOpen(false);
+                          setBugDescription("");
+                        }}
+                        className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
 
             {/* Input Row */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-3xl mb-8">
                 <input
                     type="text"
-                    className="w-full sm:w-[340px] px-4 py-3 border border-gray-300 rounded-lg text-lg outline-none"
+                    className="w-full sm:w-[340px] px-4 py-3 border border-gray-500 rounded-lg text-lg outline-none"
                     value={rgbaInput}
                     onChange={(e) => setRgbaInput(e.target.value)}
                     placeholder="(22,25,255,0.9)"
                 />
                 <button
-                    className="w-full sm:w-auto bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer text-black px-4 py-3 rounded-md text-lg transition"
+                    className="w-full sm:w-auto bg-[#273D58] text-white border border-white cursor-pointer text-black px-4 py-3 rounded-md text-lg transition"
                     onClick={handleConvert}
                 >
                     Convert
@@ -285,7 +283,7 @@ export default function RgbaToHexConverter({id="Color Mixer"}) {
                 <input
                     type="text"
                     ref={hexRef}
-                    className="w-full sm:w-[340px] px-4 py-3 border border-gray-300 rounded-lg text-lg outline-none"
+                    className="w-full sm:w-[340px] px-4 py-3 border border-gray-500 rounded-lg text-lg outline-none"
                     value={hex}
                     placeholder="HEX"
                     readOnly
@@ -297,7 +295,7 @@ export default function RgbaToHexConverter({id="Color Mixer"}) {
                 <button
                     onClick={handleCopy}
                     disabled={!hex}
-                    className={`w-full sm:w-auto bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer text-black px-6 py-2 rounded-md flex items-center gap-2
+                    className={`w-full sm:w-auto bg-[#273D58] text-white border border-white cursor-pointer text-black px-6 py-2 rounded-md flex items-center gap-2
                         ${!hex ? 'opacity-50 cursor-not-allowed' : 'hover:bg-indigo-50'}
                     `}
                 >
@@ -311,7 +309,7 @@ export default function RgbaToHexConverter({id="Color Mixer"}) {
                     <div className="text-red-600 font-medium mb-4">{error}</div>
                 )}
                 {/* Preview area */}
-                <div className="flex w-full min-h-[150px] bg-white rounded-xl shadow-md overflow-hidden">
+                <div className="flex w-full min-h-[150px] bg-[#273D58] rounded-xl shadow-md overflow-hidden">
                     <div className="flex-1 flex items-center justify-center text-4xl text-gray-400 bg-gray-50">
                         {hex ? (
                             <span
@@ -324,9 +322,9 @@ export default function RgbaToHexConverter({id="Color Mixer"}) {
                         )}
                     </div>
                     <div className="flex-1 flex flex-col justify-center px-6">
-                        <div className="text-gray-500 text-sm mb-1">HEX</div>
+                        <div className="text-white text-sm mb-1">HEX</div>
                         <div className="text-lg font-mono">{hex || "--"}</div>
-                        <div className="text-gray-500 text-sm mt-4">RGBA</div>
+                        <div className="text-white text-sm mt-4">RGBA</div>
                         <div className="text-lg font-mono">{rgbaInput || "--"}</div>
                     </div>
                 </div>

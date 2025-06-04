@@ -32,7 +32,7 @@ const generateColors = (prompt, theme) => {
 
 function ColorCard({ label, hex }) {
     return (
-        <div className="border border-gray-200 rounded-xl p-4 flex justify-between items-center shadow">
+        <div className="border border-white rounded-xl p-4 flex justify-between items-center shadow">
             <div>
                 <p className="text-sm text-gray-500">{label}</p>
                 <p className="font-semibold">{hex}</p>
@@ -128,50 +128,49 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
     return (
         <>
             <div className="max-w-4xl mx-auto px-4 py-6 mt-3">
-                 <div className="flex flex-col sm:flex-row items-center justify-between mb-4 gap-2">
-                                <div className="flex items-center gap-3 mb-2 sm:mb-0">
-                                    <span className="text-4xl text-indigo-400">
-                                        <FaBrain/>
-                                    </span>
-                                    <h1 className="text-xl sm:text-2xl md:text-lg font-bold text-white">
-                                        AI&nbsp;Color
-                                    </h1>
-                                </div>
-                                <div className="flex flex-col w-full sm:w-auto sm:flex-row sm:items-center gap-2 sm:gap-3">
-                                    <button
-                                        onClick={() => setShareOpen(true)}
-                                        className="flex items-center justify-center w-full sm:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 cursor-pointer"
-                                    >
-                                        <FiShare2 className="mr-2" size={18} />
-                                        Share
-                                    </button>
-                                    <button
-                                        className="flex items-center justify-center gap-2 w-full sm:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 cursor-pointer hover:bg-indigo-100 transition"
-                                        onClick={() => setOpen(true)}
-                                    >
-                                        <FiAlertCircle className="text-indigo-600 text-base" />
-                                        Report Bug
-                                    </button>
-                                    <button
-                                        onClick={onFavoriteToggle}
-                                        className={`px-3 py-2 rounded-xl border text-sm w-full sm:w-auto ${
-                                            isFavorite
-                                                ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-                                                : "bg-indigo-50 border-indigo-600 text-indigo-600"
-                                        }`}
-                                    >
-                                        {isFavorite ? (
-                                            <>
-                                                <FaCheck className="inline-block mr-1" size={12} /> Added
-                                            </>
-                                        ) : (
-                                            <>
-                                                <FaRegStar className="inline-block mr-1" size={12} /> Add to Favorites
-                                            </>
-                                        )}
-                                    </button>
-                                </div>
-                            </div>
+                <div className="flex flex-col sm:flex-row items-center justify-between mb-4 gap-2">
+                    <div className="flex items-center gap-3 mb-2 sm:mb-0">
+                        <span className="text-4xl text-indigo-400">
+                            <FaBrain />
+                        </span>
+                        <h1 className="text-xl sm:text-2xl md:text-lg font-bold text-white">
+                            AI&nbsp;Color
+                        </h1>
+                    </div>
+                    <div className="flex flex-col w-full sm:w-auto sm:flex-row sm:items-center gap-2 sm:gap-3">
+                        <button
+                            onClick={() => setShareOpen(true)}
+                            className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white mb-2 md:mb-0 cursor-pointer"
+                        >
+                            <FiShare2 className="mr-2" size={18} />
+                            Share
+                        </button>    <button
+                            className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white cursor-pointer transition"
+                            onClick={() => setOpen(true)}
+                        >
+                            <FiAlertCircle className="text-white text-base" />
+                            Report Bug
+                        </button>
+                        <button
+                            onClick={onFavoriteToggle}
+                            className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
+                                ? "border border-white bg-[#273D58]  border border-white text-white"
+                                : "bg-[#273D58]  border border-white text-white"
+                                }`}
+                        >
+                            {isFavorite ? (
+                                <>
+                                    <FaCheck className="inline-block mr-1" size={12} /> Added
+                                </>
+                            ) : (
+                                <>
+                                    <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                                    Favorites
+                                </>
+                            )}
+                        </button>
+                    </div>
+                </div>
 
                 <div className="flex flex-col md:flex-row gap-4">
                     <input
@@ -179,12 +178,12 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
                         value={prompt}
                         onChange={(e) => setPrompt(e.target.value)}
                         placeholder="Enter a color (e.g., red)"
-                        className="flex-1 p-3 border border-gray-300 rounded-md outline-none"
+                        className="flex-1 p-3 border border-gray-500 rounded-md outline-none"
                     />
                     <select
                         value={theme}
                         onChange={(e) => setTheme(e.target.value)}
-                        className="p-3 border border-gray-300 rounded-md outline-none"
+                        className="bg-[#16283E] p-3 border border-gray-500 rounded-md outline-none"
                     >
                         <option value="light">Light</option>
                         <option value="dark">Dark</option>
@@ -214,12 +213,12 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
                 </div>
 
                 <div className="flex gap-4 mt-4">
-                    <button onClick={() => setShowExportModal(true)} className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-white px-4 py-2 rounded-md">
+                    <button onClick={() => setShowExportModal(true)} className="bg-[#273D58] text-white border border-white px-4 py-2 rounded-md">
                         Export Colors
                     </button>
-                    <button onClick={() => setShowPreview(!showPreview)} className="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-md">
+                    {/* <button onClick={() => setShowPreview(!showPreview)} className="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-md">
                         {showPreview ? "Hide Preview" : "Show Preview"}
-                    </button>
+                    </button> */}
                 </div>
 
                 {showPreview && <PreviewSection primary={primary} accent={accent} background={background} text={text} />}
@@ -229,8 +228,14 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
                     <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center p-4">
                         <div className="bg-[#16283E] p-6 rounded-2xl shadow-xl max-w-md w-full relative">
                             <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
-                                <button onClick={() => setActiveTab("tool")} className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool" ? "bg-indigo-600 text-white" : "text-indigo-600 hover:bg-indigo-600 hover:text-white"}`}>⚙️ Share Tool</button>
-                                <button onClick={() => setActiveTab("home")} className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home" ? "bg-indigo-600 text-white" : "text-indigo-600 hover:bg-indigo-600 hover:text-white"}`}>🏠 Share 10015</button>
+                                <button onClick={() => setActiveTab("tool")} className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
+                                    ? "bg-[#273D58]  border border-white text-white"
+                                    : "text-black hover:bg-[#273D58] hover:text-white"
+                                    }`}>⚙️ Share Tool</button>
+                                <button onClick={() => setActiveTab("home")} className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
+                                    ? "bg-[#273D58]  border border-white text-white"
+                                    : "text-black hover:bg-[#273D58] hover:text-white"
+                                    }`}>🏠 Share 10015</button>
                             </div>
                             <div className="text-center border border-gray-300 rounded-xl p-6">
                                 <p className="text-sm mb-1 text-gray-500">You are currently sharing:</p>
@@ -246,7 +251,7 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
                                     ))}
                                 </div>
                             </div>
-                            <button className="absolute top-0 right-4 text-gray-600 text-lg" onClick={() => setShareOpen(false)}>✕</button>
+                            <button className="absolute top-0 right-4 text-white text-lg" onClick={() => setShareOpen(false)}>✕</button>
                         </div>
                     </div>
                 )}
@@ -265,7 +270,7 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
                                 onChange={(e) => setBugDescription(e.target.value)}
                             />
                             <div className="flex justify-end gap-3 mt-4">
-                                <button onClick={() => setOpen(false)} className="px-4 py-2 bg-[#273D58] rounded-lg">Cancel</button>
+                                <button onClick={() => setOpen(false)} className="px-4 py-2 bg-[#273D58] text-white border border-white  rounded-lg">Cancel</button>
                                 <button
                                     onClick={() => {
                                         if (!bugDescription.trim()) {
@@ -276,7 +281,7 @@ export default function ColorPaletteGenerator({ id = "AI Color Palette Generator
                                         setOpen(false);
                                         setBugDescription("");
                                     }}
-                                    className="px-4 py-2 bg-indigo-500 text-white rounded-lg"
+                                    className="px-4 py-2 bg-[#273D58] text-white border border-white  text-white rounded-lg"
                                 >
                                     Submit
                                 </button>

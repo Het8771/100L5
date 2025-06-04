@@ -1,4 +1,4 @@
-import React, { useState, useRef,useContext, useEffect } from "react";
+import React, { useState, useRef, useContext, useEffect } from "react";
 import { MdContentCopy } from "react-icons/md";
 import { TbColorPicker } from "react-icons/tb";
 import { FiShare2 } from "react-icons/fi";
@@ -17,7 +17,7 @@ import { MdOutlineContentPaste, MdShare } from "react-icons/md";
 import Comment from "../Text tools/Comment";
 import { FavoritesContext } from "../../Context/FavoriteContext";
 
-const ImageColorPicker = ({id="Image Color Picker"}) => {
+const ImageColorPicker = ({ id = "Image Color Picker" }) => {
   const { updateFavorites } = useContext(FavoritesContext);
   const [open, setOpen] = useState(false);
   const [bugDescription, setBugDescription] = useState("");
@@ -164,287 +164,292 @@ const ImageColorPicker = ({id="Image Color Picker"}) => {
     }
   };
 
-     const onFavoriteToggle = () => {
-        const favorites = JSON.parse(localStorage.getItem("FavoriteTools") || "[]");
-        let newFavorites;
-    
-        if (favorites.includes(id)) {
-          newFavorites = favorites.filter((favId) => favId !== id);
-          setIsFavorite(false);
-        } else {
-          newFavorites = [...favorites, id];
-          setIsFavorite(true);
-        }
-    
-        localStorage.setItem("FavoriteTools", JSON.stringify(newFavorites));
-        updateFavorites();
-      };
-    
-      useEffect(() => {
-        const favorites = JSON.parse(localStorage.getItem("FavoriteTools") || "[]");
-        setIsFavorite(favorites.includes(id));
-      }, [id]);
+  const onFavoriteToggle = () => {
+    const favorites = JSON.parse(localStorage.getItem("FavoriteTools") || "[]");
+    let newFavorites;
+
+    if (favorites.includes(id)) {
+      newFavorites = favorites.filter((favId) => favId !== id);
+      setIsFavorite(false);
+    } else {
+      newFavorites = [...favorites, id];
+      setIsFavorite(true);
+    }
+
+    localStorage.setItem("FavoriteTools", JSON.stringify(newFavorites));
+    updateFavorites();
+  };
+
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem("FavoriteTools") || "[]");
+    setIsFavorite(favorites.includes(id));
+  }, [id]);
 
   return (
     <>
-    <div className="max-w-4xl mx-auto p-3">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row items-center justify-between mb-4 gap-2">
-        <div className="flex items-center gap-3 mb-2 sm:mb-0">
-          <span className="text-4xl text-indigo-400 mt-5">
-            <TbColorPicker />
-          </span>
-          <span className="text-2xl font-bold text-gray-900 md:text-lg lg:text-2xl sm:text-lg mt-5">
-          Image&nbsp;Color&nbsp;Picker
-          </span>
-        </div>
-        <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 md:mt-5 lg:justify-end lg:gap-2">
-          <button
-            onClick={() => setShareOpen(true)}
-            className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 mb-2 md:mb-0 cursor-pointer"
-          >
-            <FiShare2 className="mr-2" size={18} />
-            Share
-          </button>
-          <button
-            className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 cursor-pointer hover:bg-indigo-100 transition"
-            onClick={() => setOpen(true)}
-          >
-            <FiAlertCircle className="text-indigo-600 text-base" />
-            Report Bug
-          </button>
-          <button
-            onClick={onFavoriteToggle}
-            className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
-              ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-              : "bg-indigo-50  text-indigo-600"
-              }`}
-          >
-            {isFavorite ? (
-              <>
-                <FaCheck className="inline-block mr-1" size={12} /> Added
-              </>
-            ) : (
-              <>
-                <FaRegStar className="inline-block mr-1" size={12} /> Add to
-                Favorites
-              </>
-            )}
-          </button>
-        </div>
-      </div>
-    {/* Share Popup */}
-              {shareOpen && (
-                <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
-                  <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
-                    <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
-                      <button
-                        onClick={() => setActiveTab("tool")}
-                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
-                          ? "bg-[#273D58]  border border-white text-white"
-                          : "text-black hover:bg-[#273D58] hover:text-white"
-                          }`}
-                      >
-                        ⚙️ Share Tool
-                      </button>
-                      <button
-                        onClick={() => setActiveTab("home")}
-                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
-                          ? "bg-[#273D58]  border border-white text-white"
-                          : "text-black hover:bg-[#273D58] hover:text-white"
-                          }`}
-                      >
-                        🏠 Share 10015
-                      </button>
-                    </div>
-                    <div className="text-center border border-gray-500 rounded-xl p-6">
-                      <p className="text-sm mb-1 text-white">
-                        You are currently sharing:
-                      </p>
-                      <h2 className="text-xl font-semibold mb-5 text-white">
-                        {activeTab === "tool"
-                          ? "Google Fonts Pair Finder"
-                          : "10015 Tools"}
-                      </h2>
-                      <div className="flex justify-center mb-6">
-                        <MdShare className="text-white text-7xl" />
-                      </div>
-                      <div className="flex justify-center gap-4">
-                        {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
-                          (Icon, i) => (
-                            <button
-                              key={i}
-                              className="text-black bg-white rounded-full w-10 h-10 flex items-center justify-center"
-                            >
-                              <Icon />
-                            </button>
-                          )
-                        )}
-                      </div>
-                    </div>
-                    <button
-                      className="absolute top-0 h-2 w-2 right-4 text-white text-lg cursor-pointer"
-                      onClick={() => setShareOpen(false)}
-                    >
-                      ✕
-                    </button>
-                  </div>
-                </div>
-              )}
-        
-              {/* Bug Report Popup */}
-              {open && (
-                <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
-                  <div className="bg-[#16283E] border border-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
-                    <h2 className="text-xl font-bold mb-2">Bug Report</h2>
-                    <p className="text-sm mb-4">
-                      <strong>Tool:</strong> Lorem Ipsum Generator
-                    </p>
-                    <label className="text-sm mb-1 block" htmlFor="bugDescription">
-                      Please describe the issue.
-                    </label>
-                    <textarea
-                      id="bugDescription"
-                      className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 "
-                      placeholder="Description*"
-                      value={bugDescription}
-                      onChange={(e) => setBugDescription(e.target.value)}
-                    />
-                    <div className="flex justify-end gap-3 mt-4">
-                      <button
-                        onClick={() => setOpen(false)}
-                        className="px-4 py-2 bg-[#273D58]  border border-white text-white border border-white rounded-lg"
-                      >
-                        Cancel
-                      </button>
-                      <button
-                        onClick={() => {
-                          if (!bugDescription.trim()) {
-                            alert("Please enter a description.");
-                            return;
-                          }
-                          console.log("Bug description submitted:", bugDescription);
-                          setOpen(false);
-                          setBugDescription("");
-                        }}
-                        className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-      {/* Upload Area */}
-      <div
-        className="border-2 border-dashed border-gray-500 rounded-lg p-6 text-center mb-6 cursor-pointer"
-        onClick={() => fileInputRef.current.click()}
-        onDragOver={handleDragOver}
-        onDrop={handleDrop}
-      >
-        <input
-          type="file"
-          ref={fileInputRef}
-          onChange={handleFileChange}
-          className="hidden"
-          accept="image/*"
-        />
-        <svg className="w-10 h-10 mx-auto text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-        <p className="text-gray-600">
-          Drag your image here, or click to <span className="text-indigo-600 font-medium">browse</span>
-        </p>
-      </div>
-
-      {/* Image Preview */}
-      {imageUrl && (
-        <div className="mb-8 bg-gray-50 p-4 rounded-lg">
-          <div className="relative overflow-hidden">
-            <div
-              className="cursor-crosshair"
-              onClick={handleImageClick}
-            >
-              <img
-                ref={imageRef}
-                src={imageUrl}
-                alt="Uploaded"
-                className="w-full h-auto rounded"
-                crossOrigin="anonymous"
-                style={{ display: 'block', maxWidth: '100%' }}
-              />
-              <canvas
-                ref={canvasRef}
-                className="absolute top-0 left-0 opacity-0 pointer-events-none"
-                style={{ width: '100%', height: '100%' }}
-              />
+      <div className=" bg-[#16283E] ">
+        <div className="max-w-4xl mx-auto p-3">
+          {/* Header */}
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-4 gap-2">
+            <div className="flex items-center gap-3 mb-2 sm:mb-0">
+              <span className="text-4xl text-indigo-400 mt-8">
+                <TbColorPicker />
+              </span>
+              <span className="text-2xl font-bold text-white md:text-lg lg:text-2xl sm:text-lg mt-8">
+                Image&nbsp;Color&nbsp;Picker
+              </span>
+            </div>
+            <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 md:mt-5 lg:justify-end lg:gap-2">
+              <button
+                onClick={() => setShareOpen(true)}
+                className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border mb-2 md:mb-0 cursor-pointer text-white bg-[#273D58]"
+              >
+                <FiShare2 className="mr-2" size={18} />
+                Share
+              </button>
+              <button
+                className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border cursor-pointer bg-[#273D58] text-white transition"
+                onClick={() => setOpen(true)}
+              >
+                <FiAlertCircle className="text-white text-base" />
+                Report Bug
+              </button>
+              <button
+                onClick={onFavoriteToggle}
+                className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer bg-[#273D58] text-white ${isFavorite
+                  ? ""
+                  : "bg"
+                  }`}
+              >
+                {isFavorite ? (
+                  <>
+                    <FaCheck className="inline-block mr-1" size={12} /> Added
+                  </>
+                ) : (
+                  <>
+                    <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                    Favorites
+                  </>
+                )}
+              </button>
             </div>
           </div>
-          <p className="text-center text-gray-500 mt-2">{imageLabel || "hot 2"}</p>
-        </div>
-      )}
+          {/* Share Popup */}
+          {shareOpen && (
+            <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
+              <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
+                <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
+                  <button
+                    onClick={() => setActiveTab("tool")}
+                    className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
+                      ? "bg-[#273D58] text-white"
+                      : "text-black"
+                      }`}
+                  >
+                    ⚙️ Share Tool
+                  </button>
+                  <button
+                    onClick={() => setActiveTab("home")}
+                    className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
+                      ? "bg-[#273D58] text-white"
+                      : "text-black"
+                      }`}
+                  >
+                    🏠 Share 10015
+                  </button>
+                </div>
+                <div className="text-center border border-gray-300 rounded-xl p-6">
+                  <p className="text-sm mb-1 text-white">
+                    You are currently sharing:
+                  </p>
+                  <h2 className="text-xl font-semibold mb-5 text-white">
+                    {activeTab === "tool"
+                      ? "Google Fonts Pair Finder"
+                      : "10015 Tools"}
+                  </h2>
+                  <div className="flex justify-center mb-6">
+                    <MdShare className="text-white text-7xl" />
+                  </div>
+                  <div className="flex justify-center gap-4">
+                    {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
+                      (Icon, i) => (
+                        <button
+                          key={i}
+                          className="text-black bg-white rounded-full w-10 h-10 flex items-center justify-center"
+                        >
+                          <Icon />
+                        </button>
+                      )
+                    )}
+                  </div>
+                </div>
+                <button
+                  className="absolute top-0 h-2 w-2 right-4 text-white text-lg cursor-pointer"
+                  onClick={() => setShareOpen(false)}
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+          )}
 
-      {/* Color Information */}
-      {selectedColor && (
-        <div className="flex bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 max-w-md mx-auto">
+
+          {/* Bug Report Popup */}
+          {open && (
+            <div className="fixed inset-0  z-40 flex justify-center items-center text-white ">
+              <div className="bg-[#16283E] border border-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
+                <h2 className="text-xl font-bold mb-2">Bug Report</h2>
+                <p className="text-sm mb-4">
+                  <strong>Tool:</strong> Lorem Ipsum Generator
+                </p>
+                <label className="text-sm mb-1 block" htmlFor="bugDescription">
+                  Please describe the issue.
+                </label>
+                <textarea
+                  id="bugDescription"
+                  className="w-full p-3 border border-gray-300 rounded-xl text-base h-32 "
+                  placeholder="Description*"
+                  value={bugDescription}
+                  onChange={(e) => setBugDescription(e.target.value)}
+                />
+                <div className="flex justify-end gap-3 mt-4">
+                  <button
+                    onClick={() => setOpen(false)}
+                    className="px-4 py-2 bg-[#273D58] text-white border border-white rounded-lg"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={() => {
+                      if (!bugDescription.trim()) {
+                        alert("Please enter a description.");
+                        return;
+                      }
+                      console.log("Bug description submitted:", bugDescription);
+                      setOpen(false);
+                      setBugDescription("");
+                    }}
+                    className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+
+
+          {/* Upload Area */}
           <div
-            className="w-32 h-32"
-            style={{ backgroundColor: rgbToHex(selectedColor.r, selectedColor.g, selectedColor.b) }}
-          />
-          <div className="flex-1 p-4 font-mono">
-            {/* HEX */}
-            <div className="mb-4 flex items-center gap-2">
-              <div>
-                <p className="text-xs text-gray-500 mb-1">HEX</p>
-                <p className="inline-block font-medium">{rgbToHex(selectedColor.r, selectedColor.g, selectedColor.b)}</p>
-              </div>
-              <button
-                className="ml-2 p-1 rounded hover:bg-gray-100 transition"
-                onClick={handleCopyHex}
-                title="Copy HEX"
-              >
-                <MdContentCopy className={`text-lg ${copied.hex ? "text-green-500" : "text-gray-400"}`} />
-              </button>
-              {copied.hex && <span className="text-xs text-green-500 ml-1">Copied!</span>}
-            </div>
-            {/* RGBA */}
-            <div className="mb-4 flex items-center gap-2">
-              <div>
-                <p className="text-xs text-gray-500 mb-1">RGBA</p>
-                <p>rgb({selectedColor.r}, {selectedColor.g}, {selectedColor.b})</p>
-              </div>
-              <button
-                className="ml-2 p-1 rounded hover:bg-gray-100 transition"
-                onClick={handleCopyRgba}
-                title="Copy RGBA"
-              >
-                <MdContentCopy className={`text-lg ${copied.rgba ? "text-green-500" : "text-gray-400"}`} />
-              </button>
-              {copied.rgba && <span className="text-xs text-green-500 ml-1">Copied!</span>}
-            </div>
-            {/* HSLA */}
-            <div className="flex items-center gap-2">
-              <div>
-                <p className="text-xs text-gray-500 mb-1">HSLA</p>
-                <p>{(() => {
-                  const [h, s, l] = rgbToHsl(selectedColor.r, selectedColor.g, selectedColor.b);
-                  return `hsl(${h}, ${s}%, ${l}%)`;
-                })()}</p>
-              </div>
-              <button
-                className="ml-2 p-1 rounded hover:bg-gray-100 transition"
-                onClick={handleCopyHsl}
-                title="Copy HSLA"
-              >
-                <MdContentCopy className={`text-lg ${copied.hsl ? "text-green-500" : "text-gray-400"}`} />
-              </button>
-              {copied.hsl && <span className="text-xs text-green-500 ml-1">Copied!</span>}
-            </div>
+            className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center mb-6 mt-8 cursor-pointer  bg-[#16283E] "
+            onClick={() => fileInputRef.current.click()}
+            onDragOver={handleDragOver}
+            onDrop={handleDrop}
+          >
+            <input
+              type="file"
+              ref={fileInputRef}
+              onChange={handleFileChange}
+              className="hidden "
+              accept="image/*"
+            />
+            <svg className="w-10 h-10 mx-auto text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+            <p className="text-gray-600">
+              Drag your image here, or click to <span className="text-gray-400  underline">browse</span>
+            </p>
           </div>
+
+          {/* Image Preview */}
+          {imageUrl && (
+            <div className="mb-8 bg-gray-50 p-4 rounded-lg">
+              <div className="relative overflow-hidden">
+                <div
+                  className="cursor-crosshair"
+                  onClick={handleImageClick}
+                >
+                  <img
+                    ref={imageRef}
+                    src={imageUrl}
+                    alt="Uploaded"
+                    className="w-full h-auto rounded"
+                    crossOrigin="anonymous"
+                    style={{ display: 'block', maxWidth: '100%' }}
+                  />
+                  <canvas
+                    ref={canvasRef}
+                    className="absolute top-0 left-0 opacity-0 pointer-events-none"
+                    style={{ width: '100%', height: '100%' }}
+                  />
+                </div>
+              </div>
+              <p className="text-center text-gray-500 mt-2">{imageLabel || "hot 2"}</p>
+            </div>
+          )}
+
+          {/* Color Information */}
+          {selectedColor && (
+            <div className="flex bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 max-w-md mx-auto">
+              <div
+                className="w-32 h-32"
+                style={{ backgroundColor: rgbToHex(selectedColor.r, selectedColor.g, selectedColor.b) }}
+              />
+              <div className="flex-1 p-4 font-mono">
+                {/* HEX */}
+                <div className="mb-4 flex items-center gap-2">
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">HEX</p>
+                    <p className="inline-block font-medium">{rgbToHex(selectedColor.r, selectedColor.g, selectedColor.b)}</p>
+                  </div>
+                  <button
+                    className="ml-2 p-1 rounded hover:bg-gray-100 transition"
+                    onClick={handleCopyHex}
+                    title="Copy HEX"
+                  >
+                    <MdContentCopy className={`text-lg ${copied.hex ? "text-green-500" : "text-gray-400"}`} />
+                  </button>
+                  {copied.hex && <span className="text-xs text-green-500 ml-1">Copied!</span>}
+                </div>
+                {/* RGBA */}
+                <div className="mb-4 flex items-center gap-2">
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">RGBA</p>
+                    <p>rgb({selectedColor.r}, {selectedColor.g}, {selectedColor.b})</p>
+                  </div>
+                  <button
+                    className="ml-2 p-1 rounded hover:bg-gray-100 transition"
+                    onClick={handleCopyRgba}
+                    title="Copy RGBA"
+                  >
+                    <MdContentCopy className={`text-lg ${copied.rgba ? "text-green-500" : "text-gray-400"}`} />
+                  </button>
+                  {copied.rgba && <span className="text-xs text-green-500 ml-1">Copied!</span>}
+                </div>
+                {/* HSLA */}
+                <div className="flex items-center gap-2">
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">HSLA</p>
+                    <p>{(() => {
+                      const [h, s, l] = rgbToHsl(selectedColor.r, selectedColor.g, selectedColor.b);
+                      return `hsl(${h}, ${s}%, ${l}%)`;
+                    })()}</p>
+                  </div>
+                  <button
+                    className="ml-2 p-1 rounded hover:bg-gray-100 transition"
+                    onClick={handleCopyHsl}
+                    title="Copy HSLA"
+                  >
+                    <MdContentCopy className={`text-lg ${copied.hsl ? "text-green-500" : "text-gray-400"}`} />
+                  </button>
+                  {copied.hsl && <span className="text-xs text-green-500 ml-1">Copied!</span>}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
-      )}
-    </div>
-      <Comment/>
-      </>
+      </div>
+      <Comment />
+    </>
   );
 };
 

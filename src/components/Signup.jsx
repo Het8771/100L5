@@ -9,7 +9,7 @@ export default function Signup() {
   return (
     <div className="min-h-screen w-full bg-purple-100 flex items-center justify-center relative">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-100 to-purple-200 z-0" />
+      <div className="absolute inset-0 bg-[#16283E] z-0" />
 
       {/* Decorative image at bottom left */}
       <div className="absolute bottom-0 left-0 w-64 opacity-10 pointer-events-none z-0">
@@ -23,7 +23,7 @@ export default function Signup() {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center px-4 py-12 relative z-10">
         {/* Left side with illustration */}
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center mb-8 md:mb-0 px-4">
-          <div className="hidden md:flex text-purple-300 font-bold text-6xl md:text-7xl opacity-40 mb-4 select-none">
+          <div className="hidden md:flex text-[#273D58] font-bold text-6xl md:text-7xl opacity-40 mb-4 select-none">
             WELCOME
           </div>
           <img
@@ -34,7 +34,7 @@ export default function Signup() {
         </div>
 
         {/* Right side - Login Form */}
-        <div className="w-full md:w-1/2 max-w-md bg-white rounded-3xl shadow-lg p-6 sm:p-8">
+        <div className="w-full md:w-1/2 max-w-md bg-[#273D58] rounded-3xl shadow-lg p-6 sm:p-8">
           {/* Decorative image (optional) */}
           <div className="hidden md:block absolute right-8 top-8 opacity-10 w-24 pointer-events-none">
             <img src={leaf} alt="leaf" />
@@ -48,7 +48,7 @@ export default function Signup() {
           </Link>
 
           {/* Title */}
-          <h1 className="text-3xl font-bold text-center text-gray-900 mb-6">
+          <h1 className="text-3xl font-bold text-center text-white mb-6">
             Create Account
           </h1>
 
@@ -68,7 +68,7 @@ export default function Signup() {
             />
             <button
               type="submit"
-              className="w-full bg-[#050A30] text-white rounded-full py-3 font-medium hover:bg-navy-800 transition duration-300"
+              className="w-full bg-[#D5C7FF] text-black rounded-full py-3 font-medium hover:bg-navy-800 transition duration-300"
             >
               CREATE ACCOUNT
             </button>

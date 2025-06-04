@@ -57,7 +57,8 @@ export default function About() {
                     <Link
                       to="/"
                       state={{ scrollTo: 'featured-tools' }}
-                      className="bg-[#273D58]  border border-white text-white font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
+                      className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] 
+ font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
                     >
                       EXPLORE TOOL
                     </Link>
@@ -68,7 +69,8 @@ export default function About() {
                     />
                   </div>
                   <div className="relative inline-flex items-center">
-                    <Link to="/Productfinder"><button className="bg-[#273D58]  border border-white text-white font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap">
+                    <Link to="/Productfinder"><button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] 
+   font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap">
                       PRODUCT FINDER
                     </button></Link>
                     <img
@@ -156,98 +158,8 @@ export default function About() {
               </div>
             </div>
 
-          {/* Content */}
-          <div className="max-w-5xl w-full space-y-8 ">
-            {/* What */}
-            <div>
-              <h3
-                style={{ fontFamily: "David Libre" }}
-                className="text-3xl font-bold text-[#23274b] mb-2"
-              >
-                What?
-              </h3>
-              <p className="text-gray-500 mb-4">
-                10015.io is an online tool factory where you can get all tools
-                you needed in one place. While serving different type of tools
-                in different categories, it aims to perform this with a clean
-                and beautiful user interface. Every tool is designed to solve a
-                problem with minimum number of steps to save time of the users
-                and decrease the complexity of the operation.
-              </p>
-              <p className="text-gray-500 ">
-                10015.io has started to operate in 2020 and it will continue to
-                grow with time by adding new tools each day.
-              </p>
-            </div>
-            {/* Why */}
-            <div>
-              <h3
-                style={{ fontFamily: "David Libre" }}
-                className="text-3xl font-bold  mb-2"
-              >
-                Why?
-              </h3>
-              <p className="mb-4 text-[16px] text-gray-500 ">
-                There are lots of sites on web which offers you online tools.
-                Most of them focus on specific topics and they mostly have
-                outdated designs which makes you think "Am I in 90's?". When you
-                start to bookmark the tools you needed, the list becomes larger
-                and larger in some point.
-              </p>
-              <p className="text-gray-500 ">
-                10015 Tools solves all these problems. So, bookmark it and
-                forget about all other tool sites.
-              </p>
-            </div>
-            {/* Who */}
-            <div>
-              <h3
-                style={{ fontFamily: "David Libre" }}
-                className="text-3xl font-bold text-[#23274b] mb-2"
-              >
-                Who?
-              </h3>
-              <p className="text-gray-500 ">
-                10015.io is designed and coded by Fatih Telis (me) as a side
-                project. I am a frontend developer based in Istanbul, Turkey. I
-                started this project to build a platform which will work as an
-                all-in-one toolbox while I'm challenging myself to create tools
-                which does many different things. Even though I'm not a
-                professional designer, I'm doing my best to construct a simple,
-                aesthetic and easy-to-use UI system. You can contact me via
-                email or Twitter about anything.
-              </p>
-            </div>
-          </div>
-          {/* Social Icons */}
-          <div className="flex space-x mt-10">
-            <Link
-              to="https://www.facebook.com/" className=" "></Link>
-              <img
-                src={boy}
-                alt="Boy Illustration"
-                className="w-28 md:w-32 mb-4 md:mb-0 md:mr-8"
-              />
-              {/* Text Content */}
-              <div
-                style={{ fontFamily: "David Libre" }}
-                className="flex flex-col  items-center md:items-start"
-              >
-                <h2 className="text-4xl md:text-5xl font-bold text-[#23274b] text-center md:text-left mb-2">
-                  ABOUT OUR
-                </h2>
-                <h2 className="text-4xl md:text-5xl ml-[10%] font-bold text-[#23274b] text-center md:text-left mb-2">
-                  PROECT
-                </h2>
-                <p className="text-gray-500 text-center md:text-left">
-                  Digitize your documents and save time with this smart and
-                  reliable tool.
-                </p>
-              </div>
-            </div>
-
             {/* Content */}
-            <div className="max-w-5xl w-full space-y-8  ">
+            <div className="max-w-5xl w-full space-y-8 ">
               {/* What */}
               <div>
                 <h3
@@ -309,6 +221,7 @@ export default function About() {
                 </p>
               </div>
             </div>
+
             {/* Social Icons */}
             <div className="flex space-x mt-10">
               <Link
@@ -346,12 +259,9 @@ export default function About() {
             </div>
           </section>
         </div>
-
-
         <Support />
-      <Footer />
+        <Footer />
       </div>
-
     </>
   );
 }

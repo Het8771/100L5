@@ -360,161 +360,161 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
           <span className="text-4xl text-indigo-400">
             <MdOutlineDocumentScanner />
           </span>
-          <span className="text-xl font-bold text-gray-900 md:text-sm lg:text-2xl sm:text-lg">
+          <span className="text-xl font-bold text-white md:text-sm lg:text-2xl sm:text-lg">
             CSS&nbsp;Clip&nbsp;Path&nbsp;Generator
           </span>
         </div>
         <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 lg:justify-end lg:gap-2">
-          <button
-            onClick={() => setShareOpen(true)}
-            className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 mb-2 md:mb-0 cursor-pointer"
-          >
-            <FiShare2 className="mr-2" size={18} />
-            Share
-          </button>
-          <button
-            className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 cursor-pointer hover:bg-indigo-100 transition"
-            onClick={() => setOpen(true)}
-          >
-            <FiAlertCircle className="text-indigo-600 text-base" />
-            Report Bug
-          </button>
-          <button
-            onClick={onFavoriteToggle}
-            className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer border-indigo-600 ${
-              isFavorite
-                ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-                : "bg-indigo-50 border-indigo-300 text-indigo-600"
-            }`}
-          >
-            {isFavorite ? (
-              <>
-                <FaCheck className="inline-block mr-1" size={12} /> Added
-              </>
-            ) : (
-              <>
-                <FaRegStar className="inline-block mr-1" size={12} /> Add to
-                Favorites
-              </>
-            )}
-          </button>
+              <button
+                             onClick={() => setShareOpen(true)}
+                             className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white mb-2 md:mb-0 cursor-pointer"
+                           >
+                             <FiShare2 className="mr-2" size={18} />
+                             Share
+                           </button>    <button
+                             className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white cursor-pointer transition"
+                             onClick={() => setOpen(true)}
+                           >
+                             <FiAlertCircle className="text-white text-base" />
+                             Report Bug
+                           </button>
+                            <button
+                                      onClick={onFavoriteToggle}
+                                      className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
+                                        ? "border border-white bg-[#273D58]  border border-white text-white"
+                                        : "bg-[#273D58]  border border-white text-white"
+                                        }`}
+                                    >
+                                      {isFavorite ? (
+                                        <>
+                                          <FaCheck className="inline-block mr-1" size={12} /> Added
+                                        </>
+                                      ) : (
+                                        <>
+                                          <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                                          Favorites
+                                        </>
+                                      )}
+                                    </button>
         </div>
       </div>
-      {/* Share Popup */}
-      {shareOpen && (
-        <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
-            <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
-              <button
-                onClick={() => setActiveTab("tool")}
-                className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${
-                  activeTab === "tool"
-                    ? "bg-indigo-600 text-white"
-                    : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                }`}
-              >
-                ⚙️ Share Tool
-              </button>
-              <button
-                onClick={() => setActiveTab("home")}
-                className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${
-                  activeTab === "home"
-                    ? "bg-indigo-600 text-white"
-                    : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                }`}
-              >
-                🏠 Share 10015
-              </button>
-            </div>
-            <div className="text-center border border-gray-500 rounded-xl p-6">
-              <p className="text-sm mb-1 text-gray-500">
-                You are currently sharing:
-              </p>
-              <h2 className="text-xl font-semibold mb-5 text-gray-600">
-                {activeTab === "tool"
-                  ? "Google Fonts Pair Finder"
-                  : "10015 Tools"}
-              </h2>
-              <div className="flex justify-center mb-6">
-                <MdShare className="text-indigo-500 text-7xl" />
-              </div>
-              <div className="flex justify-center gap-4">
-                {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
-                  (Icon, i) => (
+ {shareOpen && (
+                <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
+                    <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
+                      <button
+                        onClick={() => setActiveTab("tool")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        ⚙️ Share Tool
+                      </button>
+                      <button
+                        onClick={() => setActiveTab("home")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        🏠 Share 10015
+                      </button>
+                    </div>
+                    <div className="text-center border border-gray-500 rounded-xl p-6">
+                      <p className="text-sm mb-1 text-white">
+                        You are currently sharing:
+                      </p>
+                      <h2 className="text-xl font-semibold mb-5 text-white">
+                        {activeTab === "tool"
+                          ? "Google Fonts Pair Finder"
+                          : "10015 Tools"}
+                      </h2>
+                      <div className="flex justify-center mb-6">
+                        <MdShare className="text-white text-7xl" />
+                      </div>
+                      <div className="flex justify-center gap-4">
+                        {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
+                          (Icon, i) => (
+                            <button
+                              key={i}
+                              className="text-black bg-white rounded-full w-10 h-10 flex items-center justify-center"
+                            >
+                              <Icon />
+                            </button>
+                          )
+                        )}
+                      </div>
+                    </div>
                     <button
-                      key={i}
-                      className="text-white bg-indigo-500 rounded-full w-10 h-10 flex items-center justify-center"
+                      className="absolute top-0 h-2 w-2 right-4 text-white text-lg cursor-pointer"
+                      onClick={() => setShareOpen(false)}
                     >
-                      <Icon />
+                      ✕
                     </button>
-                  )
-                )}
-              </div>
-            </div>
-            <button
-              className="absolute top-0 h-2 w-2 right-4 text-gray-600 text-lg cursor-pointer"
-              onClick={() => setShareOpen(false)}
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
+                  </div>
+                </div>
+              )}
+        
+              {/* Bug Report Popup */}
+           {open && (
+                <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
+                    <h2 className="text-xl font-bold mb-2 text-white">Bug Report</h2>
+                    <p className="text-sm mb-4">
+                     
 
-      {/* Bug Report Popup */}
-      {open && (
-        <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
-          <div className="bg-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
-            <h2 className="text-xl font-bold mb-2">Bug Report</h2>
-            <p className="text-sm mb-4">
-              <strong>Tool:</strong> Lorem Ipsum Generator
-            </p>
-            <label className="text-sm mb-1 block" htmlFor="bugDescription">
-              Please describe the issue.
-            </label>
-            <textarea
-              id="bugDescription"
-              className="w-full p-3 border border-blue-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-              placeholder="Description*"
-              value={bugDescription}
-              onChange={(e) => setBugDescription(e.target.value)}
-            />
-            <div className="flex justify-end gap-3 mt-4">
-              <button
-                onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={() => {
-                  if (!bugDescription.trim()) {
-                    alert("Please enter a description.");
-                    return;
-                  }
-                  console.log("Bug description submitted:", bugDescription);
-                  setOpen(false);
-                  setBugDescription("");
-                }}
-                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-      <div className="bg-slate-50 p-4 sm:p-6 rounded-lg mb-4 sm:mb-6">
+                    </p>
+                    <label className="text-sm mb-1 block text-white" htmlFor="bugDescription">
+                      Please describe the issue.
+                    </label>
+                    <textarea
+                      id="bugDescription"
+                      className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 text-white"
+                      placeholder="Description*"
+                      value={bugDescription}
+                      onChange={(e) => setBugDescription(e.target.value)}
+                    />
+                    <div className="flex justify-end gap-3 mt-4">
+                      <button
+                        onClick={() => setOpen(false)}
+                        className="px-4 py-2 bg-[#273D58]  border border-white text-white border border-white rounded-lg"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (!bugDescription.trim()) {
+                            alert("Please enter a description.");
+                            return;
+                          }
+                          console.log("Bug description submitted:", bugDescription);
+                          setOpen(false);
+                          setBugDescription("");
+                        }}
+                        className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+
+
+
+      <div className="bg-[#16283E] p-4 sm:p-6 rounded-lg mb-4 sm:mb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
           <div>
-            <label className="block text-xs sm:text-sm font-medium mb-2">
+            <label className="block text-white sm:text-sm font-medium mb-2">
               ClipPath Shape
             </label>
             <div className="relative">
               <select
                 value={shape}
                 onChange={handleShapeChange}
-                className="block w-full px-3 sm:px-4 py-1 sm:py-2 pr-8 border border-gray-500 rounded-md focus:outline-none  appearance-none text-xs sm:text-sm"
+                className="block w-full px-3 sm:px-4 py-1 sm:py-2 pr-8 border border-gray-500 bg-[#16283E] text-white rounded-md focus:outline-none  appearance-none text-xs sm:text-sm"
               >
                 {Object.entries(shapes).map(([key, { name }]) => (
                   <option key={key} value={key}>
@@ -541,7 +541,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <div>
-              <label className="block text-xs sm:text-sm font-medium mb-2">
+              <label className="block text-white sm:text-sm font-medium mb-2">
                 Image Width: {width}px
               </label>
               <input
@@ -551,11 +551,11 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
                 step="1"
                 value={width}
                 onChange={handleWidthChange}
-                className="w-full h-1 sm:h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                className="w-full h-1 sm:h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-white"
               />
             </div>
             <div>
-              <label className="block text-xs sm:text-sm font-medium mb-2">
+              <label className="block text-white sm:text-sm font-medium mb-2">
                 Image Height: {height}px
               </label>
               <input
@@ -565,7 +565,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
                 step="1"
                 value={height}
                 onChange={handleHeightChange}
-                className="w-full h-1 sm:h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                className="w-full h-1 sm:h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-white"
               />
             </div>
           </div>
@@ -579,7 +579,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
               alt={`Thumbnail ${idx + 1}`}
               className={`rounded cursor-pointer border-2 transition ${
                 selectedImageIdx === idx
-                  ? "border-blue-500"
+                  ? "border-gray-500"
                   : "border-transparent"
               }`}
               style={{ width: 60, height: 45, objectFit: "cover" }}
@@ -590,7 +590,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
 
         <div
           className={`relative rounded-lg overflow-hidden ${
-            selectedImageIdx !== -1 ? "border-2 border-gray-200" : ""
+            selectedImageIdx !== -1 ? "border-4 border-gray-500" : ""
           } mx-auto`}
           style={{
             width: "100%",
@@ -676,7 +676,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
         <div className="flex flex-wrap gap-3 sm:gap-4 mt-3 sm:mt-4">
           <button
             onClick={handleShuffleImage}
-            className="px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-500 rounded-md flex items-center gap-1 hover:bg-gray-50"
+            className="px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-500 text-white rounded-md flex items-center gap-1 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -696,7 +696,7 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
               <path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8" />
               <path d="m18 14 4 4-4 4" />
             </svg>
-            <span className="cursor-pointer">Shuffle Image</span>
+            <span className="cursor-pointer ">Shuffle Image</span>
           </button>
 
           <div className="flex items-center gap-2">
@@ -705,9 +705,9 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
               id="customBackground"
               checked={customBackground}
               onChange={(e) => setCustomBackground(e.target.checked)}
-              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-500 rounded focus:ring-blue-500"
+              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
-            <label htmlFor="customBackground" className="text-xs sm:text-sm">
+            <label htmlFor="customBackground" className="text-white sm:text-sm">
               Custom Background
             </label>
           </div>
@@ -719,11 +719,11 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
                 placeholder="Background URL"
                 value={customBackgroundUrl}
                 onChange={(e) => setCustomBackgroundUrl(e.target.value)}
-                className="flex-1 px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button
                 onClick={handleSetCustomBackground}
-                className="px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-500 rounded-md hover:bg-gray-50"
+                className="px-2 sm:px-3 py-1 text-xs sm:text-sm border border-gray-500 text-white rounded-md "
               >
                 Set
               </button>
@@ -736,9 +736,9 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
               id="showOutside"
               checked={showOutside}
               onChange={(e) => setShowOutside(e.target.checked)}
-              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-500 rounded focus:ring-blue-500"
+              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
-            <label htmlFor="showOutside" className="text-xs sm:text-sm">
+            <label htmlFor="showOutside" className="text-white sm:text-sm">
               Show Outside
             </label>
           </div>
@@ -749,9 +749,9 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
               id="hideGuides"
               checked={hideGuides}
               onChange={(e) => setHideGuides(e.target.checked)}
-              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-500 rounded focus:ring-blue-500"
+              className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
-            <label htmlFor="hideGuides" className="text-xs sm:text-sm">
+            <label htmlFor="hideGuides" className="text-white sm:text-sm">
               Hide Guides
             </label>
           </div>
@@ -759,8 +759,8 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
       </div>
 
       <div className="border border-gray-200 rounded-lg p-3 sm:p-4 mb-4 sm:mb-6">
-        <div className="mb-2 text-xs sm:text-sm font-medium">CSS Code</div>
-        <pre className="bg-gray-50 p-2 sm:p-3 rounded text-xs sm:text-sm overflow-x-auto">
+        <div className="mb-2 text-xs text-white sm:text-sm font-medium">CSS Code</div>
+        <pre className="bg-[#16283E] text-white p-2 sm:p-3 rounded text-xs sm:text-sm overflow-x-auto">
           <code>{clipPathCode}</code>
         </pre>
       </div>
@@ -768,13 +768,13 @@ export default function ClipPathGenerator({id="CSS Clip Path Generator"}) {
       <div className="flex justify-center gap-3 sm:gap-4">
         <button
           onClick={handleReset}
-          className="px-3 sm:px-4 py-1 sm:py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg text-xs sm:text-base"
+          className="px-3 sm:px-4 py-1 sm:py-2 transition  bg-[#273D58] border border-white text-white cursor-pointer rounded-lg text-xs sm:text-base"
         >
           Reset
         </button>
         <button
           onClick={handleCopy}
-          className="px-3 sm:px-4 py-1 sm:py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center gap-2 text-xs sm:text-base"
+          className="px-3 sm:px-4 py-1 sm:py-2 transition  bg-[#273D58] border border-white text-white cursor-pointer rounded-lg flex items-center gap-2 text-xs sm:text-base"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

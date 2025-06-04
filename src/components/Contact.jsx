@@ -18,7 +18,7 @@ const ContactSection = () => {
 
   return (
     <>
-      <div className="relative ">
+      <div className="relative bg-[#16283E]">
         {/* Background Image - Hidden on mobile/tablet, visible on lg screens */}
         {/* <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
           <img
@@ -43,7 +43,7 @@ const ContactSection = () => {
           />
         </div> */}
         <Navbar />
-        <div className=" max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
+        <div className=" max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8 ">
           <div className="py-12 flex flex-col lg:flex-row items-center justify-between relative z-10 ">
             <div className="flex-1 text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
@@ -60,7 +60,8 @@ const ContactSection = () => {
       to="/"
       state={exploreLinkState} 
     >
-      <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap">
+      <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] 
+  font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap">
                     EXPLORE TOOL
                   </button></Link>
                   <img
@@ -70,7 +71,8 @@ const ContactSection = () => {
                   />
                 </div>
                 <div className="relative inline-flex items-center">
-               <Link to ="/Productfinder"> <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap"> 
+               <Link to ="/Productfinder"> <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] 
+ font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap"> 
                     PRODUCT FINDER
                   </button></Link>
                   <img
@@ -121,8 +123,6 @@ const ContactSection = () => {
               />
             </div>
           </div>
-        
-
           <Support />
         </div>
         <Footer />

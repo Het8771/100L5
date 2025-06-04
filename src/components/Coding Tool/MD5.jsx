@@ -227,7 +227,7 @@ export default function Md5EncryptDecrypt() {
                   <div className="flex justify-end gap-3 mt-4">
                     <button
                       onClick={() => setOpen(false)}
-                      className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                      className="px-4 py-2 bg-[#273D58] text-white border border-white rounded-lg"
                     >
                       Cancel
                     </button>
@@ -241,7 +241,7 @@ export default function Md5EncryptDecrypt() {
                         setOpen(false);
                         setBugDescription("");
                       }}
-                      className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-black rounded-lg"
+                      className="px-4 py-2 bg-[#273D58] text-white border border-white rounded-lg"
                     >
                       Submit
                     </button>
@@ -262,7 +262,7 @@ export default function Md5EncryptDecrypt() {
         <button
           className={`px-8 py-2 rounded-t-lg font-semibold text-base transition ${
             tab === "encrypt"
-              ? " bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg"
+              ? " bg-[#273D58] text-white border border-white cursor-pointer rounded-lg"
               : "bg-[#e7eafe] text-[#4f5fff]"
           }`}
           onClick={() => {
@@ -277,7 +277,7 @@ export default function Md5EncryptDecrypt() {
         <button
           className={`px-8 py-2 rounded-t-lg font-semibold text-base transition ml-2 ${
             tab === "decrypt"
-              ? " bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg"
+              ? " bg-[#273D58] text-white border border-white cursor-pointer rounded-lg"
               : "bg-[#e7eafe] text-[#4f5fff]"
           }`}
           onClick={() => {
@@ -335,21 +335,21 @@ export default function Md5EncryptDecrypt() {
         <button
           className={`px-12 py-3 rounded-full font-semibold text-base transition ${
             tab === "encrypt"
-              ? " bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg text-sm"
-              : " bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg text-sm"
+              ? " bg-[#273D58] text-white border border-white cursor-pointer rounded-lg text-sm"
+              : " bg-[#273D58] text-white border border-white cursor-pointer rounded-lg text-sm"
           }`}
           onClick={tab === "encrypt" ? handleEncrypt : handleDecrypt}
         >
           {tab === "encrypt" ? "Encrypt >" : "Decrypt >"}
         </button>
         <button
-          className="px-8 py-3  bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg transition"
+          className="px-8 py-3  bg-[#273D58] text-white border border-white cursor-pointer rounded-lg transition"
           onClick={handleReset}
         >
           Reset
         </button>
         <button
-          className={`px-8 py-3  bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] cursor-pointer rounded-lg flex items-center gap-2 transition ${
+          className={`px-8 py-3  bg-[#273D58] text-white border border-white cursor-pointer rounded-lg flex items-center gap-2 transition ${
             isCopied
               ? "text-green-600 bg-green-50 border-green-200"
               : "text-[#4f5fff] hover:bg-[#f3f0ff]"

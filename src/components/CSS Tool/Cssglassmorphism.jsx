@@ -155,147 +155,152 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
             <IoMdPhonePortrait />
 
           </span>
-          <span className="text-base font-bold text-gray-900 md:text-lg lg:text-2xl sm:text-lg">
+          <span className="text-base font-bold text-white md:text-lg lg:text-2xl sm:text-lg">
             CSS&nbsp;Glassmorphism&nbsp;Generator
           </span>
         </div>
         <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 lg:justify-end lg:gap-2">
-          <button
-            onClick={() => setShareOpen(true)}
-            className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 mb-2 md:mb-0 cursor-pointer"
-          >
-            <FiShare2 className="mr-2" size={18} />
-            Share
-          </button>
-          <button
-            className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 cursor-pointer hover:bg-indigo-100 transition"
-            onClick={() => setOpen(true)}
-          >
-            <FiAlertCircle className="text-indigo-600 text-base" />
-            Report Bug
-          </button>
-          <button
-            onClick={onFavoriteToggle}
-            className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer border-indigo-600 ${isFavorite
-              ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-              : "bg-indigo-50 border-indigo-300 text-indigo-600"
-              }`}
-          >
-            {isFavorite ? (
-              <>
-                <FaCheck className="inline-block mr-1" size={12} /> Added
-              </>
-            ) : (
-              <>
-                <FaRegStar className="inline-block mr-1" size={12} /> Add to
-                Favorites
-              </>
-            )}
-          </button>
+       <button
+                             onClick={() => setShareOpen(true)}
+                             className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white mb-2 md:mb-0 cursor-pointer"
+                           >
+                             <FiShare2 className="mr-2" size={18} />
+                             Share
+                           </button>    <button
+                             className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white cursor-pointer transition"
+                             onClick={() => setOpen(true)}
+                           >
+                             <FiAlertCircle className="text-white text-base" />
+                             Report Bug
+                           </button>
+                            <button
+                                      onClick={onFavoriteToggle}
+                                      className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
+                                        ? "border border-white bg-[#273D58]  border border-white text-white"
+                                        : "bg-[#273D58]  border border-white text-white"
+                                        }`}
+                                    >
+                                      {isFavorite ? (
+                                        <>
+                                          <FaCheck className="inline-block mr-1" size={12} /> Added
+                                        </>
+                                      ) : (
+                                        <>
+                                          <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                                          Favorites
+                                        </>
+                                      )}
+                                    </button>
         </div>
       </div>
       {/* Share Popup */}
-      {shareOpen && (
-        <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
-            <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
-              <button
-                onClick={() => setActiveTab("tool")}
-                className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
-                  ? "bg-indigo-600 text-white"
-                  : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                  }`}
-              >
-                ⚙️ Share Tool
-              </button>
-              <button
-                onClick={() => setActiveTab("home")}
-                className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
-                  ? "bg-indigo-600 text-white"
-                  : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                  }`}
-              >
-                🏠 Share 10015
-              </button>
-            </div>
-            <div className="text-center border border-gray-500 rounded-xl p-6">
-              <p className="text-sm mb-1 text-gray-500">
-                You are currently sharing:
-              </p>
-              <h2 className="text-xl font-semibold mb-5 text-gray-600">
-                {activeTab === "tool"
-                  ? "Google Fonts Pair Finder"
-                  : "10015 Tools"}
-              </h2>
-              <div className="flex justify-center mb-6">
-                <MdShare className="text-indigo-500 text-7xl" />
-              </div>
-              <div className="flex justify-center gap-4">
-                {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
-                  (Icon, i) => (
+    
+   {shareOpen && (
+                <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
+                    <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
+                      <button
+                        onClick={() => setActiveTab("tool")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        ⚙️ Share Tool
+                      </button>
+                      <button
+                        onClick={() => setActiveTab("home")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        🏠 Share 10015
+                      </button>
+                    </div>
+                    <div className="text-center border border-gray-500 rounded-xl p-6">
+                      <p className="text-sm mb-1 text-white">
+                        You are currently sharing:
+                      </p>
+                      <h2 className="text-xl font-semibold mb-5 text-white">
+                        {activeTab === "tool"
+                          ? "Google Fonts Pair Finder"
+                          : "10015 Tools"}
+                      </h2>
+                      <div className="flex justify-center mb-6">
+                        <MdShare className="text-white text-7xl" />
+                      </div>
+                      <div className="flex justify-center gap-4">
+                        {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
+                          (Icon, i) => (
+                            <button
+                              key={i}
+                              className="text-black bg-white rounded-full w-10 h-10 flex items-center justify-center"
+                            >
+                              <Icon />
+                            </button>
+                          )
+                        )}
+                      </div>
+                    </div>
                     <button
-                      key={i}
-                      className="text-white bg-indigo-500 rounded-full w-10 h-10 flex items-center justify-center"
+                      className="absolute top-0 h-2 w-2 right-4 text-white text-lg cursor-pointer"
+                      onClick={() => setShareOpen(false)}
                     >
-                      <Icon />
+                      ✕
                     </button>
-                  )
-                )}
-              </div>
-            </div>
-            <button
-              className="absolute top-0 h-2 w-2 right-4 text-gray-600 text-lg cursor-pointer"
-              onClick={() => setShareOpen(false)}
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
+                  </div>
+                </div>
+              )}
+
 
       {/* Bug Report Popup */}
-      {open && (
-        <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
-          <div className="bg-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
-            <h2 className="text-xl font-bold mb-2">Bug Report</h2>
-            <p className="text-sm mb-4">
-              <strong>Tool:</strong> Lorem Ipsum Generator
-            </p>
-            <label className="text-sm mb-1 block" htmlFor="bugDescription">
-              Please describe the issue.
-            </label>
-            <textarea
-              id="bugDescription"
-              className="w-full p-3 border border-blue-300 rounded-xl text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300"
-              placeholder="Description*"
-              value={bugDescription}
-              onChange={(e) => setBugDescription(e.target.value)}
-            />
-            <div className="flex justify-end gap-3 mt-4">
-              <button
-                onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={() => {
-                  if (!bugDescription.trim()) {
-                    alert("Please enter a description.");
-                    return;
-                  }
-                  console.log("Bug description submitted:", bugDescription);
-                  setOpen(false);
-                  setBugDescription("");
-                }}
-                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+    {open && (
+                <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
+                    <h2 className="text-xl font-bold mb-2 text-white">Bug Report</h2>
+                    <p className="text-sm mb-4">
+                     
+
+                    </p>
+                    <label className="text-sm mb-1 block text-white" htmlFor="bugDescription">
+                      Please describe the issue.
+                    </label>
+                    <textarea
+                      id="bugDescription"
+                      className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 text-white"
+                      placeholder="Description*"
+                      value={bugDescription}
+                      onChange={(e) => setBugDescription(e.target.value)}
+                    />
+                    <div className="flex justify-end gap-3 mt-4">
+                      <button
+                        onClick={() => setOpen(false)}
+                        className="px-4 py-2 bg-[#273D58]  border border-white text-white border border-white rounded-lg"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (!bugDescription.trim()) {
+                            alert("Please enter a description.");
+                            return;
+                          }
+                          console.log("Bug description submitted:", bugDescription);
+                          setOpen(false);
+                          setBugDescription("");
+                        }}
+                        className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+
+
         <div className="flex flex-col md:flex-row gap-0">
           {/* Left: Background with Glass Card */}
           <div
@@ -352,7 +357,7 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
           <div className="w-full md:w-1/2 flex flex-col justify-between py-4 px-4">
             <div>
               <div className="mb-4">
-                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                <label className="block text-sm font-semibold text-white mb-1">
                   Glass Color
                 </label>
                 <div className="flex items-center gap-2">
@@ -360,19 +365,19 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
                     type="color"
                     value={glassColor}
                     onChange={(e) => setGlassColor(e.target.value)}
-                    className="w-8 h-8 rounded border"
+                    className="w-8 h-8 rounded border border-gray-300 cursor-pointer"
                   />
                   <input
                     type="text"
                     value={glassColor}
                     onChange={(e) => setGlassColor(e.target.value)}
-                    className="w-28 p-1 border rounded"
+                    className="w-28 p-1 border rounded text-white"
                   />
                 </div>
               </div>
 
               <div className="mb-4">
-                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                <label className="block text-sm font-semibold text-white mb-1 ">
                   Blur: {blur}px
                 </label>
                 <input
@@ -381,12 +386,12 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
                   max="30"
                   value={blur}
                   onChange={(e) => setBlur(Number(e.target.value))}
-                  className="w-full accent-blue-500"
+                  className="w-full accent-white"
                 />
               </div>
 
               <div className="mb-4">
-                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                <label className="block text-sm font-semibold text-white mb-1">
                   Opacity: {opacity}
                 </label>
                 <input
@@ -396,12 +401,12 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
                   step="0.01"
                   value={opacity}
                   onChange={(e) => setOpacity(Number(e.target.value))}
-                  className="w-full accent-blue-500"
+                  className="w-full accent-white"
                 />
               </div>
 
               <div className="mb-4 space-y-2">
-                <label className="flex items-center gap-2">
+                <label className="flex items-center gap-2 text-white">
                   <input
                     type="checkbox"
                     checked={useBorder}
@@ -410,7 +415,7 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
                   />
                   Use border for glass
                 </label>
-                <label className="flex items-center gap-2">
+                <label className="flex items-center gap-2 text-white">
                   <input
                     type="checkbox"
                     checked={showContent}
@@ -419,7 +424,7 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
                   />
                   Show content on glass?
                 </label>
-                <label className="flex items-center gap-2">
+                <label className="flex items-center gap-2 text-white">
                   <input
                     type="checkbox"
                     checked={useBasicShape}
@@ -433,7 +438,7 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
               <div className="mb-4 flex flex-col gap-3">
                 <button
                   onClick={shuffleBackground}
-                  className="w-full py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center gap-2 "
+                  className="w-full py-2 transition bg-[#273D58] border border-white text-white cursor-pointer rounded-lg flex items-center justify-center gap-2 "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -453,7 +458,7 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
                 </button>
                 <button
                   onClick={shuffleGlassColor}
-                  className="w-full py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center gap-2 "
+                  className="w-full py-2 transition bg-[#273D58] border border-white text-white cursor-pointer rounded-lg flex items-center justify-center gap-2 "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -477,11 +482,11 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
         </div>
 
         {/* CSS Output */}
-        <div className="mt-6 bg-white rounded-lg overflow-hidden border border-gray-200">
-          <div className="bg-gray-50 px-4 py-2 border-b border-gray-200">
-            <h3 className="text-sm font-medium text-gray-700">CSS</h3>
+        <div className="mt-6 bg-[#16283E] rounded-lg overflow-hidden border border-gray-200">
+          <div className=" px-4 py-2 border-b border-gray-200">
+            <h3 className="text-sm font-medium text-white">CSS</h3>
           </div>
-          <pre className="p-4 text-sm font-mono text-gray-700 overflow-x-auto">
+          <pre className="p-4 text-sm font-mono text-gray-500 overflow-x-auto">
             <span className="font-bold">background:</span> {`rgba(${rgb[0]},${rgb[1]},${rgb[2]},${opacity});`}
             {"\n"}<span className="font-bold">-webkit-backdrop-filter:</span> {`blur(${blur}px);`}
             {"\n"}<span className="font-bold">backdrop-filter:</span> {`blur(${blur}px);`}
@@ -492,16 +497,16 @@ ${useBorder ? `border: 1px solid rgba(${rgb[0]},${rgb[1]},${rgb[2]},0.25);` : ""
               </>
             )}
           </pre>
-          <div className="bg-gray-50 px-4 py-3 border-t border-gray-200 flex justify-between">
+          <div className="bg-[#16283E] px-4 py-3 border-t border-gray-200 flex justify-between">
             <button
               onClick={reset}
-              className="px-6 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center "
+              className="px-6 py-2 transition bg-[#273D58] border border-white text-white cursor-pointer rounded-lg flex items-center "
             >
               Reset
             </button>
             <button
               onClick={() => navigator.clipboard.writeText(cssCode)}
-              className="px-6 py-2 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center "
+              className="px-6 py-2 transition bg-[#273D58] border border-white text-white cursor-pointer rounded-lg flex items-center "
             >
               Copy
             </button>

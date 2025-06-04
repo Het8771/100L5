@@ -16,7 +16,8 @@ export default function Footer() {
     });
   };
   return (
-    <footer className="relative pt-12 pb-6 overflow-hidden">
+    
+    <footer className="relative pt-12 pb-6 overflow-hidden ">
       {/* Decorative image at bottom left */}
       <div className="absolute bottom-0 left-0 w-[480px] h-auto pointer-events-none">
         <img
@@ -64,8 +65,7 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-            <p className="text-gray-600 text-start mb-6">
-              Your all-in-one AI tools hub simplifying tasks, boosting creativity, and saving time with powerful, easy-to-use online tools.{" "}
+            <p className="text-gray-600 mb-4">
               {/* <Link href="#" className="text-indigo-600 hover:underline">
                 Learn more
               </Link> */}
@@ -102,14 +102,14 @@ export default function Footer() {
 
           {/* Know Us */}
           <div className="md:col-span-1">
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-lg font-semibold mb-4 text-white">
               <u>Know Us</u>
             </h3>
             <ul className="space-y-3">
               <li>
                 <Link
                   to="/"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                   onClick={scrollToTop}
                 >
                   Home
@@ -119,7 +119,7 @@ export default function Footer() {
                 <Link
                   to="/About"
                   onClick={scrollToTop}
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   About Us
                 </Link>
@@ -128,7 +128,7 @@ export default function Footer() {
                 <Link
                   to="/Contact"
                   onClick={scrollToTop}
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   Contact Us
                 </Link>
@@ -138,14 +138,14 @@ export default function Footer() {
 
           {/* Useful Tools */}
           <div className="md:col-span-1">
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-lg font-semibold mb-4 text-white">
               <u>Useful Tools</u>
             </h3>
             <ul className="space-y-3">
               <li>
                 <Link
                   href="#"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   Best AI Youtube Channels
                 </Link>
@@ -153,7 +153,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   Top 100 AI
                 </Link>
@@ -161,7 +161,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   GPTs List
                 </Link>
@@ -169,7 +169,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   Hubspot AI Tools
                 </Link>
@@ -177,7 +177,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   Best AI Agents
                 </Link>
@@ -187,14 +187,14 @@ export default function Footer() {
 
           {/* Extensions */}
           <div className="md:col-span-1">
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-lg font-semibold mb-4 text-white">
               <u>Extensions</u>
             </h3>
             <ul className="space-y-3">
               <li>
                 <Link
                   href="#"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   Tutorials, tips and blog
                 </Link>
@@ -202,7 +202,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   AI Conferences Agenda
                 </Link>
@@ -210,7 +210,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   AI Glossary & Lexicon
                 </Link>
@@ -218,7 +218,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   Explore AI Jobs
                 </Link>
@@ -228,14 +228,14 @@ export default function Footer() {
 
           {/* Policies */}
           <div className="md:col-span-1">
-            <h3 className="text-lg font-semibold mb-4">
+            <h3 className="text-lg font-semibold mb-4 text-white">
               <u>Policies</u>
             </h3>
             <ul className="space-y-3">
               <li>
                 <Link
                   href="#"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   Terms & Conditions
                 </Link>
@@ -243,7 +243,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="text-gray-600 hover:text-indigo-600 transition-colors"
+                  className="text-white transition-colors"
                 >
                   Privacy & Policy
                 </Link>
@@ -256,7 +256,7 @@ export default function Footer() {
         <div className="border-t border-gray-200 my-8"></div>
 
         {/* Copyright */}
-        <div className="text-center text-gray-500 text-sm">
+        <div className="text-center text-white text-sm">
           Copyright © 2025 ProDesigner All rights Reserved
         </div>
       </div>

@@ -129,43 +129,42 @@ export default function CssFormatter({id="CSS Formatter"}) {
           <span className="text-4xl text-indigo-400">
             <SiCsswizardry />
           </span>
-          <span className="text-2xl font-bold text-gray-900 md:text-lg lg:text-2xl sm:text-lg">
+          <span className="text-2xl font-bold text-white md:text-lg lg:text-2xl sm:text-lg">
             CSS&nbsp;Formatter
           </span>
         </div>
         <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 lg:justify-end lg:gap-2">
-          <button
+     <button
             onClick={() => setShareOpen(true)}
             className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white mb-2 md:mb-0 cursor-pointer"
           >
             <FiShare2 className="mr-2" size={18} />
             Share
-          </button>
-          <button
+          </button>    <button
             className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white cursor-pointer transition"
             onClick={() => setOpen(true)}
           >
             <FiAlertCircle className="text-white text-base" />
             Report Bug
           </button>
-          <button
-            onClick={onFavoriteToggle}
-            className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
-              ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-              : "bg-indigo-50 border-indigo-600 text-indigo-600"
-              }`}
-          >
-            {isFavorite ? (
-              <>
-                <FaCheck className="inline-block mr-1" size={12} /> Added
-              </>
-            ) : (
-              <>
-                <FaRegStar className="inline-block mr-1" size={12} /> Add to
-                Favorites
-              </>
-            )}
-          </button>
+           <button
+                     onClick={onFavoriteToggle}
+                     className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
+                       ? "border border-white bg-[#273D58]  border border-white text-white"
+                       : "bg-[#273D58]  border border-white text-white"
+                       }`}
+                   >
+                     {isFavorite ? (
+                       <>
+                         <FaCheck className="inline-block mr-1" size={12} /> Added
+                       </>
+                     ) : (
+                       <>
+                         <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                         Favorites
+                       </>
+                     )}
+                   </button>
         </div>
       </div>
     {/* Share Popup */}
@@ -269,15 +268,15 @@ export default function CssFormatter({id="CSS Formatter"}) {
                     </div>
                   </div>
                 </div>
-              )}    
+              )}
       {/* Indent Size Selector */}
       <div className="max-w-4xl mx-auto mb-2">
-        <label className="block text-gray-500 text-sm mb-1" htmlFor="indent">
+        <label className="block text-white text-sm mb-1" htmlFor="indent">
           Indent Size
         </label>
         <select
           id="indent"
-          className="w-48 border border-gray-200 rounded-lg px-4 py-2 bg-white text-gray-700 focus:outline-none focus:border-[#5b63e6] mb-2"
+          className="w-48 border border-gray-200 rounded-lg px-4 py-2 bg-[#273D58] text-white outline-none mb-2"
           value={indent}
           onChange={e => setIndent(e.target.value)}
         >
@@ -292,12 +291,12 @@ export default function CssFormatter({id="CSS Formatter"}) {
       {/* Main Content */}
       <div className="flex flex-col md:flex-row gap-4 max-w-4xl mx-auto mb-4">
         {/* Input Area */}
-        <div className="flex-1 bg-white rounded-xl border border-[#e7eafe] p-4 min-h-[260px] flex flex-col">
+        <div className="flex-1 bg-[#16283E] rounded-xl border border-[#e7eafe] p-4 min-h-[260px] flex flex-col">
           <label className="text-gray-400 text-sm mb-2">
             Raw CSS Code
           </label>
           <textarea
-            className="flex-1 resize-none outline-none bg-transparent text-gray-700 text-base"
+            className="flex-1 resize-none outline-none bg-transparent text-white text-base"
             placeholder="Paste your CSS code here"
             value={input}
             onChange={e => setInput(e.target.value)}
@@ -308,12 +307,12 @@ export default function CssFormatter({id="CSS Formatter"}) {
           <span className="text-gray-300 text-2xl">&raquo;</span>
         </div>
         {/* Output Area */}
-        <div className="flex-1 bg-white rounded-xl border border-[#e7eafe] p-4 min-h-[260px] flex flex-col">
+        <div className="flex-1 bg-[#16283E] rounded-xl border border-[#e7eafe] p-4 min-h-[260px] flex flex-col">
           <label className="text-gray-400 text-sm mb-2">
             Formatted CSS Code
           </label>
           <textarea
-            className="flex-1 resize-none outline-none bg-transparent text-gray-700 text-base"
+            className="flex-1 resize-none outline-none bg-transparent text-white text-base"
             placeholder="Formatted CSS will appear here"
             value={output}
             readOnly
@@ -342,7 +341,7 @@ export default function CssFormatter({id="CSS Formatter"}) {
           Format
         </button>
         <button
-          className="px-8 py-3  bg-[#273D58]  border border-white text-white rounded-lg flex items-center gap-2 text-[#a99cff] hover:bg-[#f3f0ff] transition cursor-pointer"
+          className="px-8 py-3  bg-[#273D58]  border border-white text-white rounded-lg flex items-center gap-2 text-[#a99cff] transition cursor-pointer"
           onClick={handleDownload}
           disabled={!output}
         >
@@ -356,7 +355,7 @@ export default function CssFormatter({id="CSS Formatter"}) {
           className={`px-8 py-3  bg-[#273D58]  border border-white text-white rounded-lg flex items-center gap-2 transition cursor-pointer ${
             isCopied
               ? "text-green-600 bg-green-50 border-green-200"
-              : "text-[#a99cff] hover:bg-[#f3f0ff]"
+              : "text-white bg-[#273D58]  border border-white text-white"
           }`}
           onClick={handleCopy}
           disabled={!output}

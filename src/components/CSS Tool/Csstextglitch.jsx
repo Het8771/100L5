@@ -154,153 +154,161 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
           <span className="text-3xl sm:text-4xl text-indigo-400">
             <CgGoogle />
           </span>
-          <h1 className="text-lg sm:text-xl md:text-lg font-bold text-gray-900 text-center sm:text-left">
+          <h1 className="text-lg sm:text-xl md:text-lg font-bold text-white text-center sm:text-left">
             CSS Text Glitch Effect Generator
           </h1>
         </div>
         <div className="flex flex-wrap justify-center sm:justify-end md:mt-2 gap-3 w-full sm:w-auto">
-          <button
-            onClick={() => setShareOpen(true)}
-            className="flex items-center justify-center px-4 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 transition w-full sm:w-auto"
-          >
-            <FiShare2 className="mr-2" size={18} />
-            Share
-          </button>
-          <button
-            className="flex items-center justify-center gap-2 px-4 py-2 text-sm rounded-xl border border-indigo-600 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 transition w-full sm:w-auto"
-            onClick={() => setOpen(true)}
-          >
-            <FiAlertCircle className="text-indigo-600 text-base" />
-            Report Bug
-          </button>
-          <button
-            onClick={onFavoriteToggle}
-            className={`flex items-center justify-center px-4 py-2 rounded-xl border text-sm cursor-pointer border-indigo-600 ${
-              isFavorite
-                ? "bg-indigo-100 border-indigo-600 text-indigo-700"
-                : "bg-indigo-50 border-indigo-300 text-indigo-600"
-            } hover:bg-indigo-100 transition w-full sm:w-auto`}
-          >
-            {isFavorite ? (
-              <>
-                <FaCheck className="inline-block mr-1" size={12} /> Added
-              </>
-            ) : (
-              <>
-                <FaRegStar className="inline-block mr-1" size={12} /> Add to Favorites
-              </>
-            )}
-          </button>
+            <button
+                             onClick={() => setShareOpen(true)}
+                             className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white mb-2 md:mb-0 cursor-pointer"
+                           >
+                             <FiShare2 className="mr-2" size={18} />
+                             Share
+                           </button>    <button
+                             className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white cursor-pointer transition"
+                             onClick={() => setOpen(true)}
+                           >
+                             <FiAlertCircle className="text-white text-base" />
+                             Report Bug
+                           </button>
+                            <button
+                                      onClick={onFavoriteToggle}
+                                      className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
+                                        ? "border border-white bg-[#273D58]  border border-white text-white"
+                                        : "bg-[#273D58]  border border-white text-white"
+                                        }`}
+                                    >
+                                      {isFavorite ? (
+                                        <>
+                                          <FaCheck className="inline-block mr-1" size={12} /> Added
+                                        </>
+                                      ) : (
+                                        <>
+                                          <FaRegStar className="inline-block mr-1" size={12} /> Add to
+                                          Favorites
+                                        </>
+                                      )}
+                                    </button>
+
         </div>
       </div>
 
       {/* Share Popup */}
-      {shareOpen && (
-        <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center px-4 py-6">
-          <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-xl w-full max-w-md">
-            <div className="flex flex-col sm:flex-row justify-between mb-4 bg-indigo-50 p-1 rounded-xl gap-2">
-              <button
-                onClick={() => setActiveTab("tool")}
-                className={`flex-1 px-4 py-2 rounded-xl font-semibold text-sm ${
-                  activeTab === "tool"
-                    ? "bg-indigo-600 text-white"
-                    : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                }`}
-              >
-                ⚙️ Share Tool
-              </button>
-              <button
-                onClick={() => setActiveTab("home")}
-                className={`flex-1 px-4 py-2 rounded-xl font-semibold text-sm ${
-                  activeTab === "home"
-                    ? "bg-indigo-600 text-white"
-                    : "text-indigo-600 hover:bg-indigo-600 hover:text-white"
-                }`}
-              >
-                🏠 Share 10015
-              </button>
-            </div>
-            <div className="text-center border border-gray-500 rounded-xl p-4 sm:p-6">
-              <p className="text-sm mb-1 text-gray-500">You are currently sharing:</p>
-              <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-5 text-gray-600">
-                {activeTab === "tool" ? "Google Fonts Pair Finder" : "10015 Tools"}
-              </h2>
-              <div className="flex justify-center mb-4 sm:mb-6">
-                <MdShare className="text-indigo-500 text-5xl sm:text-6xl" />
-              </div>
-              <div className="flex justify-center gap-3 sm:gap-4 flex-wrap">
-                {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map((Icon, i) => (
-                  <button
-                    key={i}
-                    className="text-white bg-indigo-500 rounded-full w-10 h-10 flex items-center justify-center hover:bg-indigo-600 transition"
-                  >
-                    <Icon size={20} />
-                  </button>
-                ))}
-              </div>
-            </div>
-            <button
-              className="absolute top-3 right-3 text-gray-600 text-lg cursor-pointer"
-              onClick={() => setShareOpen(false)}
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      )}
+ {shareOpen && (
+                <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">
+                    <div className="flex justify-between mb-4 bg-indigo-50 p-1 rounded-xl">
+                      <button
+                        onClick={() => setActiveTab("tool")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        ⚙️ Share Tool
+                      </button>
+                      <button
+                        onClick={() => setActiveTab("home")}
+                        className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
+                          ? "bg-[#273D58]  border border-white text-white"
+                          : "text-black hover:bg-[#273D58] hover:text-white"
+                          }`}
+                      >
+                        🏠 Share 10015
+                      </button>
+                    </div>
+                    <div className="text-center border border-gray-500 rounded-xl p-6">
+                      <p className="text-sm mb-1 text-white">
+                        You are currently sharing:
+                      </p>
+                      <h2 className="text-xl font-semibold mb-5 text-white">
+                        {activeTab === "tool"
+                          ? "Google Fonts Pair Finder"
+                          : "10015 Tools"}
+                      </h2>
+                      <div className="flex justify-center mb-6">
+                        <MdShare className="text-white text-7xl" />
+                      </div>
+                      <div className="flex justify-center gap-4">
+                        {[FaFacebookF, FaTwitter, FaLinkedinIn, FaEnvelope, FaCopy].map(
+                          (Icon, i) => (
+                            <button
+                              key={i}
+                              className="text-black bg-white rounded-full w-10 h-10 flex items-center justify-center"
+                            >
+                              <Icon />
+                            </button>
+                          )
+                        )}
+                      </div>
+                    </div>
+                    <button
+                      className="absolute top-0 h-2 w-2 right-4 text-white text-lg cursor-pointer"
+                      onClick={() => setShareOpen(false)}
+                    >
+                      ✕
+                    </button>
+                  </div>
+                </div>
+              )}
+
+
 
       {/* Bug Report Popup */}
-      {open && (
-        <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center px-4 py-6">
-          <div className="bg-white w-full max-w-md p-4 sm:p-6 rounded-2xl shadow-lg relative">
-            <h2 className="text-lg sm:text-xl font-bold mb-2">Bug Report</h2>
-            <p className="text-sm mb-4">
-              <strong>Tool:</strong> Lorem Ipsum Generator
-            </p>
-            <label className="text-sm mb-1 block" htmlFor="bugDescription">
-              Please describe the issue.
-            </label>
-            <textarea
-              id="bugDescription"
-              className="w-full p-3 border border-blue-300 rounded-xl text-sm sm:text-base h-32 focus:outline-none focus:ring-2 focus:ring-indigo-300 resize-none"
-              placeholder="Description*"
-              value={bugDescription}
-              onChange={(e) => setBugDescription(e.target.value)}
-            />
-            <div className="flex justify-end gap-3 mt-4">
-              <button
-                onClick={() => setOpen(false)}
-                className="px-4 py-2 bg-gradient-to-r from-[#B8D0FF] to۔[#E8D0FF] text-[#14143B] rounded-lg hover:opacity-90 transition"
-              >
-                Cancel
-              </button>
-              <button
-                onClick={() => {
-                  if (!bugDescription.trim()) {
-                    alert("Please enter a description.");
-                    return;
-                  }
-                  console.log("Bug description submitted:", bugDescription);
-                  setOpen(false);
-                  setBugDescription("");
-                }}
-                className="px-4 py-2 bg-[#273D58]  border border-white text-white rounded-lg hover:opacity-90 transition"
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+   {open && (
+                <div className="fixed inset-0 bg-black/30 z-40 flex justify-center items-center">
+                  <div className="bg-[#16283E] border border-white max-w-md w-full p-6 rounded-2xl shadow-lg relative">
+                    <h2 className="text-xl font-bold mb-2 text-white">Bug Report</h2>
+                    <p className="text-sm mb-4">
+                     
+
+                    </p>
+                    <label className="text-sm mb-1 block text-white" htmlFor="bugDescription">
+                      Please describe the issue.
+                    </label>
+                    <textarea
+                      id="bugDescription"
+                      className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 text-white"
+                      placeholder="Description*"
+                      value={bugDescription}
+                      onChange={(e) => setBugDescription(e.target.value)}
+                    />
+                    <div className="flex justify-end gap-3 mt-4">
+                      <button
+                        onClick={() => setOpen(false)}
+                        className="px-4 py-2 bg-[#273D58]  border border-white text-white border border-white rounded-lg"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={() => {
+                          if (!bugDescription.trim()) {
+                            alert("Please enter a description.");
+                            return;
+                          }
+                          console.log("Bug description submitted:", bugDescription);
+                          setOpen(false);
+                          setBugDescription("");
+                        }}
+                        className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+
 
       {/* Main Content */}
-      <div className="bg-white p-4 sm:p-6 rounded-md shadow-sm mb-6">
+      <div className="bg-[316283E] p-4 sm:p-6 rounded-md shadow-sm mb-6">
         {/* Controls Row */}
         <div className="grid grid-cols-1 gap-4 mb-6">
           <div>
-            <label className="block text-sm text-gray-600 mb-1">Glitch Effect</label>
+            <label className="block text-sm text-white mb-1">Glitch Effect</label>
             <select
-              className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
+              className="w-full p-3 border border-gray-300 bg-[#16283E] text-white rounded outline-none text-sm"
               value={glitchEffect}
               onChange={(e) => setGlitchEffect(e.target.value)}
             >
@@ -310,16 +318,16 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
             </select>
           </div>
           <div>
-            <label className="block text-sm text-gray-600 mb-1">Text</label>
+            <label className="block text-sm text-white bg-[#16283E] mb-1">Text</label>
             <input
               type="text"
-              className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
+              className="w-full p-3 border border-gray-300 text-white rounded outline-none text-sm"
               value={text}
               onChange={(e) => setText(e.target.value)}
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-600 mb-1">Font Size: {fontSize}px</label>
+            <label className="block text-sm text-white mb-1">Font Size: {fontSize}px</label>
             <input
               type="range"
               className="w-full h-2 bg-blue-500 rounded-lg appearance-none cursor-pointer"
@@ -388,48 +396,48 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
         {/* Color Controls */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           <div>
-            <label className="block text-sm text-gray-600 mb-1">Background Color</label>
+            <label className="block text-sm text-white mb-1">Background Color</label>
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 rounded" style={{ backgroundColor: backgroundColor }}></div>
               <input
                 type="text"
-                className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
+                className="w-full p-3 border border-gray-300 rounded outline-none text-sm text-white"
                 value={backgroundColor}
                 onChange={(e) => setBackgroundColor(e.target.value)}
               />
             </div>
           </div>
           <div>
-            <label className="block text-sm text-gray-600 mb-1">Text Color</label>
+            <label className="block text-sm text-white mb-1">Text Color</label>
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 rounded" style={{ backgroundColor: textColor }}></div>
               <input
                 type="text"
-                className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
+                className="w-full p-3 border border-gray-300 rounded outline-none text-sm text-white"
                 value={textColor}
                 onChange={(e) => setTextColor(e.target.value)}
               />
             </div>
           </div>
           <div>
-            <label className="block text-sm text-gray-600 mb-1">Glitch Color #1</label>
+            <label className="block text-sm text-white mb-1">Glitch Color #1</label>
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 rounded" style={{ backgroundColor: glitchColor1 }}></div>
               <input
                 type="text"
-                className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
+                className="w-full p-3 border border-gray-300 rounded outline-none text-sm text-white"
                 value={glitchColor1}
                 onChange={(e) => setGlitchColor1(e.target.value)}
               />
             </div>
           </div>
           <div>
-            <label className="block text-sm text-gray-600 mb-1">Glitch Color #2</label>
+            <label className="block text-sm text-white mb-1">Glitch Color #2</label>
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 rounded" style={{ backgroundColor: glitchColor2 }}></div>
               <input
                 type="text"
-                className="w-full p-3 border border-gray-500 rounded outline-none text-sm"
+                className="w-full p-3 border border-gray-300 rounded outline-none text-sm text-white"
                 value={glitchColor2}
                 onChange={(e) => setGlitchColor2(e.target.value)}
               />
@@ -439,9 +447,9 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
 
         {/* Code Display */}
         <div>
-          <label className="block text-sm text-gray-600 mb-1">HTML & CSS Code</label>
-          <div className="border border-gray-500 rounded bg-gray-50 p-4 overflow-x-auto">
-            <pre className="text-xs sm:text-sm whitespace-pre-wrap" ref={codeRef}>
+          <label className="block text-sm text-white mb-1">HTML & CSS Code</label>
+          <div className="border border-gray-300 rounded bg-[#16283E]  p-4 overflow-x-auto">
+            <pre className="text-xs sm:text-sm whitespace-pre-wrap text-gray-500" ref={codeRef}>
               <code className="language-html">{generateCode()}</code>
             </pre>
           </div>
@@ -452,12 +460,12 @@ const CSSTextGlitchEffectGenerator = ({ id = "CSS Text Glitch" }) => {
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
         <button
           onClick={handleReset}
-          className="w-full sm:w-40 px-6 py-3 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
+          className="w-full sm:w-40 px-6 py-3 transition bg-[#273D58] border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
         >
           Reset
         </button>
         <button
-          className="w-full sm:w-40 px-6 py-3 transition bg-[#273D58]  border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
+          className="w-full sm:w-40 px-6 py-3 transition bg-[#273D58] border border-white text-white cursor-pointer rounded-lg flex items-center justify-center hover:opacity-90"
           onClick={() => {
             navigator.clipboard.writeText(generateCode());
           }}

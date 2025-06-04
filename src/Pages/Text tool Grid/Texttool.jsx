@@ -29,7 +29,7 @@ function Texttool() {
       <div>
         <div className="">
           <Information
-            className="text-white"
+            className="text-white "
             title="Online  Text  Tools For Free"
             description="Looking for some great online text tools? Look no further than 10015.io!
 

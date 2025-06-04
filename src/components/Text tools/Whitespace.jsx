@@ -119,7 +119,7 @@ export default function WhitespaceRemover({ id = "Multiple Whitespace Remove" })
         </div>
       </div>
 
-      {/* Share Popup */}
+    {/* Share Popup */}
               {shareOpen && (
                 <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
                   <div className="bg-[#16283E] border border-white p-6 rounded-2xl shadow-xl max-w-md w-full relative">

@@ -31,14 +31,14 @@ const ProductFinderHero = () => {
 
   return (
     <>
-        <section className="w-full relative bg-[#16283E]">
-      <img
-        src={Oval2}
-        alt="Background"
-        className="absolute w-150 h-auto object-cover hidden lg:block  "
-      />
-      <Navbar />
-      {/* <div
+      <section className="w-full relative bg-[#16283E]">
+        <img
+          src={Oval2}
+          alt="Background"
+          className="absolute w-150 h-auto object-cover hidden lg:block  "
+        />
+        <Navbar />
+        {/* <div
         className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[64%] "
         style={{ zIndex: -1 }}
       >
@@ -57,13 +57,12 @@ const ProductFinderHero = () => {
         <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           {/* Main Blur Container */}
           <div
-            className={`${
-              showAuthModal ? "blur-sm pointer-events-none select-none" : ""
-            }`}
+            className={`${showAuthModal ? "blur-sm pointer-events-none select-none" : ""
+              }`}
           >
             <div className="py-12 flex flex-col lg:flex-row items-center justify-between relative z-10 gap-10">
               <div className="flex-1 text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
                   Product Finder
                 </h1>
                 <p className="text-gray-400 text-base sm:text-lg">
@@ -75,7 +74,8 @@ const ProductFinderHero = () => {
                     <Link
                       to="/"
                       state={{ scrollTo: "featured-tools" }}
-                      className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
+                      className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] 
+ font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
                     >
                       EXPLORE TOOL
                     </Link>
@@ -87,7 +87,8 @@ const ProductFinderHero = () => {
                   </div>
                   <div className="relative inline-flex items-center">
                     <Link to="/Productfinder">
-                      <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap">
+                      <button className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] 
+ font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap">
                         PRODUCT FINDER
                       </button>
                     </Link>
@@ -102,42 +103,11 @@ const ProductFinderHero = () => {
                 <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6 mt-10 max-w-md mx-auto lg:mx-0">
                   <div className="flex flex-col items-center space-y-3">
                     <Link to="/Signup">
-                      <button className="bg-gray-100 px-8 py-2 rounded-full text-gray-600 font-semibold shadow-md whitespace-nowrap cursor-pointer">
+                      <button className="bg-[#273D58] text-gray-400 px-8 py-2 rounded-full text-gray-600 font-semibold shadow-md whitespace-nowrap cursor-pointer">
                         LOGIN / REGISTER
                       </button>
                     </Link>
-                    <Link to="/Signup">
-                      <button className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
-                        SIGN IN
-                      </button>
-                    </Link>
                   </div>
-
-                  <div className="text-center ">
-                    <p className="text-sm text-gray-500 mb-2 max-w-xs mx-auto sm:mx-0">
-                      Get the extension and access all tools with just one click
-                    </p>
-                    <div className="flex items-center justify-center gap-4">
-                      <div className="h-px w-12 bg-gray-300" />
-                      <a
-                        href="https://chrome.google.com/webstore"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        <img src={chrome} alt="Chrome" className="w-6 h-6" />
-                      </a>
-                      <a
-                        href="https://chrome.google.com/webstore"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        <img src={firefox} alt="Firefox" className="w-6 h-6" />
-                      </a>
-                      <div className="h-px w-12 bg-gray-300" />
-                    </div>
-                  </div> 
                 </div>
               </div>
 
@@ -182,9 +152,8 @@ const ProductFinderHero = () => {
                   {[1, 2, 3].map((num) => (
                     <div
                       key={num}
-                      className={`relative bg-[#16283E] p-6 rounded-2xl shadow-lg cursor-pointer ${
-                        selectedPackage === num ? "" : ""
-                      }`}
+                      className={`relative bg-[#16283E] p-6 rounded-2xl shadow-lg cursor-pointer ${selectedPackage === num ? "" : ""
+                        }`}
                       onClick={() => setSelectedPackage(num)}
                     >
                       <div className="absolute top-4 right-4 text-yellow-400 text-2xl">
@@ -194,8 +163,8 @@ const ProductFinderHero = () => {
                         {num === 1
                           ? "Basic"
                           : num === 2
-                          ? "Standard"
-                          : "Premium"}{" "}
+                            ? "Standard"
+                            : "Premium"}{" "}
                         <br /> Category Star
                       </h3>
                       <p className="text-center text-3xl font-bold  text-white mt-3">
@@ -268,8 +237,8 @@ const ProductFinderHero = () => {
           )}
 
         </div>
-          <Support />
-      <Footer />
+        <Support />
+        <Footer />
       </section>
     </>
   );
