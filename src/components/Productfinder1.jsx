@@ -224,27 +224,30 @@ const ProductFinderHero = () => {
                     </p>
                   </div>
                   {/* <!-- Visit Button --> */}
-                  <div class="flex justify-end">
-                    <a
-                      href="#"
-                      class="bg-[#D5C7FF] text-black rounded-full px-8 py-2 text-lg font-medium flex items-center gap-2 hover:bg-[#23233c] transition"
-                    >
-                      Visit
-                      <svg
-                        class="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                      </svg>
-                    </a>
-                  </div>
+                <div class="flex justify-end">
+  <a
+    href="https://www.cleansnap.co/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="bg-[#D5C7FF] text-black rounded-full px-8 py-2 text-lg font-medium flex items-center gap-2 transition"
+  >
+    Visit
+    <svg
+      class="w-5 h-5"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M14 5l7 7m0 0l-7 7m7-7H3"
+      />
+    </svg>
+  </a>
+</div>
+
                 </div>
               </div>
 

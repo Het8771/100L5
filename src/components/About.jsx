@@ -5,17 +5,13 @@ import facebook from "../image/facebook.svg";
 import instagram from "../image/instagram.svg";
 import linkedin from "../image/linkedin.svg";
 import tiweter from "../image/tiweter.svg";
-
 import Support from "./Support";
-import arror from "../image/arror.svg";
 import finder from "../image/finder.svg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import firefox from "../image/firefox.svg";
 import explore from "../image/explore.svg";
 import { Link } from "react-router-dom";
 import Oval2 from "../image/Oval2.svg";
-import chrome from "../image/chrome.svg";
 
 export default function About() {
   return (
@@ -56,9 +52,8 @@ export default function About() {
                   <div className="relative inline-flex items-center">
                     <Link
                       to="/"
-                      state={{ scrollTo: 'featured-tools' }}
-                      className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] 
- font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
+                      state={{ scrollTo: "featured-tools" }}
+                      className="inline-flex items-center bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] font-bold px-6 py-2 rounded-full shadow-md whitespace-nowrap hover:scale-105 transition-transform"
                     >
                       EXPLORE TOOL
                     </Link>
@@ -124,6 +119,21 @@ export default function About() {
                   src={search}
                   alt="Illustration"
                   className="hidden lg:block w-full max-w-xs sm:max-w-sm md:max-w-md"
+                />
+                <div
+                  className="
+                  hidden xl:block  2xl:block lg:block
+                  absolute
+                  xl:right-[-40px]  top-1/4   2xl:right-[-200px] lg:right-[-30px]
+                  -translate-y-1/2
+                  w-190  h-100
+                  rounded-full
+                  bg-gradient-to-br from-[#1F2B56] to-[#ffffff]     
+                 blur-3xl
+                  opacity-35
+                  z-0
+                "
+                  aria-hidden="true"
                 />
               </div>
             </div>

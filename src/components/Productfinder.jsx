@@ -57,7 +57,7 @@ const ProductFinderHero = () => {
       "Documentation",
       "Database",
       "Version Control",
-    ],  
+    ],
     design: ["Coloring", "Background", "Animation", "UX Tools"],
     marketing: ["Email Marketing", "Affiliation", "Conversion", "SEO"],
     business: ["Accounting", "CRM", "Project Management"],
@@ -258,14 +258,14 @@ const ProductFinderHero = () => {
                 </p>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-4">
                   <div className="relative inline-flex items-center">
-                   <Link
-                  to="/"
-                  state={{ scrollTo: 'featured-tools' }}
-                  className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] 
+                    <Link
+                      to="/"
+                      state={{ scrollTo: 'featured-tools' }}
+                      className="bg-gradient-to-r from-[#B8D0FF] to-[#E8D0FF] text-[#14143B] 
  font-bold px-6 sm:px-8 py-2 rounded-full shadow-md whitespace-nowrap cursor-pointer inline-block text-center"
-                >
-                  EXPLORE TOOL
-                </Link>
+                    >
+                      EXPLORE TOOL
+                    </Link>
                     <img
                       src={explore}
                       alt="Arrow Icon"
@@ -341,6 +341,21 @@ const ProductFinderHero = () => {
                   alt="Illustration"
                   className="hidden lg:block w-full max-w-xs sm:max-w-sm md:max-w-md"
                 />
+                <div
+                  className="
+                  hidden xl:block  2xl:block lg:block
+                  absolute
+                  xl:right-[-40px]  top-1/4   2xl:right-[-200px] lg:right-[-30px]
+                  -translate-y-1/2
+                  w-190  h-100
+                  rounded-full
+                  bg-gradient-to-br from-[#1F2B56] to-[#ffffff]     
+                 blur-3xl
+                  opacity-35
+                  z-0
+                "
+                  aria-hidden="true"
+                />
               </div>
             </div>
 
@@ -368,19 +383,17 @@ const ProductFinderHero = () => {
                         <button
                           key={cat.id}
                           onClick={() => setActiveCategory(cat.id)}
-                          className={`flex items-center gap-3 px-5 sm:px-6 py-3 rounded-full transition-all whitespace-nowrap cursor-pointer ${
-                            isActive
+                          className={`flex items-center gap-3 px-5 sm:px-6 py-3 rounded-full transition-all whitespace-nowrap cursor-pointer ${isActive
                               ? "bg-blue-200 text-[#0D1440]"
                               : "bg-gray-100 text-gray-600 hover:bg-blue-100"
-                          }`}
+                            }`}
                           aria-pressed={isActive}
                         >
                           <div
-                            className={`text-lg p-2 rounded-full ${
-                              isActive
+                            className={`text-lg p-2 rounded-full ${isActive
                                 ? "bg-[#0D1440] text-white"
                                 : "bg-blue-100 text-blue-600"
-                            }`}
+                              }`}
                           >
                             {cat.icon}
                           </div>
@@ -508,10 +521,10 @@ const ProductFinderHero = () => {
           </Link>
         </section>
       </div>
-      
-                  <div className="bg-[#16283E]">
+
+      <div className="bg-[#16283E]">
         <Support />
-      <Footer />
+        <Footer />
       </div>
     </>
   );

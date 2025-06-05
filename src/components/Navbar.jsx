@@ -616,16 +616,16 @@ export default function Navbar() {
         <div className="lg:hidden">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-gray-800" />
+              <X className="h-6 w-6 text-white" />
             ) : (
-              <Menu className="h-6 w-6 text-gray-800" />
+              <Menu className="h-6 w-6 text-white" />
             )}
           </button>
         </div>
 
         {/* Mobile/Tablet Menu */}
         {mobileMenuOpen && (
-          <div className="fixed inset-0 bg-white z-40 lg:hidden">
+          <div className="fixed inset-0 bg-[#16283E] z-40 lg:hidden">
             <div className="flex justify-between items-center p-4">
               <Link
                 to="/"
@@ -642,13 +642,13 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="p-2 rounded-full hover:bg-gray-100"
               >
-                <X className="h-6 w-6 text-gray-800" />
+                <X className="h-6 w-6 text-white" />
               </button>
             </div>
             <nav className="px-4 py-6 flex flex-col space-y-4">
               <Link
                 to="/About"
-                className="text-white hover:text-gray-900"
+                className="text-white"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
@@ -683,7 +683,7 @@ export default function Navbar() {
               {!isSpecialPage && (
                 <div className="relative z-10">
                   <button
-                    className="flex items-center text-gray-700 hover:text-gray-900 w-full justify-between"
+                    className="flex items-center text-white w-full justify-between"
                     onClick={toggleMobileFeatured}
                   >
                     Categories
@@ -694,52 +694,52 @@ export default function Navbar() {
                     />
                   </button>
                   {mobileFeaturedOpen && (
-                    <div className="w-full bg-gray-50 rounded-lg mt-2 py-2">
+                    <div className="w-full bg-[#273D58] rounded-lg mt-2 py-2">
                       <Link
                         to="/Texttool"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-sm text-white"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Text Tool
                       </Link>
                       <Link
                         to="/Imagetool"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-sm text-white"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Image Tool
                       </Link>
                       <Link
                         to="/CSStool"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-sm text-white"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         CSS Tool
                       </Link>
                       <Link
                         to="/Codingtool"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-sm text-white"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Coding Tools
                       </Link>
                       <Link
                         to="/Colortool"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-sm text-white"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Color Tools
                       </Link>
                       <Link
                         to="/Socialmediatool"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-sm text-white"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Social Media Tools
                       </Link>
                       <Link
                         to="/Miscellaneoustool"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-sm text-white"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Miscellaneous Tools
@@ -751,7 +751,7 @@ export default function Navbar() {
               {/* Extensions Dropdown Mobile */}
               <div className="relative z-10">
                 <button
-                  className="flex items-center text-gray-700 hover:text-gray-900 w-full justify-between"
+                  className="flex items-center text-white w-full justify-between"
                   onClick={toggleMobileExtensions}
                 >
                   Extensions
@@ -762,12 +762,12 @@ export default function Navbar() {
                   />
                 </button>
                 {mobileExtensionsOpen && (
-                  <div className="w-full bg-gray-50 rounded-lg mt-2 py-2">
+                  <div className="w-full bg-[#273D58] rounded-lg mt-2 py-2">
                     <a
                       href="https://chrome.google.com/webstore"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="flex items-center px-4 py-2 text-sm text-white"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <img
@@ -781,7 +781,7 @@ export default function Navbar() {
                       href="https://addons.mozilla.org/en-US/firefox/"
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="flex items-center px-4 py-2 text-sm text-white"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <img
@@ -797,7 +797,7 @@ export default function Navbar() {
               {/* Theme Dropdown Mobile */}
               <div className="relative z-10">
                 <button
-                  className="flex items-center text-gray-700 hover:text-gray-900 w-full justify-between"
+                  className="flex items-center text-white w-full justify-between"
                   onClick={toggleMobileTheme}
                 >
                   Theme
@@ -808,15 +808,15 @@ export default function Navbar() {
                   />
                 </button>
                 {mobileThemeOpen && (
-                  <div className="w-full bg-gray-50 rounded-lg mt-2 py-2">
+                  <div className="w-full bg-[#273D58] rounded-lg mt-2 py-2">
                     <button
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                      className="block px-4 py-2 text-sm text-white w-full text-left"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Dark Theme
                     </button>
                     <button
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                      className="block px-4 py-2 text-sm text-white w-full text-left"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Light Theme
@@ -827,7 +827,7 @@ export default function Navbar() {
 
               <Link
                 to="/Contact"
-                className="bg-[#00063F] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-opacity-90 transition-colors text-center mt-4"
+                className="bg-[#273D58] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-opacity-90 transition-colors text-center mt-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 CONTACT US
@@ -1019,7 +1019,7 @@ export default function Navbar() {
               <ChevronDown className="ml-1 h-4 w-4" />
             </button>
             {themeOpen && (
-              <div className="absolute top-full w-41 rounded-2xl shadow-lg py-2 z-10">
+              <div className="absolute top-full w-45 bg-[#273D58] rounded-xl shadow-lg py-2 z-10">
                 <button
                   className="block px-4 py-2 text-sm text-white bg-[#273D58] w-full text-center cursor-pointer "
                 >

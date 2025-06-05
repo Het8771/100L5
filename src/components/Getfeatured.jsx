@@ -117,6 +117,21 @@ const ProductFinderHero = () => {
                   alt="Illustration"
                   className="hidden lg:block w-full max-w-xs sm:max-w-sm md:max-w-md"
                 />
+                 <div
+                className="
+                  hidden xl:block  2xl:block lg:block
+                  absolute
+                  xl:right-[-40px]  top-1/4   2xl:right-[-200px] lg:right-[-30px]
+                  -translate-y-1/2
+                  w-190  h-100
+                  rounded-full
+                  bg-gradient-to-br from-[#1F2B56] to-[#ffffff]     
+                 blur-3xl
+                  opacity-35
+                  z-0
+                "
+                aria-hidden="true"
+              />
               </div>
             </div>
 

@@ -1,4 +1,3 @@
-"use client"
 import { FaChevronDown } from "react-icons/fa"
 import { IoText, IoImages } from "react-icons/io5"
 import { IoLogoCss3 } from "react-icons/io"
@@ -263,34 +262,34 @@ export default function Sidebar() {
   }, [favoriteItems.length])
 
   return (
-    <div className="flex flex-col lg:flex-row h-auto overflow-hidden">
+    <div className="flex flex-col lg:flex-row ">
       {/* Topbar for mobile and tablet (hidden on large screens) */}
-      <div className="lg:hidden border-b border-gray-200 p-2 flex justify-between items-center  top-0 left-0 right-0 z-20">
-        <button onClick={() => setSidebarOpen(!sidebarOpen)} className="text-gray-600">
+      <div className="lg:hidden bg-[#16283E] border-b border-gray-200 p-2 flex justify-between items-center fixed top-0 left-0 right-0 z-20">
+        <button onClick={() => setSidebarOpen(!sidebarOpen)} className="text-white">
           <FaChevronDown
             className={`transition-transform duration-200 mt-15 ${sidebarOpen ? "rotate-180" : ""}`}
             size={22}
           />
         </button>
-        <span className="font-bold text-lg mt-15">Toolbox</span>
+        <span className="font-bold text-lg mt-15 text-white">Toolbox</span>
         <div />
       </div>
 
       {/* Sidebar: toggled on mobile/tablet, always visible on large screens */}
       <aside
         className={`
-          bg-[#16283E] w-full lg:w-72 border-r border-gray-200 p-4  space-y-3 overflow-y-auto z-10 transition-all duration-300 ease-in-out
+          bg-[#16283E] w-full lg:w-72 border-r border-gray-200 p-4 h-[100%] space-y-3 overflow-y-auto z-10 transition-all duration-300 ease-in-out
           fixed top-14 left-0 right-0 max-h-[calc(100vh-3.5rem)]
           ${sidebarOpen ? "block" : "hidden"}
           lg:sticky lg:top-0 lg:left-0 lg:h-screen lg:max-h-screen lg:block
         `}
       >
-        <h2 className="text-gray-500 font-bold text-sm tracking-wider uppercase">Tool Categories</h2>
+        <h2 className="text-white font-bold text-sm tracking-wider uppercase">Tool Categories</h2>
         {sections.map(({ key, icon, label, items }) => (
           <div key={key}>
             <button
               onClick={() => toggleDropdown(key)}
-              className="flex justify-between items-center w-full text-left font-semibold text-gray-300 mb-1"
+              className="flex justify-between items-center w-full text-left font-semibold text-white mb-1"
             >
               <span className="flex items-center gap-2">
                 <span className="text-lg">{icon}</span> {label}
@@ -301,7 +300,7 @@ export default function Sidebar() {
                 )}
               </span>
               <FaChevronDown
-                className={`text-gray-400 transition-transform duration-200 ${openDropdownKey === key ? "rotate-180" : ""}`}
+                className={`text-white transition-transform duration-200 ${openDropdownKey === key ? "rotate-180" : ""}`}
               />
             </button>
             {openDropdownKey === key && (
@@ -316,8 +315,8 @@ export default function Sidebar() {
                     }}
                     className={`flex items-center gap-2 p-2 rounded cursor-pointer  ${
                       selectedTool === item.label
-                        ? "bg-white text-black "
-                        : "text-gray-400"
+                        ? "bg-white text-black font-semibold"
+                        : "text-gray-400 "
                     }`}
                   >
                     {item.icon}
@@ -332,3 +331,12 @@ export default function Sidebar() {
     </div>
   )
 }
+
+
+
+
+
+
+
+
+

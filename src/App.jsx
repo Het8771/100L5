@@ -79,12 +79,15 @@ import Miscellaneoustool from "./Pages/Miscellaneous tool Grid/Miscellaneoustool
 import Imagefilter from "./components/Image Tool/Imagefilter";
 import ImageCaptionGenerator from "./components/Image Tool/ImageCaptionGenerator";
 import Sidebar from "./components/Sidebar";
+import ScrollToTop from "./components/ScrollToTop";
+
 
 function App() {
   return (
     <>
       <FavoritesProvider>
         <Router>
+          <ScrollToTop />
           <Routes>
             {/* Home route WITHOUT layout */}
             <Route path="/" element={<Home />} />
