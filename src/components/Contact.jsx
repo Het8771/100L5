@@ -4,9 +4,6 @@ import Contact from "../image/Contact.svg";
 import Support from "./Support";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import ston from "../image/ston.svg";
-import Oval2 from "../image/Oval2.svg";
-import leaf1 from "../image/leaf1.svg";
 import { Link } from "react-router-dom";
 
 const ContactSection = () => {
@@ -19,29 +16,6 @@ const ContactSection = () => {
   return (
     <>
       <div className="relative bg-[#16283E]">
-        {/* Background Image - Hidden on mobile/tablet, visible on lg screens */}
-        {/* <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
-          <img
-            src={Oval2}
-            alt="Background"
-            className="w-150 h-auto object-cover "
-          />
-          <img
-            src={leaf1}
-            alt="leav"
-            className="top-15 absolute hidden lg:block"
-          />
-        </div> */}
-        {/* <div
-          className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[63%]"
-          style={{ zIndex: 1 }}
-        >
-          <img
-            src={ston || "/placehol der.svg"}
-            alt="Background Shape"
-            className="w-full h-auto object-cover"
-          />
-        </div> */}
         <Navbar />
         <div className=" max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8 ">
           <div className="py-12 flex flex-col lg:flex-row items-center justify-between relative z-10 ">
@@ -90,36 +64,30 @@ const ContactSection = () => {
                       LOGIN / REGISTER
                     </button>
                   </Link>
-                  <Link to="/Signup">
-                    {/* <button className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
-                      SIGN IN
-                    </button> */}
-                  </Link>
                 </div>
-
-                {/* <div className="text-center ">
-                  <p className="text-sm text-gray-500 mb-2 max-w-xs mx-auto sm:mx-0">
-                    Get the extension and access all tools with just one click
-                  </p>
-                  <div className="flex items-center justify-center gap-4">
-                    <div className="h-px w-12 bg-gray-300" />
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png"
-                      alt="Chrome"
-                      className="w-6 h-6"
-                    />
-                    <img src={firefox} alt="Firefox" className="w-6 h-6" />
-                    <div className="h-px w-12 bg-gray-300" />
-                  </div>
-                </div> */}
               </div>
             </div>
 
-            <div className="flex-1 flex justify-center max-w-md w-full">
+              <div className="flex-1 flex justify-center  w-full relative">
+              <div
+                  className="
+                  hidden xl:block  2xl:block lg:block
+                  absolute
+                  xl:right-[-40px]  top-1/4   2xl:right-[-100px] lg:right-[-30px]
+                  -translate-y-1/2
+                  w-190  h-100
+                  rounded-full
+                  bg-gradient-to-br from-[#1F2B56] to-[#ffffff]     
+                 blur-3xl
+                  opacity-35
+                  z-0
+                "
+                  aria-hidden="true"
+                />
               <img
                 src={Contact}
                 alt="Illustration"
-                className="hidden lg:block w-full max-w-xs sm:max-w-sm md:max-w-md"
+                  className="hidden xl:block 2xl:block lg:block w-full max-w-xs sm:max-w-sm md:max-w-md relative z-10  2xl:left-10"
               />
             </div>
           </div>

@@ -1,5 +1,4 @@
 import phone from "../image/phone.svg";
-import leaf from "../image/leaf.svg";
 import { Link } from "react-router-dom";
 
 export default function Support() {
@@ -12,13 +11,6 @@ export default function Support() {
   return (
     
     <div className="relative p-2  max-w-7xl mx-auto  mx-auto bg-[#D5C7FF] py-12 px-7 lg:px-20 rounded-3xl overflow-hidden">
-      {/* Leaf Background Image */}
-      {/* <img
-        src={leaf}
-        alt="Decorative Leaf"
-        className="absolute bottom-1 right-1 w-30 opacity-90 pointer-events-none select-none"
-      /> */}
-
       <div className="flex flex-col lg:flex-row items-center justify-between gap-6 relative z-10">
         {/* Text */}
         <div className="space-y-2">

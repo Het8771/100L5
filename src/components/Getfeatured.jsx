@@ -38,22 +38,6 @@ const ProductFinderHero = () => {
           className="absolute w-150 h-auto object-cover hidden lg:block  "
         />
         <Navbar />
-        {/* <div
-        className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-[64%] "
-        style={{ zIndex: -1 }}
-      >
-        <img
-          src={ston}
-          alt="Background Shape"
-          className="w-full h-auto object-cover"
-        />
-      </div> */}
-        {/* Leaf Background */}
-        {/* <img
-          src={Getleaf}
-          alt="Leaf Background"
-          className="hidden lg:block absolute left-0 top-0 w-48 md:w-64 lg:w-80 opacity-5 z-0"
-        /> */}
         <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           {/* Main Blur Container */}
           <div
@@ -111,17 +95,12 @@ const ProductFinderHero = () => {
                 </div>
               </div>
 
-              <div className="flex-1 flex justify-center max-w-md w-full">
-                <img
-                  src={search}
-                  alt="Illustration"
-                  className="hidden lg:block w-full max-w-xs sm:max-w-sm md:max-w-md"
-                />
+              <div className="flex-1 flex justify-center  w-full relative">
                  <div
                 className="
                   hidden xl:block  2xl:block lg:block
                   absolute
-                  xl:right-[-40px]  top-1/4   2xl:right-[-200px] lg:right-[-30px]
+                  xl:right-[-40px]  top-1/4   2xl:right-[-100px] lg:right-[-30px]
                   -translate-y-1/2
                   w-190  h-100
                   rounded-full
@@ -132,6 +111,11 @@ const ProductFinderHero = () => {
                 "
                 aria-hidden="true"
               />
+                <img
+                  src={search}
+                  alt="Illustration"
+                  className="hidden xl:block 2xl:block lg:block w-full max-w-xs sm:max-w-sm md:max-w-md relative z-10  2xl:left-10"
+                />
               </div>
             </div>
 

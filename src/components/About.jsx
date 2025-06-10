@@ -21,7 +21,7 @@ export default function About() {
           <img
             src={Oval2}
             alt="Background"
-            className="w-150 h-auto object-cover "
+            className="w-150 h-auto object-cover"
           />
         </div>
         <div
@@ -114,17 +114,12 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="flex-1 flex justify-center max-w-md w-full">
-                <img
-                  src={search}
-                  alt="Illustration"
-                  className="hidden lg:block w-full max-w-xs sm:max-w-sm md:max-w-md"
-                />
+              <div className="flex-1 flex justify-center  w-full relative">
                 <div
                   className="
                   hidden xl:block  2xl:block lg:block
                   absolute
-                  xl:right-[-40px]  top-1/4   2xl:right-[-200px] lg:right-[-30px]
+                  xl:right-[-40px]  top-1/4   2xl:right-[-100px] lg:right-[-30px]
                   -translate-y-1/2
                   w-190  h-100
                   rounded-full
@@ -134,6 +129,11 @@ export default function About() {
                   z-0
                 "
                   aria-hidden="true"
+                />
+                <img
+                  src={search}
+                  alt="Illustration"
+                  className="hidden xl:block 2xl:block lg:block w-full max-w-xs sm:max-w-sm md:max-w-md relative z-10  2xl:left-10"
                 />
               </div>
             </div>

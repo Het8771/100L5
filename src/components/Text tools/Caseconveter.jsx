@@ -226,7 +226,7 @@ function CaseConverter({ id = "Case Converter" }) {
         </div>
 
         <textarea
-          className="w-full p-4 border border-gray-500 rounded-2xl text-base mb-5 h-40"
+          className="w-full p-4 border border-gray-500 rounded-2xl text-base mb-5 h-40 outline-none"
           placeholder="Enter your text..."
           value={text}
           onChange={(e) => setText(e.target.value)}

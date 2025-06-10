@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import { Star } from "lucide-react";
 import search from "../image/search.svg";
 import explore from "../image/explore.svg";
 import finder from "../image/finder.svg";
-import firefox from "../image/firefox.svg";
-import Getleaf from "../image/Getleaf.svg";
 import Support from "./Support";
 import finderp from "../image/finderp.svg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import ston from "../image/ston.svg";
 import { Link } from "react-router-dom";
 import Oval2 from "../image/Oval2.svg";
-import chrome from "../image/chrome.svg";
 import leaf1 from "../image/leaf1.svg";
 
 const ProductFinderHero = () => {
@@ -38,25 +33,14 @@ const ProductFinderHero = () => {
   return (
     <>
       <div className="relative bg-[#16283E]">
-        {/* <div
-          className="absolute inset-0 w-140 left-280 top-[-50px] hidden lg:block md:left-150 lg:left-115 xl:left-230 2xl:left-280 "
-          style={{ zIndex: 1 }}
-        >
-          <img
-            src={ston}
-            alt="Background Shape"
-            className="w-full h-auto object-cover"
-          />
-        </div> */}
-
         <section className="w-full relative">
           <Navbar />
           {/* Leaf Background */}
           <img
-               src={leaf1}
-               alt="leav"
-               className="top-15 absolute hidden lg:block"
-             />
+            src={leaf1}
+            alt="leav"
+            className="top-15 absolute hidden lg:block"
+          />
           <div className="absolute hidden lg:block left-80 top-0 bottom-120 inset-0 overflow-hidden z-0 lg:left-0 2xl:right-100 ">
             <img
               src={Oval2}
@@ -67,9 +51,8 @@ const ProductFinderHero = () => {
           <div className="max-w-7xl mx-auto">
             {/* Main Blur Container */}
             <div
-              className={`${
-                showAuthModal ? "blur-sm pointer-events-none select-none" : ""
-              }`}
+              className={`${showAuthModal ? "blur-sm pointer-events-none select-none" : ""
+                }`}
             >
               <div className="py-12 flex flex-col lg:flex-row items-center justify-between relative z-10 gap-10">
                 <div className="flex-1 text-center lg:text-left space-y-6 max-w-xl mx-auto lg:mx-0 px-7">
@@ -110,47 +93,7 @@ const ProductFinderHero = () => {
                           LOGIN / REGISTER
                         </button>
                       </Link>
-                      {/* <Link to="/Login">
-                        <button className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
-                          SIGN IN
-                        </button>
-                      </Link> */}
                     </div>
-{/* 
-                    <div className="text-center">
-                      <p className="text-sm text-gray-500 mb-2 max-w-xs mx-auto sm:mx-0">
-                        Get the extension and access all tools with just one
-                        click
-                      </p>
-                      <div className="flex items-center justify-center gap-4">
-                        <div className="h-px w-12 bg-gray-300" />
-                        <a
-                          href="https://chrome.google.com/webstore"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
-                          <img
-                            src={chrome}
-                            alt="Chrome"
-                            className="w-6 h-6"
-                          />
-                        </a>
-                        <a
-                          href="https://chrome.google.com/webstore"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
-                          <img
-                            src={firefox}
-                            alt="Firefox"
-                            className="w-6 h-6"
-                          />
-                        </a>
-                        <div className="h-px w-12 bg-gray-300" />
-                      </div>
-                    </div> */}
                   </div>
                 </div>
 
@@ -224,29 +167,29 @@ const ProductFinderHero = () => {
                     </p>
                   </div>
                   {/* <!-- Visit Button --> */}
-                <div class="flex justify-end">
-  <a
-    href="https://www.cleansnap.co/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="bg-[#D5C7FF] text-black rounded-full px-8 py-2 text-lg font-medium flex items-center gap-2 transition"
-  >
-    Visit
-    <svg
-      class="w-5 h-5"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      viewBox="0 0 24 24"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M14 5l7 7m0 0l-7 7m7-7H3"
-      />
-    </svg>
-  </a>
-</div>
+                  <div class="flex justify-end">
+                    <a
+                      href="https://www.cleansnap.co/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="bg-[#D5C7FF] text-black rounded-full px-8 py-2 text-lg font-medium flex items-center gap-2 transition"
+                    >
+                      Visit
+                      <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
 
                 </div>
               </div>
@@ -348,12 +291,12 @@ const ProductFinderHero = () => {
             </div>
           </div>
         </section>
-         <div className="bg-[#16283E]">
-            <Support />
-      <Footer />
+        <div className="bg-[#16283E]">
+          <Support />
+          <Footer />
+        </div>
       </div>
-      </div>
-     
+
     </>
   );
 };

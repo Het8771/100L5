@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import explore from "../image/explore.svg";
 
-
 function Information({
   title,
   description,
@@ -62,7 +61,7 @@ function Information({
                 className="
                   hidden xl:block  2xl:block lg:block
                   absolute
-                  xl:right-[-40px]  top-1/4   2xl:right-[-200px] lg:right-[-30px]
+                  xl:right-[-40px]  top-1/4   2xl:right-[-100px] lg:right-[-30px]
                   -translate-y-1/2
                   w-190  h-100
                   rounded-full

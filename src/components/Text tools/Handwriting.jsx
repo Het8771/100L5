@@ -7,7 +7,7 @@ import Comment from "../Text tools/Comment";
 // Register align format for Quill
 Quill.register('formats/align', Quill.import('formats/align'), true);
 
-// ... your frame and icon imports here ...
+// Frame and icon imports
 import frame1 from "../../image/frame1.png";
 import frame2 from "../../image/frame2.png";
 import frame3 from "../../image/frame3.png";
@@ -34,8 +34,6 @@ import {
 } from "react-icons/fa6";
 import { MdShare } from "react-icons/md";
 import { FavoritesContext } from "../../Context/FavoriteContext";
-
-// ... fontOptions and paperFrames as in your code ...
 
 const fontOptions = [
   { label: "Satisfy", value: "Satisfy" },
@@ -107,7 +105,6 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
   const previewRef = useRef(null);
   const selectedFrame = paperFrames.find(f => f.value === frame) || paperFrames[1];
 
-  // const cardRef = useRef(null);
   const handleFontSizeChange = (e) => {
     let value = e.target.value.trim();
     if (/^\d+$/.test(value)) {
@@ -122,35 +119,6 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
     ? (textAreaValue ? textAreaValue.replace(/\n/g, '<br/>') : 'Your handwriting text will appear here...')
     : (editorValue || 'Your handwriting text will appear here...');
 
-  // Download as image
-  //  const handleDownload = () => {
-  //   if (!cardRef.current || !imageLoaded) {
-  //     alert('Please wait for the frame image to load before downloading.');
-  //     return;
-  //   }
-  //   const node = cardRef.current;
-  //   const width = node.offsetWidth;
-  //   const height = node.offsetHeight;
-
-  //   toPng(node, {
-  //     cacheBust: true,
-  //     width,
-  //     height,
-  //     backgroundColor: null, 
-  //   })
-  //     .then((dataUrl) => {
-  //       const link = document.createElement('a');
-  //       link.download = 'handwriting-card.png';
-  //       link.href = dataUrl;
-  //       link.click();
-  //     })
-  //     .catch((err) => {
-  //       alert('Could not generate image. Try again.');
-  //       console.error(err);
-  //     });
-  // };
-
-  // Download as PNG
   const handleDownloadImage = async () => {
     if (previewRef.current) {
       const canvas = await html2canvas(previewRef.current);
@@ -161,7 +129,6 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
     }
   };
 
-  // Download as PDF
   const handleDownloadPDF = async () => {
     if (previewRef.current) {
       const canvas = await html2canvas(previewRef.current);
@@ -196,30 +163,38 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
     setIsFavorite(favorites.includes(id));
   }, [id]);
 
-
   return (
     <>
+      {/* Style to make ReactQuill placeholder text white */}
+      <style>
+        {`
+          .ql-editor.ql-blank::before {
+            color: white !important;
+          }
+        `}
+      </style>
+
       <div className="max-w-4xl mx-auto p-3">
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between mb-4 gap-2">
           <div className="flex items-center gap-3 mb-2 sm:mb-0">
-            <span className="text-3xl sm:text-4xl text-indigo-400">
+            <span className="text-3xl sm:text-4xl mt-7 text-indigo-400">
               <BsLayoutTextSidebarReverse />
             </span>
-            <span className="font-bold text-white text-lg sm:text-xl md:text-2xl lg:text-3xl">
+            <span className="font-bold text-white text-lg sm:text-xl mt-5 md:text-2xl lg:text-3xl">
               Text&nbsp;to&nbsp;Handwriting&nbsp;Converter
             </span>
           </div>
           <div className="flex flex-col w-full md:flex-row md:justify-center md:items-center md:gap-4 lg:justify-end lg:gap-2">
             <button
               onClick={() => setShareOpen(true)}
-              className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white mb-2 md:mb-0 cursor-pointer"
+              className="flex items-center justify-center md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58] text-white mb-2 md:mb-0 cursor-pointer"
             >
               <FiShare2 className="mr-2" size={18} />
               Share
             </button>
             <button
-              className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58]  border border-white text-white cursor-pointer transition"
+              className="flex items-center justify-center gap-2 w-full md:w-auto px-3 py-2 text-sm rounded-xl border border-white bg-[#273D58] text-white cursor-pointer transition"
               onClick={() => setOpen(true)}
             >
               <FiAlertCircle className="text-white text-base" />
@@ -228,8 +203,8 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
             <button
               onClick={onFavoriteToggle}
               className={`px-3 py-2 rounded-xl border text-sm mt-2 md:mt-0 ml-0 cursor-pointer ${isFavorite
-                ? "border border-white bg-[#273D58]  border border-white text-white"
-                : "bg-[#273D58]  border border-white text-white"
+                ? "border border-white bg-[#273D58] text-white"
+                : "bg-[#273D58] border border-white text-white"
                 }`}
             >
               {isFavorite ? (
@@ -245,6 +220,7 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
             </button>
           </div>
         </div>
+
         {/* Share Popup */}
         {shareOpen && (
           <div className="fixed inset-0 bg-black/30 z-50 flex justify-center items-center">
@@ -253,7 +229,7 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
                 <button
                   onClick={() => setActiveTab("tool")}
                   className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "tool"
-                    ? "bg-[#273D58]  border border-white text-white"
+                    ? "bg-[#273D58] border border-white text-white"
                     : "text-black hover:bg-[#273D58] hover:text-white"
                     }`}
                 >
@@ -262,7 +238,7 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
                 <button
                   onClick={() => setActiveTab("home")}
                   className={`w-1/2 px-4 py-2 rounded-xl font-semibold text-sm ${activeTab === "home"
-                    ? "bg-[#273D58]  border border-white text-white"
+                    ? "bg-[#273D58] border border-white text-white"
                     : "text-black hover:bg-[#273D58] hover:text-white"
                     }`}
                 >
@@ -317,7 +293,7 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
               </label>
               <textarea
                 id="bugDescription"
-                className="w-full p-3 border border-gray-500 rounded-xl text-base h-32 "
+                className="w-full p-3 border border-gray-500 rounded-xl text-base h-32"
                 placeholder="Description*"
                 value={bugDescription}
                 onChange={(e) => setBugDescription(e.target.value)}
@@ -325,7 +301,7 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
               <div className="flex justify-end gap-3 mt-4">
                 <button
                   onClick={() => setOpen(false)}
-                  className="px-4 py-2 bg-[#273D58]  border border-white text-white border border-white rounded-lg"
+                  className="px-4 py-2 bg-[#273D58] border border-white text-white rounded-lg"
                 >
                   Cancel
                 </button>
@@ -352,7 +328,7 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
           <button
             className={`flex items-center gap-2 px-6 py-2 rounded-md transition font-medium text-base
             ${tabchange === 'textarea'
-                ? 'cursor-pointer bg-[#273D58]  border border-white text-white shadow'
+                ? 'cursor-pointer bg-[#273D58] border border-white text-white shadow'
                 : 'text-[#7a7a9d]'
               }`}
             onClick={() => setTabchange('textarea')}
@@ -395,12 +371,13 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
               borderRadius: "8px",
               height: "300px",
               marginBottom: "8px",
+              color: "white",
             }}
           />
         )}
 
         {/* Controls: Font, Font Size, Ink Color, Frame */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-3">
           <select
             className="border border-gray-500 bg-[#16283E] rounded px-3 py-2 outline-none"
             value={font}
@@ -432,91 +409,75 @@ export default function HandwritingConverter({ id = "Text to Handwriting" }) {
               <option key={opt.value} value={opt.value} className='bottom-full'>{opt.label}</option>
             ))}
           </select>
-
         </div>
+
         <div className="flex gap-3 justify-start mt-4">
           <button
             onClick={handleDownloadImage}
-            className="cursor-pointer bg-[#273D58]  border border-white text-white  px-8 py-2 rounded-lg shadow-md"
+            className="cursor-pointer bg-[#273D58] border border-white text-white px-8 py-2 rounded-lg shadow-md"
           >
             Download as Image
           </button>
           <button
             onClick={handleDownloadPDF}
-            className="cursor-pointer bg-[#273D58]  border border-white text-white  px-8 py-2 rounded-lg shadow-md"
+            className="cursor-pointer bg-[#273D58] border border-white text-white px-8 py-2 rounded-lg shadow-md"
           >
             Download as PDF
           </button>
         </div>
+
         {/* Card Preview */}
-        <div className="mt-8 flex flex-col items-center relative ">
-          <div
-            ref={previewRef}
-            style={{
-              backgroundImage: `url(${selectedFrame.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              width: 490,
-              height: 750,
-              maxWidth: '100%',
-              borderRadius: 14,
-              padding: '48px 36px',
-              margin: '0 auto',
-              position: 'relative',
-              boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
-              display: 'flex',
-              alignItems: 'flex-start',
-              justifyContent: 'flex-start',
-              overflow: 'hidden',
-              backgroundColor: '#fff',
-            }}
-          >
-            {/* <div ref={previewRef} className="relative w-full p-4 bg-white shadow-md rounded-md">
-          <div
-            className="text-center"
-            style={{
-              fontFamily: font,
-              fontSize: fontSize,
-              color: inkColor,
-              backgroundImage: `url(${selectedFrame.image})`,
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              minHeight: "400px",
-              padding: "40px",
-              lineHeight: 1.5,
-            }}
-            dangerouslySetInnerHTML={{ __html: previewText }}
-          />
-        </div> */}
+     <div className="mt-8 flex flex-col items-center relative">
+  <div
+    ref={previewRef}
+    style={{
+      backgroundImage: `url(${selectedFrame.image})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      width: '100%',
+      maxWidth: '490px', // Max width for larger screens
+      height: 'auto',
+      aspectRatio: '490 / 750', // Maintain aspect ratio (width:height)
+      borderRadius: '14px',
+      padding: 'clamp(24px, 10%, 48px) clamp(18px, 7%, 36px)', // Responsive padding
+      margin: '0 auto',
+      position: 'relative',
+      boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+      display: 'flex',
+      alignItems: 'flex-start',
+      justifyContent: 'flex-start',
+      overflow: 'hidden',
+      backgroundColor: '#fff',
+    }}
+  >
+    <img
+      src={selectedFrame.image}
+      alt="frame"
+      style={{ display: 'none' }}
+      onLoad={() => setImageLoaded(true)}
+    />
 
+    <div
+      className="ql-editor container mx-auto"
+      style={{
+        width: 'calc(100% - 60px)', // Adjust for margin/padding
+        maxWidth: '420px', // Prevents overflow
+        minHeight: 'clamp(120px, 30vh, 350px)', // Responsive min-height
+        fontFamily: font,
+        fontSize: fontSize,
+        color: inkColor,
+        wordBreak: 'break-word',
+        padding: 0,
+        border: 'none',
+        background: 'transparent',
+        marginTop: 'clamp(20px, 7%, 50px)', // Responsive margin
+        marginLeft: 'clamp(15px, 5%, 30px)', // Responsive margin
+      }}
+      dangerouslySetInnerHTML={{ __html: previewText }}
+    />
+  </div>
+</div>
 
-            {/* Hidden image to detect load */}
-            <img
-              src={selectedFrame.image}
-              alt="frame"
-              style={{ display: 'none' }}
-              onLoad={() => setImageLoaded(true)}
-            />
-
-            <div
-              className="ql-editor container mx-auto "
-              style={{
-                width: 500,
-                minHeight: 250,
-                fontFamily: font,
-                fontSize: fontSize,
-                color: inkColor,
-                wordBreak: 'break-word',
-                padding: 0,
-                border: 'none',
-                background: 'transparent',
-                marginTop: '50px',
-                marginLeft: '30px',
-              }}
-              dangerouslySetInnerHTML={{ __html: previewText }}
-            />
-          </div>
-        </div>
       </div>
       <Comment />
     </>

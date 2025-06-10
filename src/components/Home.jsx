@@ -281,11 +281,26 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 flex justify-center max-w-md w-full">
+            <div className="flex-1 flex justify-center  w-full relative">
+              <div
+                className="
+                  hidden xl:block  2xl:block lg:block
+                  absolute
+                  xl:right-[-40px]  top-1/4   2xl:right-[-100px] lg:right-[-40px]
+                  -translate-y-1/2
+                  w-190  h-100
+                  rounded-full
+                  bg-gradient-to-br from-[#1F2B56] to-[#ffffff]     
+                 blur-3xl
+                  opacity-35
+                  z-0
+                "
+                aria-hidden="true"
+              />
               <img
                 src={home1}
                 alt="Illustration"
-                className="hidden lg:block w-full max-w-xs sm:max-w-sm md:max-w-md"
+                className="hidden xl:block 2xl:block lg:block w-full max-w-xs sm:max-w-sm md:max-w-md relative z-10  2xl:left-10"
               />
             </div>
           </div>

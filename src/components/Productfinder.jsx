@@ -16,7 +16,6 @@ import { Link } from "react-router-dom";
 import search from "../image/search.svg";
 import explore from "../image/explore.svg";
 import finder from "../image/finder.svg";
-import firefox from "../image/firefox.svg";
 import productback1 from "../image/productback1.svg";
 import Text from "../image/Text.svg";
 import folder from "../image/folder.svg";
@@ -26,10 +25,7 @@ import Product1 from "../image/Product1.svg";
 import Support from "./Support";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import ston from "../image/ston.svg";
 import Oval2 from "../image/Oval2.svg";
-import chrome from "../image/chrome.svg";
-import leaf1 from "../image/leaf1.svg";
 
 const ProductFinderHero = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -292,60 +288,16 @@ const ProductFinderHero = () => {
                         LOGIN / REGISTER
                       </button>
                     </Link>
-                    {/* <Link to="/Login">
-                      <button className="text-red-600 font-semibold cursor-pointer hover:underline select-none">
-                        SIGN IN
-                      </button>
-                    </Link> */}
                   </div>
-
-                  {/* <div className="text-center ">
-                    <p className="text-sm text-gray-500 mb-2 max-w-xs mx-auto sm:mx-0">
-                      Get the extension and access all tools with just one click
-                    </p>
-                    <div className="flex items-center justify-center gap-4">
-                      <div className="h-px w-12 bg-gray-300" />
-                      <a
-                        href="https://chrome.google.com/webstore"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        <img
-                          src={chrome}
-                          alt="Chrome"
-                          className="w-6 h-6"
-                        />
-                      </a>
-                      <a
-                        href="https://chrome.google.com/webstore"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        <img
-                          src={firefox}
-                          alt="Firefox"
-                          className="w-6 h-6"
-                        />
-                      </a>
-                      <div className="h-px w-12 bg-gray-300" />
-                    </div>
-                  </div> */}
                 </div>
               </div>
 
-              <div className="flex-1 flex justify-center max-w-md w-full">
-                <img
-                  src={search}
-                  alt="Illustration"
-                  className="hidden lg:block w-full max-w-xs sm:max-w-sm md:max-w-md"
-                />
+              <div className="flex-1 flex justify-center  w-full relative">
                 <div
                   className="
                   hidden xl:block  2xl:block lg:block
                   absolute
-                  xl:right-[-40px]  top-1/4   2xl:right-[-200px] lg:right-[-30px]
+                  xl:right-[-40px]  top-1/4   2xl:right-[-100px] lg:right-[-30px]
                   -translate-y-1/2
                   w-190  h-100
                   rounded-full
@@ -355,6 +307,11 @@ const ProductFinderHero = () => {
                   z-0
                 "
                   aria-hidden="true"
+                />
+                <img
+                  src={search}
+                  alt="Illustration"
+                  className="hidden xl:block 2xl:block lg:block w-full max-w-xs sm:max-w-sm md:max-w-md relative z-10  2xl:left-10"
                 />
               </div>
             </div>

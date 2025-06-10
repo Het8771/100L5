@@ -735,7 +735,7 @@ export default function BionicReadingConverter({ id = "Bionic Reading Converter"
             id="fixation"
             value={fixation}
             onChange={(e) => setFixation(Number(e.target.value))}
-            className="w-full px-3 py-2  bg-[#16283E] border border-gray-500 rounded-md "
+            className="w-full px-3 py-2  bg-[#16283E] border border-gray-500 rounded-md outline-none"
           >
             {fixationLevels.map((level) => (
               <option key={level.value} value={level.value}>
@@ -753,7 +753,7 @@ export default function BionicReadingConverter({ id = "Bionic Reading Converter"
             id="contrast"
             value={contrast}
             onChange={(e) => setContrast(e.target.value)}
-            className="w-full px-3 py-2 bg-[#16283E] border border-gray-500 rounded-md"
+            className="w-full px-3 py-2 bg-[#16283E] border border-gray-500 rounded-md outline-none"
           >
             {contrastLevels.map((level) => (
               <option key={level.value} value={level.value}>
@@ -775,7 +775,7 @@ export default function BionicReadingConverter({ id = "Bionic Reading Converter"
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="Type or paste your text here, or upload a PDF file above..."
-            className="w-full h-80 px-3 py-2 border border-gray-500 rounded-md resize-none  font-mono text-sm"
+            className="w-full h-80 px-3 py-2 border border-gray-500 rounded-md resize-none  font-mono text-sm outline-none"
             style={{ whiteSpace: "pre-wrap" }}
           />
         </div>
@@ -795,7 +795,7 @@ export default function BionicReadingConverter({ id = "Bionic Reading Converter"
             </button>
           </div>
           <div
-            className={`h-80 p-3 border border-gray-500 rounded-md overflow-y-auto bg-[#16283E] ${contrastClass[contrast]}`}
+            className={`h-80 p-3 border border-gray-500 rounded-md overflow-y-auto bg-[#16283E] text-white ${contrastClass[contrast]}`}
             style={{ whiteSpace: "pre-wrap", fontFamily: "monospace", fontSize: "14px" }}
             dangerouslySetInnerHTML={{
               __html: bionic || "<span class='text-gray-400'>Converted text will appear here...</span>",
@@ -832,24 +832,24 @@ export default function BionicReadingConverter({ id = "Bionic Reading Converter"
             </button>
 
             {exportOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
+              <div className="absolute right-0 mt-2 w-48 bg-[#273D58] border border-gray-200 rounded-lg shadow-lg z-10">
                 <button
                   onClick={handleExportHTML}
-                  className="w-full px-4 py-2 text-left hover:bg-gray-100 rounded-t-lg"
+                  className="w-full px-4 py-2 text-left hover:bg-white hover:text-black rounded-t-lg"
                 >
                   Download HTML
                 </button>
                 <button
                   onClick={handleExportPDF}
                   disabled={isGeneratingPdf}
-                  className="w-full px-4 py-2 text-left hover:bg-gray-100 disabled:bg-gray-200 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-2 text-left  hover:bg-white hover:text-black disabled:bg-gray-200 disabled:cursor-not-allowed"
                 >
                   {isGeneratingPdf ? "Generating PDF..." : "Download PDF"}
                 </button>
-                <button onClick={handleCopyHTML} className="w-full px-4 py-2 text-left hover:bg-gray-100">
+                <button onClick={handleCopyHTML} className="w-full px-4 py-2 text-left  hover:bg-white hover:text-black">
                   Copy HTML
                 </button>
-                <button onClick={handleCopyText} className="w-full px-4 py-2 text-left hover:bg-gray-100 rounded-b-lg">
+                <button onClick={handleCopyText} className="w-full px-4 py-2 text-left  hover:bg-white hover:text-black rounded-b-lg">
                   Copy Text
                 </button>
               </div>
